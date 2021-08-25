@@ -2395,6 +2395,10 @@ footer .footer-bottom p {
 	cursor: pointer;
 }
 
+.section-contacts .ticker {
+	font-weight: bold;
+}
+
 @media (max-width:1200px) {
 	.heading-1 {
 		font-size: 102px;
@@ -2674,6 +2678,8 @@ footer .footer-bottom p {
 		font-size: 52px;
 		line-height: 152px;
 		position: static;
+		margin: 0 -25px;
+		width: calc(100% + 50px);
 	}
 	.section-contacts {
 		flex-wrap: wrap;
@@ -2684,7 +2690,7 @@ footer .footer-bottom p {
 	.section-contacts .content {
 		padding-top: 106px
 	}
-	.section-contacts .lines {
+	.section-contacts .lines div {
 		border: none;
 	}
 }

@@ -122,6 +122,14 @@ $('.projects-gallery-slider').slick({
   arrows: true
 });
 
+$('.projects-slider').slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  arrows: true
+});
+
 $('.send_offer').click(function() {
 	$('.send_offer_popup').addClass('show');
 });

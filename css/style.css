@@ -1,8 +1,10 @@
 body {
 	margin: 0;
 	padding: 0;
-	font-family: Roboto;
+	font-family: 'Roboto', sans-serif;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 section {
 	position: relative;
@@ -232,9 +234,10 @@ p {
 .container {
 	max-width: 1200px;
 	width: 100%;
-	margin: 0 auto;
-	/*padding-bottom: 80px;*/
+	margin: 0 auto;	/*padding-bottom: 80px;*/
+
 	/* padding-left: 24px; */
+
 	/* padding-right: 24px; */
 }
 
@@ -1054,7 +1057,7 @@ p {
 	font-style: normal;
 	font-weight: 500;
 	font-size: 14px;
-	line-height: 28px;/* identical to box height, or 200% */
+	line-height: 28px;
 	letter-spacing: 0.16em;
 	text-transform: capitalize;
 	color: #FFFFFF;
@@ -1360,7 +1363,7 @@ footer .footer-bottom p {
 }
 
 .section-box .container .content {
-	max-width: 620px;
+	width: calc(100% - 650px);
 }
 
 .section-box h4 {
@@ -1388,7 +1391,7 @@ footer .footer-bottom p {
 	width: 100%;
 	border: 2px solid #FFFFFF;
 	position: absolute;
-	right: 140px;
+	right: 25px;
 	bottom: 40px;
 }
 
@@ -1960,6 +1963,9 @@ footer .footer-bottom p {
 	right: 0;
 	bottom: 0;
 	height: 100%;
+	max-width: 60%;
+	width: 100%;
+	object-fit: contain;
 }
 
 .section-about-two {
@@ -2048,7 +2054,8 @@ footer .footer-bottom p {
 
 .section-about-three {
 	overflow: hidden;
-	padding: 80px 0;
+	padding-top: 80px;
+	padding-bottom: 80px;
 }
 
 .bg-white .table {
@@ -2154,7 +2161,8 @@ footer .footer-bottom p {
 }
 
 .section-about-four {
-	padding: 140px 0 116px;
+	padding-top: 140px;
+	padding-bottom: 116px;
 }
 
 .section-about-four .heading-4 {
@@ -2378,7 +2386,151 @@ footer .footer-bottom p {
 	cursor: pointer;
 }
 
+@media (max-width:1200px) {
+	.heading-1 {
+		font-size: 102px;
+		line-height: 152px;
+	}
 
-@media (max-width: 1200px) {
-	
-} 
+	.heading-4 {
+		font-size: 42px;
+		line-height: 62px;
+	}
+
+	.tabs ul li {
+		padding: 25px 18px;
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	.tabs-body article {
+		padding: 80px 0;
+	}
+
+	.tabs-body article .category {
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	.tabs-body article .title {
+		font-size: 42px;
+		line-height: 52px;
+		margin: 38px 0;
+	}
+
+	.tabs-body article .link {
+		font-size: 16px;
+		line-height: 26px;
+		position: static;
+	}
+
+	.tabs-body .thumb {
+		left: -25px;
+		right: -25px
+	}
+
+	.about-team {
+		min-height: auto;
+	}
+
+	.about-team h4 {
+		margin-bottom: 32px;
+		padding-bottom: 0;
+	}
+
+	.about-team .content {
+		padding-top: 80px;
+		padding-bottom: 0;
+		max-width: none;
+	}
+
+	.about-team p {
+	}
+
+	.about-team img {
+		display: none;
+	}
+
+	.about-team .ticker {
+		position: relative;
+		bottom: 0;
+		margin-left: -25px;
+		margin-right: -25px;
+		width: calc(100% + 50px);
+		padding-bottom: 80px;
+	}
+
+	.ticker {
+		font-size: 92px;
+		line-height: normal;
+	}
+
+	.category-content .thumb img {
+		height: 112px;
+		width: 112px
+	}
+
+	.category-content {
+		padding-bottom: 42px;
+	}
+
+	.category-content .item {
+		margin-bottom: 38px
+	}
+
+	.category-content h6 {
+		font-size: 12px;
+		line-height: 18px;
+	}
+
+	.services-content .inner:before {
+		padding-bottom: 70%
+	}
+
+	.services-content h4 {
+		padding-top: 57px;
+	}
+
+	.services-content .inner {
+		max-width: 65%;
+	}
+
+	.section-about-one .container .big-img {
+		max-width: 50%;
+	}
+
+	.section-about-one .content {
+	}
+
+	.table, .table-2 {
+		overflow: scroll;
+	}
+
+	.table-2 {
+		margin: 0;
+	}
+
+	.table table, .table-2 table {
+		width: 1200px;
+	}
+
+	.table-2, .table tr:after, .table-2 table .thead:after {
+		width: 100%
+	}
+
+	.section-about-four .content .item {
+		width: 50%;
+	}
+
+	.section-about-five .container {
+		display: flex;
+		justify-content: center;
+		padding-left: 25px;
+		padding-right: 25px
+	}
+
+	.section-box .container .content {
+		width: calc(100% - 550px);
+	}
+s
+}

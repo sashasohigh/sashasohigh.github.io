@@ -90,7 +90,29 @@ $('.gallery-slider').slick({
   infinite: true,
   speed: 300,
   slidesToShow: 5,
-  arrows: true
+  arrows: true,
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 4,
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
 });
 
 $('.projects-gallery-slider').slick({

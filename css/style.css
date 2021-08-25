@@ -511,7 +511,7 @@ p {
 }
 
 .header-nav {
-	z-index: 10;
+	z-index: 11;
 	display: flex;
 	background: rgb(14 25 50 / 80%);
 	backdrop-filter: blur(15px);
@@ -1081,12 +1081,13 @@ p {
 }
 
 .services-content .content {
-	position: absolute;
+	position: relative;
 	z-index: 1;
 }
 
 .services-content .item {
 	min-height: 440px;
+	position: relative;
 }
 
 .services-content h4 {
@@ -1101,16 +1102,17 @@ p {
 }
 
 .services-content .thumb {
-
-	/* position: absolute; */
-	width: 100%;
+	position: absolute;
+	height: 100%;
+	width: 65%;
 	top: 0;
 	right: 0;
 	z-index: -1;
 }
 
 .services-content .inner {
-	position: relative;
+
+	/* position: relative; */
 	max-width: 773px;
 	width: 100%;
 	margin-left: auto;
@@ -1447,6 +1449,8 @@ footer .footer-bottom p {
 	bottom: 0;
 	padding: 80px 0;
 	color: transparent;
+	margin: 0 -25px;
+	width: calc(100% + 50px);
 }
 
 .section-projects-gallery .ticker b {
@@ -1496,6 +1500,7 @@ footer .footer-bottom p {
 /*.section-category .content h4 */
 .section-category .content-bottom {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .section-category .content-bottom ul {
@@ -1519,6 +1524,7 @@ footer .footer-bottom p {
 .section-category .content-bottom .buttons {
 	display: flex;
 	align-items: flex-start;
+	flex-wrap: wrap;
 }
 
 .section-category .content-bottom .buttons button {
@@ -1536,7 +1542,8 @@ footer .footer-bottom p {
 
 .section-news-content {
 	position: relative;
-	padding: 80px 0;
+	padding-top: 80px;
+	padding-bottom: 80px;
 }
 
 .section-news-content h4 {
@@ -2005,6 +2012,8 @@ footer .footer-bottom p {
 }
 
 .section-about-two .img-dynamic svg {
+	height: 100%;
+	width: 100%;
 }
 
 .table {
@@ -2502,7 +2511,8 @@ footer .footer-bottom p {
 	.section-about-one .content {
 	}
 
-	.table, .table-2 {
+	.table,
+	.table-2 {
 		overflow: scroll;
 	}
 
@@ -2510,11 +2520,14 @@ footer .footer-bottom p {
 		margin: 0;
 	}
 
-	.table table, .table-2 table {
+	.table table,
+	.table-2 table {
 		width: 1200px;
 	}
 
-	.table-2, .table tr:after, .table-2 table .thead:after {
+	.table-2,
+	.table tr:after,
+	.table-2 table .thead:after {
 		width: 100%
 	}
 
@@ -2525,12 +2538,153 @@ footer .footer-bottom p {
 	.section-about-five .container {
 		display: flex;
 		justify-content: center;
-		padding-left: 25px;
-		padding-right: 25px
+		/*padding-left: 25px;
+		padding-right: 25px;*/
 	}
 
 	.section-box .container .content {
 		width: calc(100% - 550px);
 	}
-s
+
+	.section-projects-gallery .ticker {
+	}
+
+	.projects-gallery-slider .item {
+		width: calc(25% - 24px);
+	}
+
+	.section-news-content {
+	}
+
+	.lines {
+		left: 25px;
+		right: 25px;
+		width: calc(100% - 50px);
+	}
+
+	footer .col_1 {
+		margin: 0;
+		width: 33%;
+	}
+
+	footer .col_2 {
+		margin: 0;
+		width: 15%;
+		margin-left: 3%;
+	}
+
+	footer .col_3 {
+		margin: 0;
+		width: 20%;
+	}
+
+	footer .col_4 {
+		width: 28%;
+		margin-left: 1%;
+	}
+
+	footer .footer-bottom {
+		height: 56px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	footer .footer-bottom p {
+		padding: 0;
+	}
+
+	.section-news-one .container .content{
+		width: 100%;
+	}
+	.section-contacts .ticker {
+		font-size: 122px;
+		line-height: 152px;
+	}
+
+}
+
+@media (max-width:1000px) {
+	.header-nav {
+		background: #030B1E;
+	}
+	.header-phone, .news-content .item_img {
+		display: none;
+	}
+
+	.section-services .heading-4 {
+		padding-bottom: 100px;
+	}
+
+	.services-content .item {
+		min-height: 320px;
+	}
+
+	.section-about-one .content {
+		max-width: none;
+		padding-bottom: 32px;
+	}
+
+	.section-about-one .parametrs {
+	}
+
+	.section-about-one .desc {
+	}
+
+	.section-about-one .container .big-img {
+		position: relative;
+		max-width: 100%;
+	}
+	.section-about-two .img-dynamic {
+		height: 184px;
+		width: 128px;
+	}
+	.news-content .content {
+		margin: 0 -22px;
+		margin-bottom: 80px;
+	}
+	.news-content .item {
+		width: calc(50% - 44px);
+		margin: 0 22px;
+	}
+	.section-box .content-video {
+		max-width: 346px;
+	}
+	footer ul li a {
+		font-size: 14px;
+		line-height: 20px;
+	}
+	.section-category .content-bottom ul {
+		width: 100%;
+		margin-bottom: 40px;
+	}
+
+}
+
+
+@media (max-width:600px) {
+	.heading-4 {
+		font-size: 30px;
+		line-height: 42px;
+	}
+	.section-contacts .content-bottom .buttons button {
+		margin-bottom: 32px
+	}
+	.section-contacts .ticker {
+		font-size: 52px;
+		line-height: 152px;
+		position: static;
+	}
+	.section-contacts {
+		flex-wrap: wrap;
+	}
+	.section-contacts .content h4 {
+		max-width: 100%;
+	}
+	.section-contacts .content {
+		padding-top: 106px
+	}
+	.section-contacts .lines {
+		border: none;
+	}
 }

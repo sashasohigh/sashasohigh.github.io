@@ -99,10 +99,9 @@ $('.gallery-slider').slick({
       }
     },
     {
-      breakpoint: 600,
+      breakpoint: 1000,
       settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
+        slidesToShow: 3,
       }
     },
     {

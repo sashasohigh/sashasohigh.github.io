@@ -510,7 +510,7 @@ p {
 .header-nav {
 	z-index: 10;
 	display: flex;
-	background: rgb(14 25 50 / 50%);
+	background: rgb(14 25 50 / 80%);
 	backdrop-filter: blur(15px);
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 	position: sticky;

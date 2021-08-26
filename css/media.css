@@ -254,6 +254,10 @@
 		display: none;
 	}
 
+	.section-services .head {
+		padding: 0;
+	}
+
 	.header-nav {
 		height: 60px;
 		margin-bottom: -60px;
@@ -288,7 +292,7 @@
 	}
 
 	.tabs ul {
-		width: 100%;
+		width: fit-content;
 	}
 
 	.tabs ul li {

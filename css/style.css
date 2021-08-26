@@ -90,7 +90,7 @@ a {
 }
 
 p {
-	font-family: Roboto;
+	font-family: 'Roboto', sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 14px;
@@ -553,7 +553,7 @@ p {
 }
 
 .header-phone a {
-	font-family: Roboto;
+	font-family: 'Roboto', sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 14px;
@@ -691,7 +691,7 @@ p {
 }
 
 .menu_wrapper .inner .menu_body ul li a {
-	font-family: Roboto;
+	font-family: 'Roboto', sans-serif;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 16px;
@@ -2338,7 +2338,7 @@ footer .footer-bottom p {
 }
 
 .wrapper-popup .popup-content .inner form .form-row input {
-	font-family: Roboto;
+	font-family: 'Roboto', sans-serif;
 	height: 60px;
 	width: -webkit-fill-available;
 	background: none;
@@ -2356,7 +2356,7 @@ footer .footer-bottom p {
 }
 
 .wrapper-popup .popup-content .inner form .form-row textarea {
-	font-family: Roboto;
+	font-family: 'Roboto', sans-serif;
 	height: 120px;
 	width: 100%;
 	background: none;

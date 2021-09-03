@@ -635,6 +635,7 @@ p {
 	position: absolute;
 	background: #ffffff;
 	top: 0;
+	height: 100vh;
 	left: -431px;
 	transition: 0.3s;
 }

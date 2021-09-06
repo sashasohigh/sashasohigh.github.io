@@ -2568,16 +2568,17 @@ footer .footer-bottom p {
 		font-size: 16px;
 		line-height: 26px;
 		position: static;
+		width: 100%;
 	}
 
 	.section-home-one .container .content-top-left {
 		left: 0;
 	}
 
-	.tabs-body .thumb {
+	/*.tabs-body .thumb {
 		left: -25px;
 		right: -25px
-	}
+	}*/
 
 	.about-team {
 		min-height: auto;

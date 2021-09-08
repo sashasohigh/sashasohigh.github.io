@@ -313,3 +313,29 @@ jQuery(function($) {
 $('.section-box .content-video .iframe_bg button').click(function() {
   $('.section-box .content-video .iframe_bg').fadeOut();
 });
+
+$('.tabs ul li').click(function() {
+  $('.tabs ul li').removeClass('active');
+  $('.tabs-body .tab').removeClass('active');
+  $(this).addClass('active');
+});
+
+$('#tab_li_1').click(function() {
+  $('#tab_1').addClass('active');
+});
+
+$('#tab_li_2').click(function() {
+  $('#tab_2').addClass('active');
+});
+
+$('#tab_li_3').click(function() {
+  $('#tab_3').addClass('active');
+});
+
+$('#btn-video').click(function() {
+  $('.video-popup').addClass('active');
+});
+
+$('.video-popup .close').click(function() {
+  $('.video-popup').removeClass('active');
+});

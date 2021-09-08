@@ -820,7 +820,9 @@ p {
 	color: #FFFFFF;
 }
 
-.section-services {overflow: hidden;}
+.section-services {
+	overflow: hidden;
+}
 
 .section-services .wrapper {
 	height: 365px;
@@ -898,6 +900,14 @@ p {
 }
 
 .tabs-body {
+}
+
+.tabs-body .tab {
+	display: none;
+}
+
+.tabs-body .tab.active {
+	display: block;
 }
 
 .tabs-body article {
@@ -2532,6 +2542,67 @@ footer .footer-bottom p {
 .mobile-bottom-menu .inner ul li a svg {
 }
 
+.video-popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 12;
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+
+.video-popup.active {
+	display: flex;
+}
+
+.video-popup:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: rgb(11 22 46 / 75%);
+}
+
+.video-popup .video-content {
+	position: relative;
+	width: 70%;
+}
+
+.video-popup .video-content:before {
+	content: '';
+	display: block;
+	padding-bottom: 60%;
+}
+
+.video-popup .video-content iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.video-popup .video-content .close {
+	position: absolute;
+	cursor: pointer;
+}
+
+.video-popup .video-content .close svg {
+	height: 45px;
+	width: 45px;
+}
+
+.video-popup .video-content .close svg path {
+}
+
 @media (max-width:1200px) {
 	.heading-1 {
 		font-size: 102px;
@@ -2579,7 +2650,6 @@ footer .footer-bottom p {
 		left: -25px;
 		right: -25px
 	}*/
-
 	.about-team {
 		min-height: auto;
 	}

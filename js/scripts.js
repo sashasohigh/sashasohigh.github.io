@@ -240,71 +240,76 @@ jQuery(function($) {
 
 
 
-var anchors = [];
-var currentAnchor = -1;
-var isAnimating  = false;
-$(function(){
-    function updateAnchors() {
-        anchors = [];
-        $('.anchor').each(function(i, element){
-            anchors.push( $(element).offset().top );
-        });
-    }
-    $('.section-home-one').on('mousewheel', function(e){
-        if(e.originalEvent.wheelDelta /120 > 0) {
-            console.log('scrolling up !');
-        }
-        else{
-            e.preventDefault();
-        e.stopPropagation();
-        if( isAnimating ) {
-            return false;
-        }
-        isAnimating  = true;
-        if( e.originalEvent.wheelDelta >= 0 ) {
-            currentAnchor--;
-        }else{
-            currentAnchor++;
-        }
-        if( currentAnchor > (anchors.length - 1) 
-           || currentAnchor < 0 ) {
-            currentAnchor = 0;
-        }
-        isAnimating  = true;
-        $('html, body').animate({
-            scrollTop: parseInt( anchors[currentAnchor] )
-        }, 1500, 'swing', function(){
-            isAnimating  = false;
-        });
-        }    
-    });
-    $('.section-services .wrapper').on('mousewheel', function(e){
-        if(e.originalEvent.wheelDelta /120 > 0) {
-            e.preventDefault();
-            e.stopPropagation();
-            if( isAnimating ) {
-                return false;
-            }
-            isAnimating  = true;
-            if( e.originalEvent.wheelDelta >= 0 ) {
-                currentAnchor--;
-            }else{
-                currentAnchor++;
-            }
-            if( currentAnchor > (anchors.length - 1) 
-               || currentAnchor < 0 ) {
-                currentAnchor = 0;
-            }
-            isAnimating  = true;
-            $('html, body').animate({
-                scrollTop: parseInt( anchors[currentAnchor] )
-            }, 1500, 'swing', function(){
-                isAnimating  = false;
-            });
-        }
-        else {
+// var anchors = [];
+// var currentAnchor = -1;
+// var isAnimating  = false;
+// $(function(){
+//     function updateAnchors() {
+//         anchors = [];
+//         $('.anchor').each(function(i, element){
+//             anchors.push( $(element).offset().top );
+//         });
+//     }
+//     $('.section-home-one').on('mousewheel', function(e){
+//         if(e.originalEvent.wheelDelta /120 > 0) {
+//             console.log('scrolling up !');
+//         }
+//         else{
+//             e.preventDefault();
+//         e.stopPropagation();
+//         if( isAnimating ) {
+//             return false;
+//         }
+//         isAnimating  = true;
+//         if( e.originalEvent.wheelDelta >= 0 ) {
+//             currentAnchor--;
+//         }else{
+//             currentAnchor++;
+//         }
+//         if( currentAnchor > (anchors.length - 1) 
+//            || currentAnchor < 0 ) {
+//             currentAnchor = 0;
+//         }
+//         isAnimating  = true;
+//         $('html, body').animate({
+//             scrollTop: parseInt( anchors[currentAnchor] )
+//         }, 1500, 'swing', function(){
+//             isAnimating  = false;
+//         });
+//         }    
+//     });
+//     $('.section-services .wrapper').on('mousewheel', function(e){
+//         if(e.originalEvent.wheelDelta /120 > 0) {
+//             e.preventDefault();
+//             e.stopPropagation();
+//             if( isAnimating ) {
+//                 return false;
+//             }
+//             isAnimating  = true;
+//             if( e.originalEvent.wheelDelta >= 0 ) {
+//                 currentAnchor--;
+//             }else{
+//                 currentAnchor++;
+//             }
+//             if( currentAnchor > (anchors.length - 1) 
+//                || currentAnchor < 0 ) {
+//                 currentAnchor = 0;
+//             }
+//             isAnimating  = true;
+//             $('html, body').animate({
+//                 scrollTop: parseInt( anchors[currentAnchor] )
+//             }, 1500, 'swing', function(){
+//                 isAnimating  = false;
+//             });
+//         }
+//         else {
             
-        }    
-    });
-    updateAnchors();   
+//         }    
+//     });
+//     updateAnchors();   
+// });
+
+
+$('.section-box .content-video .iframe_bg button').click(function() {
+  $('.section-box .content-video .iframe_bg').fadeOut();
 });

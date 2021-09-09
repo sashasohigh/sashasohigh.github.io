@@ -825,7 +825,7 @@ p {
 }
 
 .section-services .wrapper {
-	height: 365px;
+	/* height: 365px; */
 	display: flex;
 	overflow: hidden;
 	margin: 0 -24px;
@@ -836,6 +836,7 @@ p {
 .section-services .head {
 	background: #fff;
 	width: 100%;
+	padding-top: 60px;
 }
 
 .section-services .wrapper .container {
@@ -2603,34 +2604,47 @@ footer .footer-bottom p {
 .video-popup .video-content .close svg path {
 }
 
-.section-partners {
+.section-services {
 	
 }
 
-.section-partners .cont {
+.section-services .inner {
+
+display: flex;
+
+align-items: center;
+}
+
+.section-services .heading-4 {
+	
+width: 50%;
+}
+
+.section-services .cont {
 	padding-top: 80px;
 }
 
-.section-partners .gallery-content {
+.section-services .gallery-content {
 	padding: 0;
+	width: 50%;
 }
 
-.section-partners .slick-arrow {
+.section-services .slick-arrow {
 	background-image: url(../img/icons/arrow_primary.svg);
 }
 
-.section-partners .slick-arrow:hover::before {
+.section-services .slick-arrow:hover::before {
 	border-top-color: #030B1E;
 	border-right-color: #030B1E;
 	border-bottom-color: #030B1E;
 	transition: border-top-color 0.3s linear, border-right-color 0.3s linear 0.1s, border-bottom-color 0.3s linear 0.2s;
 }
 
-.section-partners .slick-arrow::after {
+.section-services .slick-arrow::after {
 	border: 0 solid transparent;
 }
 
-.section-partners .slick-arrow:hover::after {
+.section-services .slick-arrow:hover::after {
 	border-top: 1px solid #030B1E;
 	border-left-width: 1px;
 	border-right-width: 1px;
@@ -2638,11 +2652,11 @@ footer .footer-bottom p {
 	transition: transform 0.4s linear 0s, border-left-width 0s linear 0.35s;
 }
 
-.section-partners .gallery-content img {
+.section-services .gallery-content img {
 	object-fit: contain;
 }
 
-.section-partners .wrapper {
+.section-services .wrapper {
     margin: 0 -24px;
     padding: 0 24px;
 }

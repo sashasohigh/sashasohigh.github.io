@@ -1054,14 +1054,14 @@ p {
 	z-index: 0;
 }
 
-@supports (-webkit-text-stroke:1px #EAEAEA) {
+@supports (-webkit-text-stroke:2px #EAEAEA) {
 	.ticker {
 		color: #FFFFFF;
-		-webkit-text-stroke: 1px #EAEAEA;
+		-webkit-text-stroke: 2px #EAEAEA;
 	}
 
 	.section-projects-gallery .ticker {
-		-webkit-text-stroke: 1px #3E5685;
+		-webkit-text-stroke: 2px #3E5685;
 	}
 
 }
@@ -1456,7 +1456,7 @@ footer .footer-bottom p {
 }
 
 .section-box .container .content {
-	width: calc(100% - 650px);
+	/*width: calc(100% - 650px);*/
 }
 
 .section-box h4 {
@@ -1477,6 +1477,7 @@ footer .footer-bottom p {
 	font-size: 16px;
 	line-height: 26px;
 	margin-bottom: 40px;
+	width: calc(100% - 650px);
 }
 
 .section-box .content-video {
@@ -1584,7 +1585,7 @@ footer .footer-bottom p {
 }
 
 .section-category .content h4 {
-	max-width: 675px;
+	/*max-width: 675px;*/
 	padding-bottom: 60px;
 }
 

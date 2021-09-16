@@ -31,8 +31,7 @@ section {
 .heading-1 {
 	font-style: normal;
 	font-weight: 300;
-	font-size: 142px;
-	line-height: 152px;
+	font-size: 80px;
 	color: #FFFFFF;
 }
 
@@ -2663,10 +2662,10 @@ width: 50%;
 }
 
 @media (max-width:1200px) {
-	.heading-1 {
+	/*.heading-1 {
 		font-size: 102px;
 		line-height: 152px;
-	}
+	}*/
 
 	.heading-4 {
 		font-size: 42px;

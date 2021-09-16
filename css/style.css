@@ -724,7 +724,7 @@ p {
 .section-home-one h1 {
 	margin: 0;
 	margin-bottom: 40px;
-	width: 50%;
+	/*width: 50%;*/
 }
 
 .section-home-one h1 span {

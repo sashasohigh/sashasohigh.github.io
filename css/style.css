@@ -2601,6 +2601,9 @@ footer .footer-bottom p {
 	width: 100%;
 }
 
+.video-popup .video-content .video-js .vjs-picture-in-picture-control, .video-popup .video-content .video-js .vjs-volume-panel {
+	display: none;
+}
 
 .video-js .vjs-big-play-button {
 	top: 50%;

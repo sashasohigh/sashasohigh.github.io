@@ -334,10 +334,14 @@ $('#tab_li_3').click(function() {
 
 $('#btn-video').click(function() {
   $('.video-popup').addClass('active');
+  var myPlayer = videojs('#my-video_html5_api');
+  myPlayer.play();
 });
 
 $('.video-popup .close').click(function() {
   $('.video-popup').removeClass('active');
+  var myPlayer = videojs('#my-video_html5_api');
+  myPlayer.pause();
 });
 
 // $(document).ready(function() {
@@ -370,3 +374,4 @@ location.hash = ''; //очищаем хеш
 if(myHash[1] != undefined){ //проверяем, есть ли в хеше какое-то значение
     $('html, body').animate({scrollTop: $(myHash).offset().top}, 500); //скроллим за полсекунды
 };
+

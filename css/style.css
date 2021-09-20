@@ -2601,6 +2601,10 @@ footer .footer-bottom p {
 	width: 100%;
 }
 
+.video-popup .video-content .video-js .vjs-control-bar {
+	display: none;
+}
+
 .video-js .vjs-big-play-button {
 	top: 50%;
 	left: 50%;
@@ -2610,6 +2614,8 @@ footer .footer-bottom p {
 .video-popup .video-content .close {
 	position: absolute;
 	cursor: pointer;
+	top: -50px;
+	right: -0;
 }
 
 .video-popup .video-content .close svg {

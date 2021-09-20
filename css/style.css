@@ -2591,6 +2591,22 @@ footer .footer-bottom p {
 	width: 100%;
 }
 
+.video-popup .video-content .video-js {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.video-js .vjs-big-play-button {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
 .video-popup .video-content .close {
 	position: absolute;
 	cursor: pointer;

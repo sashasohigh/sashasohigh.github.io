@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet" />
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -1387,7 +1388,27 @@
 	</footer>
 	<div class="video-popup">
 		<div class="video-content">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/XBZtE-ae7xE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/XBZtE-ae7xE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+			<video
+			    id="my-video"
+			    class="video-js"
+			    controls
+			    preload="auto"
+			    width="640"
+			    height="264"
+			    poster="MY_VIDEO_POSTER.jpg"
+			    data-setup="{}"
+			  >
+			    <source src="video/video.mp4" type="video/mp4" />
+			    <source src="video/video.webm" type="video/webm" />
+			    <p class="vjs-no-js">
+			      To view this video please enable JavaScript, and consider upgrading to a
+			      web browser that
+			      <a href="https://videojs.com/html5-video-support/" target="_blank"
+			        >supports HTML5 video</a
+			      >
+			    </p>
+			  </video>
 			<div class="close">
 				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.5 7.5L7.5 16.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.5 7.5L16.5 16.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
 			</div>
@@ -1396,6 +1417,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="https://vjs.zencdn.net/7.14.3/video.min.js"></script>
 	<script src="js/lazy-line-painter-1.9.6.min.js"></script>
 	<script src='js/scripts.js'></script>
 </body>

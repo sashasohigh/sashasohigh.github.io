@@ -1682,11 +1682,31 @@ header.header-bg {
 
 .section-contacts {
 	margin-top: 60px;
+	position: relative;
 	.container {
 		display: flex;
 		.left {
 			width: calc(50% - 20px);
 			margin-right: 20px;
+			.map-wrapper {
+				height: 100%;
+				width: 100%;
+				background-size: cover!important;
+				background-position: center!important;
+				display: flex;
+				align-items: center;
+			}
+			.content {
+				p.info {
+					margin: 0;
+					margin-bottom: 20px;
+					font-style: normal;
+					font-weight: 500;
+					font-size: 12px;
+					line-height: 125%;
+					color: #7D7D7D;
+				}
+			}
 		}
 		.right {
 			width: calc(50% - 20px);

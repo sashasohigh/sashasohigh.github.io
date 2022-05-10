@@ -18,8 +18,8 @@ $('.events-slider').slick({
   slidesToShow: 1,
   centerMode: false,
   variableWidth: true,
-  prevArrow: $('.section-home-5 .prev'),
-  nextArrow: $('.section-home-5 .next'),
+  prevArrow: $('.section-events .prev'),
+  nextArrow: $('.section-events .next'),
 });
 
  $('.team-slider').slick({
@@ -46,8 +46,14 @@ $('.reviews-slider').slick({
   slidesToShow: 3
 });
 
+$('.video-slider').slick({
+  arrows: true,
+  infinite: true,
+  slidesToShow: 1
+});
 
-var header = $("header");
+
+var header = $(".header-home");
 var scrollChange = 25;
 $(window).scroll(function() {
     var scroll = $(window).scrollTop();
@@ -93,13 +99,13 @@ $(document).ready(function () {
   var offset = 600;
   $(window).scroll(function(){
     var scrolltop = $(this).scrollTop();
-    $('.section-home-2 .count-need').each(function(){
+    $('.count-need').each(function(){
       if(scrolltop >= $(this).offset().top - offset) {
-        $('.section-home-2 .count-need').each(function () {
+        $('.count-need').each(function () {
           $(this).prop('Counter',0).animate({
           Counter: $(this).text()
           }, {
-          duration: 10000,
+          duration: 5000,
           easing: 'swing',
           step: function (now) {
           $(this).text(Math.ceil(now));
@@ -117,13 +123,13 @@ $(document).ready(function () {
   var offset = 600;
   $(window).scroll(function(){
     var scrolltop = $(this).scrollTop();
-    $('.section-home-7 .count-need').each(function(){
+    $('.count-need').each(function(){
       if(scrolltop >= $(this).offset().top - offset) {
-        $('.section-home-7 .count-need').each(function () {
+        $('.count-need').each(function () {
           $(this).prop('Counter',0).animate({
           Counter: $(this).text()
           }, {
-          duration: 10000,
+          duration: 5000,
           easing: 'swing',
           step: function (now) {
           $(this).text(Math.ceil(now));

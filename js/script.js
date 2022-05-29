@@ -20,6 +20,20 @@ $('.events-slider').slick({
   variableWidth: true,
   prevArrow: $('.section-events .prev'),
   nextArrow: $('.section-events .next'),
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ]
 });
 
  $('.team-slider').slick({
@@ -43,7 +57,21 @@ $('.team-slider-nav').slick({
 $('.reviews-slider').slick({
   arrows: true,
   infinite: true,
-  slidesToShow: 3
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 1000,
+      settings: {
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ]
 });
 
 $('.video-slider').slick({
@@ -51,6 +79,63 @@ $('.video-slider').slick({
   infinite: true,
   slidesToShow: 1
 });
+
+if ($(window).width() < 1000) {
+  $('.books-slider').slick({
+    arrows: true,
+    infinite: true,
+    slidesToShow: 2,
+    prevArrow: $('.section-books .prev'),
+    nextArrow: $('.section-books .next')
+    // responsive: [
+    //   {
+    //     breakpoint: 768,
+    //     settings: {
+    //       arrows: true,
+    //       infinite: true,
+    //       slidesToShow: 2,
+    //     }
+    //   },
+    //   {
+    //     breakpoint: 480,
+    //     settings: {
+    //       slidesToShow: 1
+    //     }
+    //   }
+    // ]
+  });
+  $('.blog-slider').slick({
+    arrows: true,
+    infinite: true,
+    slidesToShow: 2,
+    prevArrow: $('.section-blog .prev'),
+    nextArrow: $('.section-blog .next')
+    // responsive: [
+    //   {
+    //     breakpoint: 768,
+    //     settings: {
+    //       arrows: true,
+    //       infinite: true,
+    //       slidesToShow: 2,
+    //     }
+    //   },
+    //   {
+    //     breakpoint: 480,
+    //     settings: {
+    //       slidesToShow: 1
+    //     }
+    //   }
+    // ]
+  });
+  $('.card-slider').slick({
+    arrows: true,
+    infinite: true,
+    slidesToShow: 2
+  });
+}
+else {
+   // alert('More than 960');
+}
 
 
 var header = $(".header-home");

@@ -11,6 +11,10 @@
 //   $('header').toggleClass('open_menu');
 // });
 
+$('.btn-trigger').click(function() {
+  $('header').toggleClass('open-menu');
+});
+
 
 $('.events-slider').slick({
   arrows: true,

@@ -66,8 +66,9 @@ $('.reviews-slider').slick({
       }
     },
     {
-      breakpoint: 480,
+      breakpoint: 550,
       settings: {
+        variableWidth: true,
         slidesToShow: 1
       }
     }
@@ -86,46 +87,30 @@ if ($(window).width() < 1000) {
     infinite: true,
     slidesToShow: 2,
     prevArrow: $('.section-books .prev'),
-    nextArrow: $('.section-books .next')
-    // responsive: [
-    //   {
-    //     breakpoint: 768,
-    //     settings: {
-    //       arrows: true,
-    //       infinite: true,
-    //       slidesToShow: 2,
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 480,
-    //     settings: {
-    //       slidesToShow: 1
-    //     }
-    //   }
-    // ]
+    nextArrow: $('.section-books .next'),
+    responsive: [
+      {
+        breakpoint: 550,
+        settings: {
+          variableWidth: true
+        }
+      }
+    ]
   });
   $('.blog-slider').slick({
     arrows: true,
     infinite: true,
     slidesToShow: 2,
     prevArrow: $('.section-blog .prev'),
-    nextArrow: $('.section-blog .next')
-    // responsive: [
-    //   {
-    //     breakpoint: 768,
-    //     settings: {
-    //       arrows: true,
-    //       infinite: true,
-    //       slidesToShow: 2,
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 480,
-    //     settings: {
-    //       slidesToShow: 1
-    //     }
-    //   }
-    // ]
+    nextArrow: $('.section-blog .next'),
+    responsive: [
+      {
+        breakpoint: 550,
+        settings: {
+          variableWidth: true
+        }
+      }
+    ]
   });
   $('.card-slider').slick({
     arrows: true,

@@ -407,8 +407,9 @@
 		z-index: 1;
 	}
 	header.open-menu,
-	header .content {
+	header.open-menu .content {
 		background: #ffffff;
+		transition: 0.3s;
 	}
 	header.open-menu .content .btn-trigger {
 		background: #4B2D3A;

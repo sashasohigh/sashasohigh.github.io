@@ -207,7 +207,11 @@
 	.section-courses-1 {
 		margin-top: 45px;
 	}
-	.section-book-single .container .content .bottom-mob {
+	.section-igor-1 {
+		margin-top: 40px;
+	}
+	.section-book-single .container .content .bottom-mob,
+	.section-about-1 {
 		margin-top: 35px;
 	}
 	.section-contacts .container .right hr,
@@ -243,8 +247,13 @@
 	}
 	.section-contacts .container .right p.street,
 	.section-about-4 .container .content .left,
-	.section-home-4 .container .title-wrapper {
+	.section-home-4 .container .title-wrapper,
+	.card-slider .slick-list {
 		margin-bottom: 25px;
+	}
+	.section-title .container .content .buttons,
+	.section-title .container .content h1 {
+		margin-bottom: 20px;
 	}
 	.section-contacts .container .right hr,
 	.section-books .container .books-wrapper .item .inner h6.heading-6 {
@@ -258,7 +267,6 @@
 	.section-home-2 .container .wrapper .side ol,
 	.section-title .container .content .buttons button,
 	.section-book-single .container .content .right .bottom p.info,
-	.card-slider .slick-list,
 	.section-courses-1 {
 		margin-bottom: 0;
 	}
@@ -296,7 +304,8 @@
 	.section-about-2 .container .content-1,
 	.section-about-2 .container .content-2,
 	.section-igor-2 .container .content-1 .right,
-	.section-courses-1 .container .content .item {
+	.section-courses-1 .container .content .item,
+	.section-title .container .content .desc {
 		margin-bottom: 35px;
 	}
 	.section-courses-2 .container .content .item {
@@ -333,7 +342,8 @@
 		padding-bottom: 25px;
 	}*/
 	.section-home-2 .container .wrapper .side,
-	.section-courses-1 .container .content .item .thumb:before {
+	.section-courses-1 .container .content .item .thumb:before,
+	.section-title .container .content {
 		padding-bottom: 0;
 	}
 	.section-blog .container .blog-wrapper .item .inner .info p.category,
@@ -729,6 +739,9 @@
 	.section-about-5 .container .wrapper .item h2 {
 		text-align: left;
 	}
+	/*.section-title .container .content {
+		border: none;
+	}*/
 }
 
 @media(max-width:768px) {
@@ -1168,9 +1181,9 @@
 		padding-bottom: 25px;
 	}
 	,
-	.section-title .container .content {
+	/*.section-title .container .content {
 		padding-bottom: 20px;
-	}
+	}*/
 	.section-home-4 .container .content-wrapper .item .inner .back .content,
 	 .section-events .container .events .item .content .head {
 		padding-bottom: 15px;
@@ -1203,8 +1216,7 @@
 	.section-book-single .container .content .right .bottom a,
 	.section-book-single .container .content .right .bottom p.info,
 	.section-courses-2 .container .content .item .inner .bottom .buttons button,
-	.section-igor-3 .container .content .left p,
-	.section-title .container .content h1 {
+	.section-igor-3 .container .content .left p {
 		margin: 0;
 	}
 	.section-about-4 {
@@ -1517,6 +1529,9 @@
 	}
 	.section-books .container .books-slider .item .inner .bottom .link {
 		font-size: 14px;
+	}
+	.section-events .container .events .item .thumb img {
+		border-radius: 5px 5px 0 0;
 	}
 }
 

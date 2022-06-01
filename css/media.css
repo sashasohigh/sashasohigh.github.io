@@ -62,6 +62,9 @@
 		height: 40px;
 		width: 40px;
 	}
+		.events-page {
+		padding-top: 45px;
+	}
 	.section-home-7 .container .body .right .box-wrapper .block .inner, 
 	.section-home-7 .container .body .right .box-wrapper .block-link .inner {
 		padding: 10px;
@@ -87,7 +90,9 @@
 	.section-books .container .title-wrapper .arrows, 
 	.section-blog .container .title-wrapper .arrows,
 	header .content-mob,
-	header .content .btn-trigger {
+	header .content .btn-trigger,
+	.section-about-1 .container .content-1 .img-mob,
+	.section-book-single .container .content .bottom-mob {
 		display: none;
 	}
 }
@@ -101,7 +106,12 @@
 	footer .container .left .logo,
 	header.open-menu .content a.logo img:first-child,
 	header.open-menu .content .btn-trigger span:nth-child(2),
-	.section-book-single .container .content .right .desc {
+	.section-book-single .container .content .right .desc,
+	.section-home-6,
+	.section-about-1 .container .content-1,
+	.section-about-5 .container .wrapper .item .content .left,
+	.section-title .container .content .books,
+	.books-page .container h2.heading-2 {
 		display: none;
 	}
 	.section-books .container .title-wrapper .arrows,
@@ -116,7 +126,8 @@
 	.section-igor-2 .container .content-1,
 	.section-book-single .container .content .right .bottom,
 	.section-book-single .container .content,
-	.section-courses-1 .container .content .item .inner .top {
+	.section-courses-1 .container .content .item .inner .top,
+	.section-home-3 .programs .item .inner .desc {
 		flex-wrap: wrap;
 	}
 	.section-title .container .content .buttons {
@@ -141,7 +152,13 @@
 	.section-igor-2 .container .content-1 .left,
 	.section-igor-2 .container .content-1 .right,
 	.section-courses-2 .container .content .item,
-	.section-courses-1 .container .content .item {
+	.section-courses-1 .container .content .item,
+	.section-home-3 .programs .item .inner .desc ul.ul-list,
+	.section-about-5 .container .wrapper .item .content .left,
+	.section-about-5 .container .wrapper .item .content .right,
+	.section-about-5 .container .wrapper .item:nth-child(even) .content .right,
+	.section-title .container .content h1,
+	.section-title .container .content .desc {
 		width: 100%;
 	}
 	.section-igor-3 .container .content .left,
@@ -149,7 +166,8 @@
 		width: 50%;
 	}
 	.section-home-2 .container .wrapper .side {
-		width: calc(40% - 60px);
+		width: calc(40% - 30px);
+		padding-right: 30px;
 	}
 	.section-home-2 .container .wrapper .content {
 		width: 60%;
@@ -174,14 +192,37 @@
 	.section-blog .container .blog-wrapper .item .inner .info p.views {
 		margin-left: 10px;
 	}
-	.section-book-single .container .content .bottom-mob {
-		margin-top: 40px;
+	.section-title .container .content h1 {
+		margin-right: 0;
 	}
-	.section-contacts .container .right hr {
+	.section-home-3,
+	.section-books {
+		margin-top: 70px;
+	}
+	.section-home-2 {
+		margin-top: 50px;
+	}
+	.section-blog,
+	.books-page,
+	.section-courses-1 {
+		margin-top: 45px;
+	}
+	.section-book-single .container .content .bottom-mob {
+		margin-top: 35px;
+	}
+	.section-contacts .container .right hr,
+	.section-title .container .content .buttons,
+	.section-courses-2 {
 		margin-top: 20px;
+	}
+	.section-about-5 .container .wrapper .item h2 {
+		margin-top: 0;
 	}
 	.section-contacts .container .right .social {
 		margin-bottom: 50px;
+	}
+	.section-about-5 .item {
+		margin-bottom: 40px;
 	}
 	.section-blog .container h2.heading-2,
 	.section-contacts .container .right h2.heading-2,
@@ -195,14 +236,18 @@
 	.section-books .container .title-wrapper,
 	.section-events .container .title-wrapper,
 	.section-about-1 .container .content-1 .inner-1 p,
-	.section-team .container .content {
+	.section-team .container .content,
+	.section-home-3 .programs .item .inner .desc ul.ul-list,
+	.section-about-5 .container .wrapper .item h2 {
 		margin-bottom: 35px;
 	}
 	.section-contacts .container .right p.street,
-	.section-about-4 .container .content .left {
+	.section-about-4 .container .content .left,
+	.section-home-4 .container .title-wrapper {
 		margin-bottom: 25px;
 	}
-	.section-contacts .container .right hr {
+	.section-contacts .container .right hr,
+	.section-books .container .books-wrapper .item .inner h6.heading-6 {
 		margin-bottom: 15px;
 	}
 	.section-contacts .container .right .link-contact,
@@ -212,7 +257,9 @@
 	}
 	.section-home-2 .container .wrapper .side ol,
 	.section-title .container .content .buttons button,
-	.section-book-single .container .content .right .bottom p.info {
+	.section-book-single .container .content .right .bottom p.info,
+	.card-slider .slick-list,
+	.section-courses-1 {
 		margin-bottom: 0;
 	}
 	.section-home-7 .container .head p.desc,
@@ -229,7 +276,9 @@
 	.section-courses-2 .container .content .item,
 	.section-courses-1 .container .content .item .inner .bottom .buttons p.price,
 	.section-courses-1 .container .content,
-	.section-courses-1 .container .content .item {
+	.section-courses-1 .container .content .item,
+	.section-about-5 .container .wrapper .item .content .right,
+	.section-title .container .content .desc {
 		margin: 0;
 	}
 	.section-home-4 .container .content-wrapper .item,
@@ -255,9 +304,8 @@
 		margin-bottom: 25px;
 	}
 	.section-home-1 .content,
-	.section-home-2 .container .wrapper .side,
-	.section-title .container .content,
-	.section-about-1 .container .content-1 {
+	.section-about-1 .container .content-1,
+	.section-title .container .content {
 		padding-bottom: 35px;
 	}
 	.section-about-1 .container .content-1 {
@@ -269,6 +317,10 @@
 	.section-home-1 .content-bottom {
 		padding-top: 35px;
 	}
+	.section-book-single .container .content .bottom-mob {
+		padding-top: 25px;
+		border-top: 1px solid rgba(125, 125, 125, 0.2);
+	}
 	.section-igor-3 .container .content .right {
 		padding: 0;
 		padding-left: 20px;
@@ -276,6 +328,13 @@
 	.section-igor-3 .container .content .left {
 		padding: 0;
 		padding-right: 20px;
+	}
+	/*.section-title .container .content {
+		padding-bottom: 25px;
+	}*/
+	.section-home-2 .container .wrapper .side,
+	.section-courses-1 .container .content .item .thumb:before {
+		padding-bottom: 0;
 	}
 	.section-blog .container .blog-wrapper .item .inner .info p.category,
 	.section-blog .container .blog-wrapper .item .inner .info p.date, 
@@ -304,7 +363,7 @@
 		width: calc(40% - 20px);
 		margin-left: 20px;
 	}
-	.section-igor-2 .container .content-1 .left {
+	.section-igor-2 .container .content-1 .left .video-slider .item iframe {
 		height: 620px;
 	}
 	header {
@@ -385,7 +444,8 @@
 		margin-right: 30px;
 	}
 
-	.section-home-2 .container .wrapper-mob  {
+	.section-home-2 .container .wrapper-mob,
+	.section-home-2 .container .wrapper .side ol {
 		margin-top: 35px;
 	}
 
@@ -468,9 +528,9 @@
 		right: 40%;
 	}
 	.card-slider .slick-arrow {
-		position: absolute;
+		/*position: absolute;*/
 		bottom: 0;
-		margin: 0;
+		margin: 0 20px;
 	}
 	.section-blog .container .title-wrapper .arrows .next,
 	.section-books .container .title-wrapper .arrows .next,
@@ -567,14 +627,14 @@
 		width: 45%;
 		margin-right: 5%;
 	}
-	.section-about-5 .container .wrapper .item .content .right {
+	/*.section-about-5 .container .wrapper .item .content .right {
 		width: calc(50% - 20px);
 		margin-left: 20px;
 	}
 	.section-about-5 .container .wrapper .item:nth-child(even) .content .right {
 		width: calc(50% - 20px);
 		margin-right: 20px;
-	}
+	}*/
 	.section-about-2 .container .content-3 .wrapper-count .col {
 		width: calc(50% - 1px);
 		border: none;
@@ -653,6 +713,22 @@
 	.section-courses-1 .container .content .item .inner .top {
 		margin-bottom: 180px;
 	}
+	.section-home-7 .container .body .left .team-slider-nav .slick-list {
+		display: none!important;
+	}
+	.section-home-7 .container .body .left .team-slider-nav {
+		justify-content: center;
+	}
+	.section-home-7 .container .body .left .team-slider-nav .slick-arrow {
+		margin: 0;
+		margin: 0 20px;
+	}
+	.section-home-2 .container .wrapper .side .position {
+		position: static;
+	}
+	.section-about-5 .container .wrapper .item h2 {
+		text-align: left;
+	}
 }
 
 @media(max-width:768px) {
@@ -699,7 +775,6 @@
 		margin-bottom: 35px;
 	}
 	.section-about-2 .container .content-1 .w50 .block img,
-	.section-about-2 .container .content-1,
 	.section-about-2 .container .content-2,
 	.section-title .container .content h1 {
 		margin-bottom: 20px;
@@ -748,11 +823,6 @@
 	.section-about-2 .container .content-2 p:nth-child(odd),
 	.section-about-3 .container .content .left,
 	.section-about-3 .container .content .right,
-	.section-about-5 .container .wrapper .item .content .left,
-	.section-about-5 .container .wrapper .item .content .right,
-	.section-about-5 .container .wrapper .item:nth-child(even) .content .right,
-	.section-title .container .content h1,
-	.section-title .container .content .desc,
 	.section-igor-3 .container .content .left, 
 	.section-igor-3 .container .content .right,
 	.section-title .container .content .books {
@@ -865,15 +935,9 @@
 		height: 125px;
 		width: 125px;
 	}
-	.section-about-5 .container .wrapper .item:nth-child(even) .content .right,
-	.section-about-5 .container .wrapper .item .content .right,
-	.section-title .container .content .desc {
+	.section-about-5 .container .wrapper .item:nth-child(even) .content .right {
 		margin: 0;
 	}
-	.section-title .container .content h1 {
-		margin-right: 0;
-	}
-	.section-about-5 .container .wrapper .item h2,
 	.section-igor-3 .container .content,
 	.section-igor-3 .container .content .right .item p {
 		text-align: left;
@@ -921,6 +985,15 @@
 
 }
 
+@media(min-width:550px) {
+	.section-about-3 .container .content .left .heading-2,
+	.section-about-4 .container .content .right .img-mob,
+	.section-igor-2 .container .content-1 .left .mob,
+	.section-book-single .container .content .right .img-mob {
+		display: none;
+	}
+}
+
 @media(max-width:550px) {
 	.section-home-2 .container .wrapper-mob,
 	.section-home-3 .programs .item .inner .desc ul.ul-list,
@@ -931,7 +1004,9 @@
 	.books-page h2,
 	.section-book-single .container .content .left,
 	.section-book-single .container .content .bottom-mob,
-	.section-courses-1 .container .content .item .inner .bottom .info span:after {
+	.section-courses-1 .container .content .item .inner .bottom .info span:after,
+	.section-about-3 .container .content .right h2,
+	.section-igor-2 .container .content-1 .right {
 		display: none;
 	}
 	.wrapper-count .col .count h2 {
@@ -976,7 +1051,8 @@
 	.section-books .container .books-wrapper .item .inner h6.heading-6,
 	.section-book-single .container .content .right .desc p,
 	.section-courses-1 .container .content .item .inner .bottom .info span,
-	.section-courses-2 .container .content .item .inner .mid .info {
+	.section-courses-2 .container .content .item .inner .mid .info,
+	.section-igor-3 .container .content .left p {
 		font-size: 14px;
 	}
 	.section-home-4 .container .content-wrapper .item .inner .back .content .quote p.desc,
@@ -1052,7 +1128,9 @@
 	.section-courses-1 .container .content .item .inner .bottom .buttons button,
 	.section-courses-2 .container .content .item .thumb,
 	.section-courses-2 .container .content .item .inner,
-	.section-courses-2 .container .content .item .inner .bottom .buttons button {
+	.section-courses-2 .container .content .item .inner .bottom .buttons button,
+	.section-about-4 .container .content .right .btn-one,
+	.section-igor-2 .container .content-1 .left .video-slider .slick-list {
 		width: 100%;
 		max-width: none;
 	}
@@ -1075,8 +1153,8 @@
 	.section-home-7 .container .body .right .box-wrapper .block:before, 
 	.section-home-7 .container .body .right .box-wrapper .block-link:before,
 	.section-about-1 .container .content-1,
-	.section-title .container .content,
-	.section-book-single .container .content .right {
+	.section-book-single .container .content .right,
+	.events-page {
 		padding: 0;
 	}
 	.section-events .container .events .item .content {
@@ -1089,12 +1167,18 @@
 	.section-home-1 .content {
 		padding-bottom: 25px;
 	}
+	,
+	.section-title .container .content {
+		padding-bottom: 20px;
+	}
 	.section-home-4 .container .content-wrapper .item .inner .back .content,
 	 .section-events .container .events .item .content .head {
 		padding-bottom: 15px;
 	}
-	footer,
 	.section-about-1 .container .content-1 {
+		padding-top: 45px;
+	}
+	footer {
 		padding-top: 35px;
 	}
 	.section-home-1 .content-bottom,
@@ -1118,7 +1202,9 @@
 	.section-blog .container .blog-wrapper,
 	.section-book-single .container .content .right .bottom a,
 	.section-book-single .container .content .right .bottom p.info,
-	.section-courses-2 .container .content .item .inner .bottom .buttons button {
+	.section-courses-2 .container .content .item .inner .bottom .buttons button,
+	.section-igor-3 .container .content .left p,
+	.section-title .container .content h1 {
 		margin: 0;
 	}
 	.section-about-4 {
@@ -1136,7 +1222,11 @@
 	.section-home-3 .programs .item .inner hr {
 		margin: 15px 0 25px;
 	}
-	.section-form-banner .container .right form .buttons .btn-two {
+	.section-igor-2 .container .content-1 .left .video-slider .slick-arrow {
+		margin: 0 20px;
+	}
+	.section-form-banner .container .right form .buttons .btn-two,
+	.section-about-2 .container .content-2 p {
 		margin-top: 5px;
 	}
 	.wrapper-count .col .count h2 small {
@@ -1151,6 +1241,9 @@
 	.section-about-3 .container .content .right .btn-outline {
 		margin-top: 25px;
 	}
+	.section-title .container .content .buttons {
+		margin-top: 30px;
+	}
 	.section-home-2,
 	.section-home-3 {
 		margin-top: 35px;
@@ -1159,18 +1252,32 @@
 	.section-courses-1 {
 		margin-top: 40px;
 	}
+	.section-team,
+	.section-blog {
+		margin-top: 45px;
+	}
 	.section-home-2 .container .wrapper .side ol,
 	.section-about-2 {
 		margin-top: 50px;
 	}
+	.section-about-3,
+	.section-igor-2 {
+		margin-top: 70px;
+	}
+	.section-about-2 {
+		margin-bottom: 70px;
+	}
 	.section-courses-1 .container .content .item .inner .top {
 		margin-bottom: 80px;
+	}
+	.section-title .container .content {
+		margin-bottom: 45px;
 	}
 	.section-home-2,
 	.section-contacts .container .right .social,
 	.section-about-2 .container .content-1 h2,
 	.section-team .container .content .item,
-	.section-blog .container .blog-wrapper .item {
+	.section-breadcrumbs {
 		margin-bottom: 35px;
 	}
 	.section-home-2 .container .wrapper .img-mob,
@@ -1179,7 +1286,9 @@
 	footer .container .right ul.footer-nav li.has-child,
 	.section-about-1 .container .content-1 .inner-1 p,
 	.img-mob,
-	.section-igor-3 .container .content .right .item {
+	.section-igor-3 .container .content .right .item,
+	.section-about-3 .container .content .left .subtitle,
+	.section-blog .container .blog-wrapper .item {
 		margin-bottom: 25px;
 	}
 	.section-home-1 .content-bottom .col:nth-child(1),
@@ -1192,7 +1301,12 @@
 	.section-courses-2 .container .content .item .thumb {
 		margin-bottom: 15px;
 	}
-	.section-form-banner .container .right form p label {
+	.section-igor-2 .container .content-1 .left .video-slider .slick-list,
+	.section-igor-3 .container .content .left p {
+		margin-bottom: 10px;
+	}
+	.section-form-banner .container .right form p label,
+	.section-about-4 .container .content .right ul li {
 		margin-bottom: 5px;
 	}
 	.section-events .container .title-wrapper .arrows .next,
@@ -1238,8 +1352,11 @@
 		left: 5px;
 		right: 5px;
 	}
-	.section-contacts .container .left,
 	.section-igor-2 .container .content-1 .left {
+		height: auto;
+	}
+	.section-contacts .container .left,
+	.section-igor-2 .container .content-1 .left .video-slider .item iframe {
 		height: 300px;
 	}
 	.btn-one, 
@@ -1361,6 +1478,45 @@
 	.section-courses-1 .container .content .item .inner .bottom .buttons {
 		flex-direction: column-reverse;
 		align-items: baseline;
+	}
+	.section-home-7 .container .body .right .box-wrapper .block .inner, 
+	.section-home-7 .container .body .right .box-wrapper .block-link .inner,
+	.section-igor-2 .container .content-1 .left .video-slider .slick-arrow {
+		position: static;
+	}
+	.section-igor-2 .container .content-1 .left .video-slider .slick-arrow {
+		height: 40px;
+		width: 40px;
+	}
+	.section-about-4 .container .content .right,
+	.section-igor-2 .container .content-1 .left .video-slider {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.section-igor-2 .container .content-1 .left .video-slider {
+		justify-content: center;
+	}
+	.section-about-4 .container .content .right ul,
+	.section-igor-2 .container .content-1 .left .video-slider .slick-prev {
+		order: 1;
+	}
+	.section-about-4 .container .content .right .img-mob,
+	.section-igor-2 .container .content-1 .left .video-slider .slick-list {
+		order: 0;
+	}
+	.section-about-4 .container .content .right .btn-one,
+	.section-igor-2 .container .content-1 .left .video-slider .slick-next {
+		order: 2;
+	}
+	.section-books .container .books-wrapper .item .inner .bottom p.price {
+		font-size: 28px;
+	}
+	.books-page .container .books-wrapper .item .inner .bottom p.price,
+	.events-page .container .events .item .content .body h6.title {
+		font-size: 16px;
+	}
+	.section-books .container .books-slider .item .inner .bottom .link {
+		font-size: 14px;
 	}
 }
 

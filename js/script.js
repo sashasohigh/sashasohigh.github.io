@@ -64,7 +64,7 @@ $('.reviews-slider').slick({
   slidesToShow: 3,
   responsive: [
     {
-      breakpoint: 1000,
+      breakpoint: 1100,
       settings: {
         slidesToShow: 2
       }
@@ -85,7 +85,7 @@ $('.video-slider').slick({
   slidesToShow: 1
 });
 
-if ($(window).width() < 1000) {
+if ($(window).width() < 1100) {
   $('.books-slider').slick({
     arrows: true,
     infinite: true,

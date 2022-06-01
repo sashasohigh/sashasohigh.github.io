@@ -2,10 +2,15 @@
 	header .content .phones {
 		display: none;
 	}
+	.section-about-1 .container .content-2 img {
+		margin: 0;
+		width: 100%;
+	}
 }
 
 @media(max-width:1280px) {
-	.section-home-2 .container .wrapper .content .desc {
+	.section-home-2 .container .wrapper .content .desc,
+	.section-events .container .events .item {
 		flex-wrap: wrap;
 		width: 100%;
 		margin-bottom: 20px
@@ -13,6 +18,9 @@
 	.section-home-2 .container .wrapper .content .desc p {
 		margin: 0;
 		margin-bottom: 10px;
+	}
+	.section-breadcrumbs {
+		margin-bottom: 40px;
 	}
 	.wrapper-count .col .count h2 small {
 		margin-top: 20px;
@@ -31,8 +39,16 @@
 		font-size: 45px;
 		line-height: normal;
 	}
+	.heading-3 {
+		font-size: 35px;
+		line-height: normal;
+	}
 	.heading-4 {
 		font-size: 35px;
+		line-height: normal;
+	}
+	.heading-5 {
+		font-size: 25px;
 		line-height: normal;
 	}
 	.section-home-7 .container .body .right .box-wrapper .block-link .inner p.desc {
@@ -53,6 +69,15 @@
 	.section-home-7 .container .body .right .box-wrapper .block-link .inner h6.count,
 	.section-home-7 .container .body .right .box-wrapper .block-link .inner p.desc {
 		padding: 0 10px;
+	}
+	.section-book-single .container .content .right {
+		width: calc(60% - 40px);
+		padding-left: 40px;
+	}
+	.section-events .container .events,
+	.section-events .container .events .item {
+		margin: 0;
+		margin-bottom: 25px;
 	}
 }
 
@@ -75,7 +100,8 @@
 	.section-home-2 .container .wrapper-count:before,
 	footer .container .left .logo,
 	header.open-menu .content a.logo img:first-child,
-	header.open-menu .content .btn-trigger span:nth-child(2) {
+	header.open-menu .content .btn-trigger span:nth-child(2),
+	.section-book-single .container .content .right .desc {
 		display: none;
 	}
 	.section-books .container .title-wrapper .arrows,
@@ -85,8 +111,19 @@
 	.section-home-4 .container .title-wrapper,
 	.section-home-7 .container .head,
 	.wrapper-count,
-	.section-form-banner .container {
+	.section-form-banner .container,
+	.section-about-4 .container .content,
+	.section-igor-2 .container .content-1,
+	.section-book-single .container .content .right .bottom,
+	.section-book-single .container .content,
+	.section-courses-1 .container .content .item .inner .top {
 		flex-wrap: wrap;
+	}
+	.section-title .container .content .buttons {
+		flex-wrap: nowrap;
+	}
+	.section-title .container .content .buttons {
+		overflow: auto;
 	}
 	.section-home-7 .container .head p.desc {
 		max-width: none;
@@ -98,8 +135,18 @@
 	.section-home-7 .container .body .left,
 	.section-home-7 .container .body .right,
 	.section-form-banner .container .right,
-	.section-form-banner .container .left {
+	.section-form-banner .container .left,
+	.section-about-4 .container .content .left,
+	.section-about-4 .container .content .right,
+	.section-igor-2 .container .content-1 .left,
+	.section-igor-2 .container .content-1 .right,
+	.section-courses-2 .container .content .item,
+	.section-courses-1 .container .content .item {
 		width: 100%;
+	}
+	.section-igor-3 .container .content .left,
+	.section-igor-3 .container .content .right {
+		width: 50%;
 	}
 	.section-home-2 .container .wrapper .side {
 		width: calc(40% - 60px);
@@ -115,13 +162,20 @@
 	}
 	/*.section-home-4 .container .content-wrapper,*/
 	.section-blog .container .blog-wrapper,
-	.section-books .container .books-wrapper {
+	.section-books .container .books-wrapper,
+	.section-team .container .content {
 		margin: 0 -10px;
+	}
+	.section-team .container .content .loadmore {
+		margin: 0 auto;
 	}
 	.section-blog .container .blog-wrapper .item .inner .info p.date, 
 	.section-blog .container .blog-wrapper .item .inner .info p.time, 
 	.section-blog .container .blog-wrapper .item .inner .info p.views {
 		margin-left: 10px;
+	}
+	.section-book-single .container .content .bottom-mob {
+		margin-top: 40px;
 	}
 	.section-contacts .container .right hr {
 		margin-top: 20px;
@@ -139,19 +193,26 @@
 	footer .container .right .logo,
 	.section-blog .container .title-wrapper,
 	.section-books .container .title-wrapper,
-	.section-events .container .title-wrapper {
+	.section-events .container .title-wrapper,
+	.section-about-1 .container .content-1 .inner-1 p,
+	.section-team .container .content {
 		margin-bottom: 35px;
 	}
-	.section-contacts .container .right p.street {
+	.section-contacts .container .right p.street,
+	.section-about-4 .container .content .left {
 		margin-bottom: 25px;
 	}
 	.section-contacts .container .right hr {
 		margin-bottom: 15px;
 	}
-	.section-contacts .container .right .link-contact {
+	.section-contacts .container .right .link-contact,
+	.section-igor-3 .container .content .right .item img,
+	.section-courses-1 .container .content .item .inner .top .cat {
 		margin-bottom: 10px;
 	}
-	.section-home-2 .container .wrapper .side ol {
+	.section-home-2 .container .wrapper .side ol,
+	.section-title .container .content .buttons button,
+	.section-book-single .container .content .right .bottom p.info {
 		margin-bottom: 0;
 	}
 	.section-home-7 .container .head p.desc,
@@ -160,12 +221,21 @@
 	footer .container .right,
 	.section-home-7 .container .body .left,
 	.section-home-7 .container .body .right,
-	footer .container .left {
+	footer .container .left,
+	.section-igor-2 .container .content-1 .left,
+	.section-igor-2 .container .content-1 .right,
+	.section-book-single .container .content .right .bottom a,
+	.section-courses-2 .container .content,
+	.section-courses-2 .container .content .item,
+	.section-courses-1 .container .content .item .inner .bottom .buttons p.price,
+	.section-courses-1 .container .content,
+	.section-courses-1 .container .content .item {
 		margin: 0;
 	}
 	.section-home-4 .container .content-wrapper .item,
 	.section-blog .container .blog-wrapper .item,
-	.section-books .container .books-wrapper .item {
+	.section-books .container .books-wrapper .item,
+	.section-team .container .content .item {
 		width: calc(33.3% - 20px);
 		margin: 0 10px;
 		margin-bottom: 40px;
@@ -173,12 +243,25 @@
 	.section-home-8 .container .reviews-slider .slide {
 		margin: 0 10px;
 	}
-	.section-home-7 .container .body .left {
+	.section-home-7 .container .body .left,
+	.section-about-2 .container .content-1,
+	.section-about-2 .container .content-2,
+	.section-igor-2 .container .content-1 .right,
+	.section-courses-1 .container .content .item {
 		margin-bottom: 35px;
 	}
+	.section-courses-2 .container .content .item {
+		padding-bottom: 25px;
+		margin-bottom: 25px;
+	}
 	.section-home-1 .content,
-	.section-home-2 .container .wrapper .side {
+	.section-home-2 .container .wrapper .side,
+	.section-title .container .content,
+	.section-about-1 .container .content-1 {
 		padding-bottom: 35px;
+	}
+	.section-about-1 .container .content-1 {
+		padding-top: 60px;
 	}
 	footer {
 		padding-top: 50px;
@@ -186,7 +269,14 @@
 	.section-home-1 .content-bottom {
 		padding-top: 35px;
 	}
-	
+	.section-igor-3 .container .content .right {
+		padding: 0;
+		padding-left: 20px;
+	}
+	.section-igor-3 .container .content .left {
+		padding: 0;
+		padding-right: 20px;
+	}
 	.section-blog .container .blog-wrapper .item .inner .info p.category,
 	.section-blog .container .blog-wrapper .item .inner .info p.date, 
 	.section-blog .container .blog-wrapper .item .inner .info p.time, 
@@ -203,6 +293,9 @@
 	.section-contacts .container {
 		flex-direction: row-reverse;
 	}
+	.section-igor-2 .container .content-1 {
+		flex-direction: column-reverse;
+	}
 	.section-contacts .container .right {
 		margin: 0;
 		width: 60%;
@@ -210,6 +303,9 @@
 	.section-contacts .container .left {
 		width: calc(40% - 20px);
 		margin-left: 20px;
+	}
+	.section-igor-2 .container .content-1 .left {
+		height: 620px;
 	}
 	header {
 		height: 60px;
@@ -438,6 +534,125 @@
 		opacity: 1;
 		top: 60px;
 	}
+	.btn-box {
+		height: 195px;
+		width: 195px;
+		padding: 15px;
+	}
+	.btn-box .circle {
+		height: 40px;
+		min-width: 40px;
+		top: 15px;
+		right: 15px;
+	}
+	.btn-box .circle svg {
+		width: 20px;
+	}
+	.section-about-5 .container .wrapper .item .content .right ol li:before {
+		font-size: 70px;
+		margin-right: 20px;
+	}
+	.btn-box span {
+		font-size: 20px;
+	}
+	.section-about-4 .container .content .right ul li,
+	.section-about-5 .container .wrapper .item .content .right ol li,
+	.section-igor-3 .container .content .left p {
+		font-size: 18px;
+	}
+	.section-igor-3 .container .content .right .item p {
+		font-size: 14px;
+	}
+	.section-about-2 .container .content-2 p:nth-child(odd) {
+		width: 45%;
+		margin-right: 5%;
+	}
+	.section-about-5 .container .wrapper .item .content .right {
+		width: calc(50% - 20px);
+		margin-left: 20px;
+	}
+	.section-about-5 .container .wrapper .item:nth-child(even) .content .right {
+		width: calc(50% - 20px);
+		margin-right: 20px;
+	}
+	.section-about-2 .container .content-3 .wrapper-count .col {
+		width: calc(50% - 1px);
+		border: none;
+		border-bottom: 1px solid rgba(125, 125, 125, 0.3);
+	}
+	.section-about-2 .container .content-3 .wrapper-count .col:first-child {
+		border-right: 1px solid rgba(125, 125, 125, 0.3);
+	}
+	.section-about-2 .container .content-3 .wrapper-count .col:last-child {
+		border-left: 1px solid rgba(125, 125, 125, 0.3);
+		width: calc(50% - 0px);
+	}
+	.section-about-3 .container .content .left .team .item {
+		margin-right: 40px;
+		margin-bottom: 40px;
+	}
+	.section-about-3 .container .content .left .team .item img,
+	.section-igor-3 .container .content .right .item img {
+		height: 100px;
+		width: 100px;
+	}
+	.section-about-3 .container .content .right h2 {
+		line-height: 100%;
+	}
+	.section-about-3 .container .content .right {
+		width: 50%;
+		padding: 0;
+	}
+	.section-about-2 .container .content-1 .w50 .block img {
+		height: 120px;
+	}
+	.section-about-1 .container .content-1 .inner-1 {
+		width: calc(100% - 250px);
+	}
+	.wrapper-count .col .count h2 {
+		font-size: 80px;
+	}
+	.section-igor-1 .container .content .wrapper-count .col:last-child h2 {
+		font-size: 60px;
+	}
+	.section-igor-2 .container .content-2 .wrapper-count .col {
+		width: 33.3%;
+		border: none;
+	}
+	.section-igor-2 .container .content-2 .wrapper-count .col:nth-child(2) {
+		border-left: 1px solid rgba(125, 125, 125, 0.3);
+		border-right: 1px solid rgba(125, 125, 125, 0.3);
+		width: calc(33.3% - 2px);
+	}
+	.section-igor-3 .container .content {
+		text-align: center;
+	}
+	.section-book-single .container .content .right {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: calc(60% - 20px);
+		padding-left: 20px;
+	}
+	.section-courses-1 .container .content .item .thumb {
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+	}
+	.section-courses-1 .container .content .item .inner {
+		position: relative;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		z-index: 1;
+		margin: 20px 10px;
+	}
+	.section-courses-1 .container .content .item .inner .top {
+		margin-bottom: 180px;
+	}
 }
 
 @media(max-width:768px) {
@@ -452,6 +667,10 @@
 	.heading-4 {
 		font-size: 30px;
 		line-height: normal;
+	}
+	.section-igor-3 .container .content .left, 
+	.section-igor-3 .container .content .right {
+		padding: 0;
 	}
 	.section-home-2,
 	.section-home-3,
@@ -471,18 +690,30 @@
 	.section-home-7 .container .head .title-wrapper h2.heading-2 {
 		margin: 25px 0;
 	}
+	.section-about-5 .item {
+		margin-bottom: 50px;
+	}
 	.section-home-4 .container .title-wrapper,
-	.section-home-4 {
+	.section-home-4,
+	.section-about-3 .container .content .left .subtitle {
 		margin-bottom: 35px;
 	}
-	.section-home-2 .container .wrapper .side ol li {
+	.section-about-2 .container .content-1 .w50 .block img,
+	.section-about-2 .container .content-1,
+	.section-about-2 .container .content-2,
+	.section-title .container .content h1 {
+		margin-bottom: 20px;
+	}
+	.section-home-2 .container .wrapper .side ol li,
+	.section-about-5 .container .wrapper .item h2 {
 		margin-bottom: 15px;
 	}
 	.section-home-2 .container .wrapper .side ol li:before {
 		margin-bottom: 0px;
 	}
 	.section-home-2 .container .wrapper .side ol li,
-	.section-contacts .container .right p.street {
+	.section-contacts .container .right p.street,
+	.btn-box span {
 		font-size: 14px;
 	}
 	footer .container .bottom p.copyright,
@@ -500,26 +731,45 @@
 	}
 	.section-home-3 .programs .item .inner .desc,
 	.section-events .container .events-slider .item,
-	footer .container .bottom {
+	footer .container .bottom,
+	.section-about-1 .container .content-1,
+	.section-about-3 .container .content,
+	.section-title .container .content,
+	.section-igor-3 .container .content {
 		flex-wrap: wrap;
 	}
 	.section-home-3 .programs .item .inner .desc ul.ul-list,
 	.section-home-7 .container .head .title-wrapper ul li,
 	.section-events .container .events-slider .item .thumb,
 	.section-events .container .events-slider .item .content,
-	footer .container .bottom a.policy {
+	footer .container .bottom a.policy,
+	.section-about-1 .container .content-1 .inner-1,
+	.section-about-2 .container .content-2 p,
+	.section-about-2 .container .content-2 p:nth-child(odd),
+	.section-about-3 .container .content .left,
+	.section-about-3 .container .content .right,
+	.section-about-5 .container .wrapper .item .content .left,
+	.section-about-5 .container .wrapper .item .content .right,
+	.section-about-5 .container .wrapper .item:nth-child(even) .content .right,
+	.section-title .container .content h1,
+	.section-title .container .content .desc,
+	.section-igor-3 .container .content .left, 
+	.section-igor-3 .container .content .right,
+	.section-title .container .content .books {
 		width: 100%;
 	}
 	.section-home-4 .container .content-wrapper .item, 
 	.section-blog .container .blog-wrapper .item, 
-	.section-books .container .books-wrapper .item {
+	.section-books .container .books-wrapper .item,
+	.section-team .container .content .item {
 		width: calc(50% - 20px);
 		margin-bottom: 20px;
 	}
 	.section-form-banner {
 		margin: 0 10px;
 	}
-	.section-home-6 {
+	.section-home-6,
+	.section-about-5 .container .wrapper .item .content .left {
 		display: none;
 	}
 	footer .container .bottom a.policy {
@@ -586,6 +836,85 @@
 		padding: 20px;
 		padding-bottom: 40px;
 	}
+	.btn-box {
+		padding: 22px;
+		height: auto;
+	}
+	.btn-box span {
+		text-align: center;
+		display: block;
+		margin: 0 auto;
+		text-transform: uppercase;
+	}
+	.btn-box .circle,
+	.section-igor-1 .container .content .wrapper-count:before,
+	.section-igor-1 .container .content .wrapper-count:after {
+		display: none;
+	}
+	.section-about-2 .container .content-1 .w50 .block img {
+		height: 100px;
+	}
+	.section-about-2 .container .content-2 p:nth-child(odd) {
+		margin-right: 0;
+		margin-left: 0;
+	}
+	.section-about-3 .container .content .left .team .item {
+		width: 125px;
+	}
+	.section-about-3 .container .content .left .team .item img {
+		height: 125px;
+		width: 125px;
+	}
+	.section-about-5 .container .wrapper .item:nth-child(even) .content .right,
+	.section-about-5 .container .wrapper .item .content .right,
+	.section-title .container .content .desc {
+		margin: 0;
+	}
+	.section-title .container .content h1 {
+		margin-right: 0;
+	}
+	.section-about-5 .container .wrapper .item h2,
+	.section-igor-3 .container .content,
+	.section-igor-3 .container .content .right .item p {
+		text-align: left;
+	}
+	.section-igor-3 .container .content .right .item {
+		justify-content: flex-start;
+	}
+	.section-igor-1 .container .content .wrapper-count {
+		align-items: end;
+	}
+	.section-igor-3 .container .content .right .item p {
+		padding-right: 20px;
+	}
+	.section-igor-2 .container .content-2 .wrapper-count .col:first-child {
+		width: 50%;
+		border-right: 1px solid rgba(125, 125, 125, 0.3)
+	}
+	.section-igor-2 .container .content-2 .wrapper-count .col:nth-child(2) {
+		width: calc(50% - 2px);
+		border: none;
+	}
+	.section-igor-2 .container .content-2 .wrapper-count .col:last-child {
+		width: 100%;
+		border-top: 1px solid rgba(125, 125, 125, 0.3)
+	}
+	.section-igor-1 .container .content .wrapper-count .col,
+	.section-igor-1 .container .content .wrapper-count .col:nth-child(3) {
+		border: none;
+		width: calc(50% - 1px);
+		border-right: 1px solid rgba(125, 125, 125, 0.3);
+		border-bottom: 1px solid rgba(125, 125, 125, 0.3);
+	}
+	.section-igor-3 .container .content .left {
+		border: none;
+		border-bottom: 1px solid rgba(125, 125, 125, 0.3);
+		padding-bottom: 25px;
+		margin-bottom: 35px;
+	}
+	.section-igor-1 .container .content .wrapper-count .col:nth-child(even) {
+		border-right: none;
+	}
 }
 
 @media(max-width:650px) {
@@ -595,14 +924,30 @@
 @media(max-width:550px) {
 	.section-home-2 .container .wrapper-mob,
 	.section-home-3 .programs .item .inner .desc ul.ul-list,
-	.section-home-7 .container .body .right .box-wrapper .block-link {
+	.section-home-7 .container .body .right .box-wrapper .block-link,
+	.section-about-1 .container .content-2,
+	.section-about-4 .container .banner_img,
+	.section-title .container .content .books,
+	.books-page h2,
+	.section-book-single .container .content .left,
+	.section-book-single .container .content .bottom-mob,
+	.section-courses-1 .container .content .item .inner .bottom .info span:after {
 		display: none;
 	}
 	.wrapper-count .col .count h2 {
 		font-size: 80px;
 	}
+	.section-about-3 .container .content .left .team .item:last-child h2 {
+		font-size: 60px;
+		line-height: normal;
+	}
+	.section-about-5 .container .wrapper .item .content .right ol li:before {
+		font-size: 45px;
+		line-height: normal;
+	}
 	.heading-1,
 	.heading-2,
+	.heading-3,
 	.section-books .container .books-wrapper .item .inner .bottom p.price {
 		font-size: 28px;
 	}
@@ -611,6 +956,9 @@
 	}
 	.section-contacts .container .right .link-contact {
 		font-size: 20px;
+	}
+	.section-books .container .books-wrapper .item .inner .bottom p.price {
+		font-size: 18px;
 	}
 	.heading-6,
 	.section-form-banner .container .right form p label {
@@ -622,12 +970,23 @@
 		font-size: 16px;
 	}
 	.section-home-7 .container .head .title-wrapper ul li,
-	.section-home-7 .container .body .left .team-slider .slide .quote p.desc {
+	.section-home-7 .container .body .left .team-slider .slide .quote p.desc,
+	.section-about-4 .container .content .right ul li, 
+	.section-about-5 .container .wrapper .item .content .right ol li,
+	.section-books .container .books-wrapper .item .inner h6.heading-6,
+	.section-book-single .container .content .right .desc p,
+	.section-courses-1 .container .content .item .inner .bottom .info span,
+	.section-courses-2 .container .content .item .inner .mid .info {
 		font-size: 14px;
 	}
 	.section-home-4 .container .content-wrapper .item .inner .back .content .quote p.desc,
-	.section-home-7 .container .body .left .team-slider .slide .quote p.name {
+	.section-home-7 .container .body .left .team-slider .slide .quote p.name,
+	.section-book-single .container .content .right .bottom p.info,
+	.section-breadcrumbs .container ul li a {
 		font-size: 12px;
+	}
+	.section-courses-1 .container .content .item .inner .top .cat {
+		font-size: 10px;
 	}
 	.section-home-4 .container .content-wrapper .item .inner .back .content .quote p.name,
 	.section-events .container .events-slider .item .content .head p, 
@@ -638,11 +997,18 @@
 	.section-home-4 .container .content-wrapper .item .inner .front .content p.theme {
 		font-size: 6px;
 	}
+	.section-book-single .container .content .right .desc {
+		display: block;
+	}
 	.section-home-1 .content-bottom,
 	.section-home-2 .container .wrapper,
 	.section-contacts .container,
 	.section-form-banner .container .right form .buttons,
-	footer .container .right ul.footer-nav {
+	footer .container .right ul.footer-nav,
+	.section-about-2 .container .content-1,
+	.section-about-4 .container .content .right ul li, 
+	.section-about-5 .container .wrapper .item .content .right ol li,
+	.section-courses-2 .container .content .item {
 		flex-wrap: wrap;
 	}
 	.section-contacts .container {
@@ -663,12 +1029,38 @@
 	.section-home-7 .container .body .right .box-wrapper .block-link,
 	.section-contacts .container .right,
 	.section-contacts .container .left,
-	.section-home-3 .programs .item .inner .desc .btn-one {
+	.section-home-3 .programs .item .inner .desc .btn-one,
+	.section-about-2 .container .content-1 h2,
+	.section-about-2 .container .content-1 .w50,
+	.section-about-2 .container .content-3 .wrapper-count .col,
+	.section-about-2 .container .content-3 .wrapper-count .col:last-child,
+	.btn-box,
+	.section-about-5 .container .wrapper .item .content .right ol li:before,
+	.section-igor-1 .container .content .wrapper-count .col,
+	.section-igor-1 .container .content .wrapper-count .col:nth-child(3),
+	.section-igor-2 .container .content-2 .wrapper-count .col,
+	.section-igor-2 .container .content-2 .wrapper-count .col:first-child,
+	.section-igor-2 .container .content-2 .wrapper-count .col:nth-child(2),
+	.section-igor-3 .container .content .right .item,
+	.section-team .container .content .item,
+	.section-blog .container .blog-wrapper .item,
+	.section-book-single .container .content .right,
+	.section-book-single .container .content .right .bottom a,
+	.section-events .container .events .item .thumb,
+	.section-events .container .events .item .content,
+	.section-courses-1 .container .content .item .inner .bottom .info span,
+	.section-courses-1 .container .content .item .inner .bottom .buttons button,
+	.section-courses-2 .container .content .item .thumb,
+	.section-courses-2 .container .content .item .inner,
+	.section-courses-2 .container .content .item .inner .bottom .buttons button {
 		width: 100%;
 		max-width: none;
 	}
 	.section-home-2 .container .wrapper .img-mob img {
 		border-radius: 5px;
+	}
+	.section-courses-1 .container .content .item .inner .bottom {
+		padding: 20px 10px;
 	}
 	.section-home-2 .container .wrapper-count .col {
 		padding: 15px 0 35px;
@@ -681,16 +1073,28 @@
 		padding-bottom: 80px;
 	}
 	.section-home-7 .container .body .right .box-wrapper .block:before, 
-	.section-home-7 .container .body .right .box-wrapper .block-link:before {
+	.section-home-7 .container .body .right .box-wrapper .block-link:before,
+	.section-about-1 .container .content-1,
+	.section-title .container .content,
+	.section-book-single .container .content .right {
 		padding: 0;
+	}
+	.section-events .container .events .item .content {
+		padding: 15px;
+		padding-bottom: 80px;
+	}
+	.section-courses-2 .container .content .item .inner {
+		padding-left: 0;
 	}
 	.section-home-1 .content {
 		padding-bottom: 25px;
 	}
-	.section-home-4 .container .content-wrapper .item .inner .back .content {
+	.section-home-4 .container .content-wrapper .item .inner .back .content,
+	 .section-events .container .events .item .content .head {
 		padding-bottom: 15px;
 	}
-	footer {
+	footer,
+	.section-about-1 .container .content-1 {
 		padding-top: 35px;
 	}
 	.section-home-1 .content-bottom,
@@ -700,13 +1104,25 @@
 	.section-home-3 .programs .item .inner .desc .btn-one,
 	.section-home-4 .container .content-wrapper .item .inner .front .content h6.title,
 	.section-contacts .container .left,
-	.section-blog .container .blog-wrapper, 
-	.section-books .container .books-wrapper,
+	.section-blog .container .blog-slider, 
+	.section-books .container .books-slider,
 	.section-home-8 .container .reviews-slider .slick-list,
 	.section-form-banner .container .right form .buttons .info,
 	footer .container .right,
-	.section-contacts .container .right .social li {
+	.section-contacts .container .right .social li,
+	.section-about-2 .container .content-1 h2,
+	.section-about-4 .container .content,
+	.section-team .container .content,
+	.section-team .container .content .item,
+	.section-blog .container .blog-wrapper .item,
+	.section-blog .container .blog-wrapper,
+	.section-book-single .container .content .right .bottom a,
+	.section-book-single .container .content .right .bottom p.info,
+	.section-courses-2 .container .content .item .inner .bottom .buttons button {
 		margin: 0;
+	}
+	.section-about-4 {
+		margin: 70px 0;
 	}
 	.section-home-8 .container .reviews-slider .slide .thumb .inner .block hr {
 		margin: 10px 0;
@@ -727,24 +1143,43 @@
 		margin-top: 12px;
 	}
 	.section-home-2 .container .wrapper .content .desc,
-	footer .container .bottom {
+	footer .container .bottom,
+	.section-book-single .container .content .right .bottom a,
+	.section-events .container .events .item .content .body h6.title {
 		margin-top: 20px;
+	}
+	.section-about-3 .container .content .right .btn-outline {
+		margin-top: 25px;
 	}
 	.section-home-2,
 	.section-home-3 {
 		margin-top: 35px;
 	}
-	.section-home-2 .container .wrapper .side ol {
+	.books-page,
+	.section-courses-1 {
+		margin-top: 40px;
+	}
+	.section-home-2 .container .wrapper .side ol,
+	.section-about-2 {
 		margin-top: 50px;
 	}
+	.section-courses-1 .container .content .item .inner .top {
+		margin-bottom: 80px;
+	}
 	.section-home-2,
-	.section-contacts .container .right .social {
+	.section-contacts .container .right .social,
+	.section-about-2 .container .content-1 h2,
+	.section-team .container .content .item,
+	.section-blog .container .blog-wrapper .item {
 		margin-bottom: 35px;
 	}
 	.section-home-2 .container .wrapper .img-mob,
 	.section-home-2 .container .wrapper .content .buttons-mob,
 	.section-home-8 .container .reviews-slider .slick-list,
-	footer .container .right ul.footer-nav li.has-child {
+	footer .container .right ul.footer-nav li.has-child,
+	.section-about-1 .container .content-1 .inner-1 p,
+	.img-mob,
+	.section-igor-3 .container .content .right .item {
 		margin-bottom: 25px;
 	}
 	.section-home-1 .content-bottom .col:nth-child(1),
@@ -752,7 +1187,9 @@
 	.section-contacts .container .right h2.heading-2,
 	.section-contacts .container .right p.street,
 	.section-form-banner .container .right form .buttons .btn-two,
-	.section-form-banner .container .right form p input {
+	.section-form-banner .container .right form p input,
+	.section-courses-1 .container .content .item .inner .bottom .buttons p.price,
+	.section-courses-2 .container .content .item .thumb {
 		margin-bottom: 15px;
 	}
 	.section-form-banner .container .right form p label {
@@ -766,10 +1203,13 @@
 	footer .container .right ul.footer-nav li.has-child {
 		margin-right: 35px;
 	}
+	.section-blog .container .blog-slider .item {
+		margin-right: 20px;
+	}
 	.section-events .container .events-slider,
 	.section-home-8 .container .reviews-slider .slick-list,
-	.section-blog .container .blog-wrapper,
-	.section-books .container .books-wrapper {
+	.section-blog .container .blog-slider,
+	.section-books .container .books-slider {
 		margin-right: -15px;
 	}
 	.section-home-2 .container .wrapper-count .col:first-child {
@@ -785,8 +1225,8 @@
 		justify-content: space-between;
 	}
 	.section-home-8 .container .reviews-slider .slide, 
-	.section-blog .container .blog-wrapper .item, 
-	.section-books .container .books-wrapper .item,
+	.section-blog .container .blog-slider .item, 
+	.section-books .container .books-slider .item,
 	.section-events .container .events-slider .item {
 		max-width: 280px;
 		width: 100%;
@@ -798,7 +1238,8 @@
 		left: 5px;
 		right: 5px;
 	}
-	.section-contacts .container .left {
+	.section-contacts .container .left,
+	.section-igor-2 .container .content-1 .left {
 		height: 300px;
 	}
 	.btn-one, 
@@ -807,7 +1248,9 @@
 	.btn-gray,
 	.section-blog .container .see-more,
 	.section-books .container .see-more,
-	.section-form-banner .container .right form .buttons .btn-two {
+	.section-form-banner .container .right form .buttons .btn-two,
+	.btn-box,
+	.section-events .container .events .item .content .body a.btn-one {
 		padding: 15px;
 		width: auto;
 	}
@@ -828,14 +1271,101 @@
 		padding: 15px;
 	}
 	.section-home-7 .container .body .right .box-wrapper .block .inner, 
-	.section-home-7 .container .body .right .box-wrapper .block-link .inner {
+	.section-home-7 .container .body .right .box-wrapper .block-link .inner, {
 		position: static;
 		padding: 40px 20px;
 	}
-	.section-form-banner .container .right form .buttons .btn-two {
+	.section-form-banner .container .right form .buttons .btn-two,
+	.btn-box,
+	.img-mob {
 		width: 100%;
 	}
 	.section-home-4 .container .content-wrapper {
 		margin: 0 -10px;
+	}
+	.section-about-2 .container .content-1 .w50 .block {
+		width: auto;
+		margin-right: 40px;
+	}
+	.section-about-2 .container .content-1 .w50 .block img {
+		height: 70px;
+	}
+	.section-about-2 .container .content-3 .wrapper-count .col,
+	.section-igor-1 .container .content .wrapper-count .col,
+	.section-igor-2 .container .content-2 .wrapper-count .col {
+		border: none!important;
+		border-bottom: 1px solid rgba(125, 125, 125, 0.3)!important;
+	}
+	.section-about-3 .container .content .left .team .item {
+		width: 33.3%;
+		margin: 0;
+		margin-bottom: 20px;
+	}
+	.section-about-3 .container .content .left .team .item img {
+		height: auto;
+		width: 80%;
+	}
+	.section-about-5 .container .wrapper .item .content .right ol li:before {
+		text-align: left;
+	}
+	.img-mob {
+		border-radius: 5px;
+	}
+	.section-books .container .books-wrapper .item .inner .bottom .link {
+		font-size: 0;
+	}
+	.section-books .container .books-wrapper .item .inner h6.heading-6 {
+		line-height: normal;
+		min-height: 36px;
+	}
+	.section-books .container .books-wrapper .item .inner .bottom p.price {
+		line-height: normal;
+	}
+	.section-book-single .container .content .right .bottom {
+
+	}
+	.section-book-single .container .content .right .bottom p.price {
+		order: 0;
+		margin: 0;
+		margin-right: 25px;
+	}
+	.section-book-single .container .content .right .bottom p.info svg {
+		margin-right: 5px;
+	}
+	.section-book-single .container .content .right .bottom p.info {
+		order: 1;
+		width: calc(100% - 140px);
+		margin-left: auto;
+	}
+	.section-book-single .container .content .right .bottom a {
+		order: 2;
+	}
+	.section-events .container .events .item .thumb:before,
+	.section-courses-2 .container .content .item .thumb:before {
+		padding-bottom: 55%;
+	}
+	.section-events .container .events .item .content .body a.btn-one {
+		left: 15px;
+		right: 15px;
+		bottom: 15px;
+	}
+	.section-courses-1 .container .content .item .inner .bottom .info span:before {
+		content: '';
+		display: block;
+		height: 6px;
+		width: 6px;
+		border-radius: 50%;
+		background: #D87756;
+		margin: 0 7px;
+	}
+	.section-courses-1 .container .content .item .inner .bottom .buttons {
+		flex-direction: column-reverse;
+		align-items: baseline;
+	}
+}
+
+@media(max-width: 480px) {
+	.section-about-3 .container .content .left .team .item:last-child h2 {
+		font-size: 40px;
 	}
 }

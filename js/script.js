@@ -127,4 +127,25 @@ jQuery(function($) {
     }
   );
 
+  var offset = 600;
+  $(window).scroll(function(){
+    var scrolltop = $(this).scrollTop();
+    $('.count-need').each(function(){
+      if(scrolltop >= $(this).offset().top - offset) {
+        $('.count-need').each(function () {
+          $(this).prop('Counter',0).animate({
+          Counter: $(this).text()
+          }, {
+          duration: 5000,
+          easing: 'swing',
+          step: function (now) {
+          $(this).text(Math.ceil(now));
+          }
+          });
+          $(this).removeClass('count-need');
+        });
+      }
+    });
+  });
+
 });

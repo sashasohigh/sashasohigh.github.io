@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-	<link href="https://vjs.zencdn.net/7.17.0/video-js.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"/>
 	<link rel="stylesheet/less" href="css/less.less">
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -13,455 +13,1075 @@
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 </head>
 <body>
-	<ul class="dev_menu">
-		<li><a href="index.html">Главная</a></li>
-		<li><a href="about.html">Об академии</a></li>
-		<li><a href="about-igor.html">Об Игоре</a></li>
-		<li><a href="team.html">Команда</a></li>
-		<li><a href="blog.html">Блог</a></li>
-		<li><a href="books.html">Книги</a></li>
-		<li><a href="books-single.html">Описание книги</a></li>
-		<li><a href="events.html">Мероприятия</a></li>
-		<li><a href="courses.html">Программы</a></li>
-	</ul>
-	<header class="header-home">
+	<header>
 		<div class="container">
-			<div class="content">
+			<div class="header-top">
 				<a href="#" class="logo">
-					<img src="img/logo.svg" alt="">
-					<img src="img/logo-dark.svg" alt="">
+					<img src="img/svg/logo.svg" alt="">
 				</a>
-				<ul class="nav">
-					<li><a href="#">академия</a></li>
-					<li><a href="#">программы</a></li>
-					<li><a href="#">мероприятия</a></li>
-					<li><a href="#">книги</a></li>
-					<li><a href="#">блог</a></li>
+				<ul class="nav-ul">
+					<li><a href="#">News</a></li>
+					<li><a href="#">Blogs</a></li>
+					<li><a href="#">Forums</a></li>
+					<li><a href="#">Support</a></li>
+					<li><a href="#">Help Yourself</a></li>
+					<li><a href="#">About us</a></li>
 				</ul>
-				<ul class="languages">
-					<li><a href="#">UA</a></li>
+				<ul class="languages-ul">
+					<li class="has-child">
+						<a href="#">EN <img src="img/langs/en.png" alt=""></a>
+						<!-- <ul class="child language">
+							<li><a href="#">EN</a></li>
+							<li><a href="#">EN</a></li>
+							<li><a href="#">EN</a></li>
+						</ul> -->
+					</li>
 				</ul>
-				<ul class="phones">
-					<li><a href="tel:+380 94 828 80 67">+380 94 828 80 67</a></li>
-					<li><a href="tel:+7 812 309 54 47">+7 812 309 54 47</a></li>
+				<ul class="nav-ul-second">
+					<li><a href="#">Contact Sales</a></li>
+					<li><a href="#">Log In</a></li>
 				</ul>
-				<ul class="social">
-					<li><a href="#"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.6689 0H4.33105C1.94287 0 0 1.94287 0 4.33105V11.669C0 14.0571 1.94287 16 4.33105 16H11.669C14.0571 16 16 14.0571 16 11.669V4.33105C16 1.94287 14.0571 0 11.6689 0V0ZM7.99998 12.3749C5.58764 12.3749 3.62512 10.4123 3.62512 7.99998C3.62512 5.58764 5.58764 3.62512 7.99998 3.62512C10.4123 3.62512 12.3749 5.58764 12.3749 7.99998C12.3749 10.4123 10.4123 12.3749 7.99998 12.3749ZM12.4795 4.65685C11.7666 4.65685 11.1867 4.07702 11.1867 3.36413C11.1867 2.65124 11.7666 2.07129 12.4795 2.07129C13.1924 2.07129 13.7723 2.65124 13.7723 3.36413C13.7723 4.07702 13.1924 4.65685 12.4795 4.65685Z" fill="white"/><path d="M7.99987 4.56317C6.10486 4.56317 4.56299 6.10492 4.56299 8.00005C4.56299 9.89507 6.10486 11.4369 7.99987 11.4369C9.89501 11.4369 11.4368 9.89507 11.4368 8.00005C11.4368 6.10492 9.89501 4.56317 7.99987 4.56317Z" fill="white"/><path d="M12.4795 3.00943C12.2839 3.00943 12.1248 3.16861 12.1248 3.36417C12.1248 3.55972 12.2839 3.7189 12.4795 3.7189C12.6752 3.7189 12.8343 3.55984 12.8343 3.36417C12.8343 3.16849 12.6752 3.00943 12.4795 3.00943Z" fill="white"/></svg></a></li>
-					<li><a href="#"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_75_816)"><path d="M6.90454 9.26931L9.54638 7.84866L6.90454 6.40311V9.26931Z" fill="white"/><path d="M15.8823 4.79772L15.8816 4.7904C15.868 4.66162 15.7331 3.51599 15.1762 2.93347C14.5326 2.24817 13.8028 2.16492 13.4519 2.125C13.4228 2.12158 13.3962 2.11865 13.3724 2.11548L13.3445 2.11255C11.2292 1.95874 8.03477 1.93774 8.00279 1.9375H7.99718C7.96519 1.93774 4.77074 1.95874 2.63647 2.11255L2.60827 2.11548C2.58557 2.11853 2.56054 2.12134 2.53332 2.12451C2.1864 2.16455 1.46447 2.24792 0.818968 2.95788C0.288574 3.53442 0.135254 4.65539 0.119507 4.78137L0.117676 4.79772C0.112915 4.85131 0 6.12707 0 7.40783V8.60509C0 9.88585 0.112915 11.1616 0.117676 11.2152L0.11853 11.2234C0.13208 11.35 0.266845 12.4745 0.821165 13.0574C1.42639 13.7198 2.19165 13.8074 2.60327 13.8545C2.66833 13.8619 2.72448 13.8684 2.76257 13.8751L2.79956 13.8801C4.02087 13.9964 7.85008 14.0537 8.01244 14.056L8.01732 14.0561L8.02208 14.056C8.05418 14.0559 11.2485 14.0349 13.3637 13.881L13.3917 13.8782C13.4183 13.8746 13.4483 13.8714 13.4813 13.868C13.8264 13.8314 14.5443 13.7554 15.181 13.055C15.7114 12.4785 15.8647 11.3575 15.8805 11.2316L15.8823 11.2152C15.8871 11.1616 16 9.88585 16 8.60509V7.40783C16 6.12707 15.8871 4.85144 15.8823 4.79772ZM10.4586 8.42247L6.92381 10.3232C6.82677 10.3755 6.7213 10.4015 6.61608 10.4015C6.50121 10.4015 6.38658 10.3705 6.28319 10.3088C6.08519 10.1904 5.96703 9.98204 5.96703 9.75145V5.9165C5.96703 5.68481 6.08593 5.47607 6.28514 5.3579C6.48436 5.23986 6.72472 5.23559 6.92797 5.3468L10.4627 7.281C10.6719 7.39538 10.8012 7.61461 10.8004 7.85302C10.7995 8.0913 10.6686 8.30956 10.4586 8.42247Z" fill="white"/></g><defs><clipPath id="clip0_75_816"><rect width="16" height="16" fill="white"/></clipPath></defs></svg></a></li>
-					<li><a href="#"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_75_821)"><path d="M9.93709 3.9368C9.95898 3.91209 10.0614 3.83137 10.4634 3.83137L11.7815 3.83088C12.2103 3.83088 12.559 3.48205 12.559 3.05324V0.749419C12.559 0.321337 12.2108 -0.0274887 11.7827 -0.0282226L9.82481 -0.0314026C8.61639 -0.0314026 7.58912 0.367203 6.85404 1.12148C6.12226 1.87234 5.7354 2.92053 5.7354 4.15255V5.39509H4.2376C3.80879 5.39509 3.45996 5.74392 3.45996 6.17273V8.6539C3.45996 9.08271 3.80879 9.43154 4.2376 9.43154H5.7354V15.2223C5.7354 15.6511 6.08423 15.9999 6.51304 15.9999H9.08031C9.50913 15.9999 9.85795 15.6511 9.85795 15.2223V9.43166H11.6888C12.1176 9.43166 12.4663 9.08271 12.4663 8.65414L12.4673 6.17285C12.4673 5.89118 12.314 5.63053 12.0672 5.49269C11.9529 5.42885 11.8198 5.39509 11.6826 5.39509H9.85795V4.41344C9.85795 4.09347 9.90101 3.97765 9.93709 3.9368Z" fill="white"/></g><defs><clipPath id="clip0_75_821"><rect width="16" height="16.0313" fill="white"/></clipPath></defs></svg></a></li>
-				</ul>
-				<div class="btn-trigger">
-					<span></span>
-					<span></span>
-					<span></span>
+				<div class="auth">
+					<a href="#" class="btn btn-secondary btn-register">Register</a>
 				</div>
 			</div>
-			<div class="content-mob">
-				<ul class="nav">
-					<li><a href="#">академия</a></li>
-					<li><a href="#">программы</a></li>
-					<li><a href="#">мероприятия</a></li>
-					<li><a href="#">книги</a></li>
-					<li><a href="#">блог</a></li>
+			<div class="header-bottom">
+				<div class="buttons">
+					<button class="btn btn-primary btn-home">
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.78125 18.3333H6.23438V11.3889H12.7656V18.3333H17.2188V7.5L9.5 2.08333L1.78125 7.5V18.3333ZM0 20V6.66667L9.5 0L19 6.66667V20H10.9844V13.0556H8.01562V20H0Z" fill="#F6F9FC"/>
+						</svg>
+					</button>
+					<button class="btn btn-primary btn-providers">
+						All providers
+						<svg width="6" height="3" viewBox="0 0 6 3" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 2.66667L0 0H6L3 2.66667Z" fill="#F6F9FC"/>
+						</svg>
+					</button>
+				</div>
+				<ul class="filters-ul">
+					<li>
+						<a href="#">
+							<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M7.76261e-07 4.05875L4.24444 -5.13852e-07L8.51111 4.08L7.57778 4.9725L4.91111 2.4225L4.91111 16.15L3.57778 16.15L3.57778 2.4225L0.933334 4.95125L7.76261e-07 4.05875ZM7.48889 12.9412L8.42222 12.0487L11.0667 14.5775L11.0667 0.85L12.4 0.85L12.4 14.5775L15.0667 12.0275L16 12.92L11.7333 17L7.48889 12.9412Z" fill="#FE4E01"/>
+							</svg>
+							Sort by:
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Area
+							<svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.875 0.000652215L15 1.08761L7.5 8.33398L6.33498e-07 1.08761L1.125 0.0006511L7.5 6.13419L13.875 0.000652215Z" fill="#FE4E01"/>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Segment
+							<svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.875 0.000652215L15 1.08761L7.5 8.33398L6.33498e-07 1.08761L1.125 0.0006511L7.5 6.13419L13.875 0.000652215Z" fill="#FE4E01"/>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Country
+							<svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.875 0.000652215L15 1.08761L7.5 8.33398L6.33498e-07 1.08761L1.125 0.0006511L7.5 6.13419L13.875 0.000652215Z" fill="#FE4E01"/>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Methods
+							<svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.875 0.000652215L15 1.08761L7.5 8.33398L6.33498e-07 1.08761L1.125 0.0006511L7.5 6.13419L13.875 0.000652215Z" fill="#FE4E01"/>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Currency
+							<svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.875 0.000652215L15 1.08761L7.5 8.33398L6.33498e-07 1.08761L1.125 0.0006511L7.5 6.13419L13.875 0.000652215Z" fill="#FE4E01"/>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Crypto
+							<svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.875 0.000652215L15 1.08761L7.5 8.33398L6.33498e-07 1.08761L1.125 0.0006511L7.5 6.13419L13.875 0.000652215Z" fill="#FE4E01"/>
+							</svg>
+						</a>
+					</li>
 				</ul>
-				<ul class="phones">
-					<li><a href="tel:+380 94 828 80 67">+380 94 828 80 67</a></li>
-					<li><a href="tel:+7 812 309 54 47">+7 812 309 54 47</a></li>
-					<li><a href="mailto:info@pogodin.academy">info@pogodin.academy</a></li>
-				</ul>
-				<ul class="social">
-					<li><a href="#"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.6689 0H4.33105C1.94287 0 0 1.94287 0 4.33105V11.669C0 14.0571 1.94287 16 4.33105 16H11.669C14.0571 16 16 14.0571 16 11.669V4.33105C16 1.94287 14.0571 0 11.6689 0V0ZM7.99998 12.3749C5.58764 12.3749 3.62512 10.4123 3.62512 7.99998C3.62512 5.58764 5.58764 3.62512 7.99998 3.62512C10.4123 3.62512 12.3749 5.58764 12.3749 7.99998C12.3749 10.4123 10.4123 12.3749 7.99998 12.3749ZM12.4795 4.65685C11.7666 4.65685 11.1867 4.07702 11.1867 3.36413C11.1867 2.65124 11.7666 2.07129 12.4795 2.07129C13.1924 2.07129 13.7723 2.65124 13.7723 3.36413C13.7723 4.07702 13.1924 4.65685 12.4795 4.65685Z" fill="white"/><path d="M7.99987 4.56317C6.10486 4.56317 4.56299 6.10492 4.56299 8.00005C4.56299 9.89507 6.10486 11.4369 7.99987 11.4369C9.89501 11.4369 11.4368 9.89507 11.4368 8.00005C11.4368 6.10492 9.89501 4.56317 7.99987 4.56317Z" fill="white"/><path d="M12.4795 3.00943C12.2839 3.00943 12.1248 3.16861 12.1248 3.36417C12.1248 3.55972 12.2839 3.7189 12.4795 3.7189C12.6752 3.7189 12.8343 3.55984 12.8343 3.36417C12.8343 3.16849 12.6752 3.00943 12.4795 3.00943Z" fill="white"/></svg></a></li>
-					<li><a href="#"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_75_816)"><path d="M6.90454 9.26931L9.54638 7.84866L6.90454 6.40311V9.26931Z" fill="white"/><path d="M15.8823 4.79772L15.8816 4.7904C15.868 4.66162 15.7331 3.51599 15.1762 2.93347C14.5326 2.24817 13.8028 2.16492 13.4519 2.125C13.4228 2.12158 13.3962 2.11865 13.3724 2.11548L13.3445 2.11255C11.2292 1.95874 8.03477 1.93774 8.00279 1.9375H7.99718C7.96519 1.93774 4.77074 1.95874 2.63647 2.11255L2.60827 2.11548C2.58557 2.11853 2.56054 2.12134 2.53332 2.12451C2.1864 2.16455 1.46447 2.24792 0.818968 2.95788C0.288574 3.53442 0.135254 4.65539 0.119507 4.78137L0.117676 4.79772C0.112915 4.85131 0 6.12707 0 7.40783V8.60509C0 9.88585 0.112915 11.1616 0.117676 11.2152L0.11853 11.2234C0.13208 11.35 0.266845 12.4745 0.821165 13.0574C1.42639 13.7198 2.19165 13.8074 2.60327 13.8545C2.66833 13.8619 2.72448 13.8684 2.76257 13.8751L2.79956 13.8801C4.02087 13.9964 7.85008 14.0537 8.01244 14.056L8.01732 14.0561L8.02208 14.056C8.05418 14.0559 11.2485 14.0349 13.3637 13.881L13.3917 13.8782C13.4183 13.8746 13.4483 13.8714 13.4813 13.868C13.8264 13.8314 14.5443 13.7554 15.181 13.055C15.7114 12.4785 15.8647 11.3575 15.8805 11.2316L15.8823 11.2152C15.8871 11.1616 16 9.88585 16 8.60509V7.40783C16 6.12707 15.8871 4.85144 15.8823 4.79772ZM10.4586 8.42247L6.92381 10.3232C6.82677 10.3755 6.7213 10.4015 6.61608 10.4015C6.50121 10.4015 6.38658 10.3705 6.28319 10.3088C6.08519 10.1904 5.96703 9.98204 5.96703 9.75145V5.9165C5.96703 5.68481 6.08593 5.47607 6.28514 5.3579C6.48436 5.23986 6.72472 5.23559 6.92797 5.3468L10.4627 7.281C10.6719 7.39538 10.8012 7.61461 10.8004 7.85302C10.7995 8.0913 10.6686 8.30956 10.4586 8.42247Z" fill="white"/></g><defs><clipPath id="clip0_75_816"><rect width="16" height="16" fill="white"/></clipPath></defs></svg></a></li>
-					<li><a href="#"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_75_821)"><path d="M9.93709 3.9368C9.95898 3.91209 10.0614 3.83137 10.4634 3.83137L11.7815 3.83088C12.2103 3.83088 12.559 3.48205 12.559 3.05324V0.749419C12.559 0.321337 12.2108 -0.0274887 11.7827 -0.0282226L9.82481 -0.0314026C8.61639 -0.0314026 7.58912 0.367203 6.85404 1.12148C6.12226 1.87234 5.7354 2.92053 5.7354 4.15255V5.39509H4.2376C3.80879 5.39509 3.45996 5.74392 3.45996 6.17273V8.6539C3.45996 9.08271 3.80879 9.43154 4.2376 9.43154H5.7354V15.2223C5.7354 15.6511 6.08423 15.9999 6.51304 15.9999H9.08031C9.50913 15.9999 9.85795 15.6511 9.85795 15.2223V9.43166H11.6888C12.1176 9.43166 12.4663 9.08271 12.4663 8.65414L12.4673 6.17285C12.4673 5.89118 12.314 5.63053 12.0672 5.49269C11.9529 5.42885 11.8198 5.39509 11.6826 5.39509H9.85795V4.41344C9.85795 4.09347 9.90101 3.97765 9.93709 3.9368Z" fill="white"/></g><defs><clipPath id="clip0_75_821"><rect width="16" height="16.0313" fill="white"/></clipPath></defs></svg></a></li>
-				</ul>
+				<div class="input-search-wrapper">
+					<input type="text" class="input-search" placeholder="Search">
+					<button class="btn-clear">
+						<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+						<path d="M4.6875 11.1L7.5 8.2875L10.3125 11.1L11.1 10.3125L8.2875 7.5L11.1 4.6875L10.3125 3.9L7.5 6.7125L4.6875 3.9L3.9 4.6875L6.7125 7.5L3.9 10.3125L4.6875 11.1ZM7.5 15C6.475 15 5.50625 14.8031 4.59375 14.4094C3.68125 14.0156 2.88438 13.4781 2.20312 12.7969C1.52188 12.1156 0.984375 11.3188 0.590625 10.4062C0.196875 9.49375 0 8.525 0 7.5C0 6.4625 0.196875 5.4875 0.590625 4.575C0.984375 3.6625 1.52188 2.86875 2.20312 2.19375C2.88438 1.51875 3.68125 0.984375 4.59375 0.590625C5.50625 0.196875 6.475 0 7.5 0C8.5375 0 9.5125 0.196875 10.425 0.590625C11.3375 0.984375 12.1313 1.51875 12.8063 2.19375C13.4813 2.86875 14.0156 3.6625 14.4094 4.575C14.8031 5.4875 15 6.4625 15 7.5C15 8.525 14.8031 9.49375 14.4094 10.4062C14.0156 11.3188 13.4813 12.1156 12.8063 12.7969C12.1313 13.4781 11.3375 14.0156 10.425 14.4094C9.5125 14.8031 8.5375 15 7.5 15Z" fill="#B8BBBE"/>
+						</svg>
+					</button>
+				</div>
 			</div>
 		</div>
 	</header>
-	<section class="section-home-1" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(img/bg.png);">
+	<section class="section-home-1">
 		<div class="container">
-			<div class="content">
-				<h1 class="heading-1">Обучение гештальт-терапии для себя и профессии</h1>
-			</div>
-			<div class="content-bottom">
-				<div class="col">В авторской методологии, адаптированной под  славянский менталитет</div>
-				<div class="col type-text"></div>
-				<div class="col"><a href="#" class="btn-one">ПОДРОБНЕЕ О МЕТОДОЛОГИИ</a></div>
+			<div class="wrapper">
+				<div class="left">
+					<div class="inner">
+						<h6 class="subtitle heading-6">HUB / community</h6>
+						<h1 class="title heading-1">Payment systems, aggregators, providers, and merchants in one resource.</h1>
+						<p class="desc">Here's the translation of your statement with some corrections: As a merchant, you can find and integrate any payment methods into your product here.</p>
+						<div class="buttons">
+							<button class="btn btn-primary">Sign up as Merchant</button>
+							<button class="btn btn-secondary">Connect a Provider</button>
+						</div>
+					</div>
+				</div>
+				<div class="right">
+					<div class="box-wrapper">
+						<!-- <div class="lines">
+							<img src="img/anim/anim.svg" alt="">
+						</div> -->
+						<!-- ------------------------------------------------- -->
+						<div class="box"><div class="box-inner"></div></div>
+						<div class="box"><div class="box-inner"></div></div>
+						<div class="box box-has-line box-1-3">
+							<div class="svg-line">
+								<svg width="2" height="127" viewBox="0 0 2 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+								  <path d="M1 127V0.5" stroke="url(#paint0_linear_23_9)" stroke-width="1.46" />
+								  <defs>
+								    <linearGradient id="paint0_linear_23_9" x1="1.5" y1="0.5" x2="1.5" y2="127" gradientUnits="userSpaceOnUse">
+								      <stop stop-color="#FE4E01" />
+								      <stop offset="1" stop-color="#B93BE4" />
+								    </linearGradient>
+								  </defs>
+								</svg>
+							</div>
+							<div class="box-inner">
+								<div class="front">
+									<span>GAmbling</span>
+								</div>
+								<div class="back">
+									<span>GAmbling</span>
+								</div>
+							</div>
+						</div>
+						<div class="box"><div class="box-inner"></div></div>
+						<div class="box"><div class="box-inner"></div></div>
+						<div class="box"><div class="box-inner"></div></div>
+						<!-- ------------------------------------------------- -->
+						<div class="box box-has-line box-2-1">
+							<div class="svg-line">
+								<svg width="162" height="64" viewBox="0 0 162 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M161 64V6.85C161 3.61913 158.381 1 155.15 1H110.343H0" stroke="url(#paint0_linear_674_277)" stroke-width="1.46"/>
+								<defs>
+								<linearGradient id="paint0_linear_674_277" x1="81.0016" y1="1" x2="81.0016" y2="64" gradientUnits="userSpaceOnUse">
+								<stop stop-color="#FE4E01"/>
+								<stop offset="1" stop-color="#B822FF"/>
+								</linearGradient>
+								</defs>
+								</svg>
+							</div>
+							<div class="box-inner">
+								<div class="front">
+									<span>BETTING</span>
+								</div>
+								<div class="back">
+									<img src="img/svg/betting.svg" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="box"><div class="box-inner"></div></div>
+						<div class="box"><div class="box-inner"></div></div>
+						<div class="box box-has-line box-2-4">
+							<div class="svg-line">
+								<svg width="60" height="68" viewBox="0 0 60 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M59.5 1H6.85C3.61913 1 1 3.61913 1 6.85V68" stroke="url(#paint0_linear_23_4)" stroke-width="1.46"/>
+								<defs>
+								<linearGradient id="paint0_linear_23_4" x1="44.75" y1="0.999999" x2="31.5" y2="96.5" gradientUnits="userSpaceOnUse">
+								<stop stop-color="#FE4E01"/>
+								<stop offset="1" stop-color="#B93BE4"/>
+								</linearGradient>
+								</defs>
+								</svg>
+							</div>
+							<div class="box-inner">
+								<div class="front">
+									<span>e-com</span>
+								</div>
+								<div class="back">
+									<img src="img/svg/e-com.svg" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="box box-2-5 active">
+							<div class="svg-line">
+								<svg width="60" height="102" viewBox="0 0 60 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0 101H40.65C43.8809 101 46.5 98.3809 46.5 95.15V51.85C46.5 48.6191 49.1191 46 52.35 46H53.15C56.3809 46 59 43.3809 59 40.15V0.5" stroke="url(#paint0_linear_23_8)" stroke-width="1.46"/>
+								<defs>
+								<linearGradient id="paint0_linear_23_8" x1="29.5" y1="0.5" x2="-36.5" y2="128.5" gradientUnits="userSpaceOnUse">
+								<stop stop-color="#FE4E01"/>
+								<stop offset="1" stop-color="#B822FF"/>
+								</linearGradient>
+								</defs>
+								</svg>
+							</div>
+							<div class="box-inner bg-primary">
+								<div class="front">
+									<span>pay</span>
+								</div>
+								<div class="back">
+									<img src="img/svg/pay.svg" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="box"><div class="box-inner"></div></div>
+						<!-- ------------------------------------------------- -->
+						<div class="box"><div class="box-inner"></div></div>
+						<div class="box box-has-line box-3-2">
+							<div class="svg-line">
+								<svg width="75" height="73" viewBox="0 0 75 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 0V44.5L1 65.65C1 68.8809 3.61913 71.5 6.85 71.5H37.75H74.5" stroke="url(#paint0_linear_23_6)" stroke-width="1.46"/>
+								<defs>
+								<linearGradient id="paint0_linear_23_6" x1="-2" y1="11" x2="147.5" y2="105" gradientUnits="userSpaceOnUse">
+								<stop stop-color="#FE4E01"/>
+								<stop offset="1" stop-color="#B822FF"/>
+								</linearGradient>
+								</defs>
+								</svg>
+							</div>
+							<div class="box-inner">
+								<div class="front">
+									<span>FOREX</span>
+								</div>
+								<div class="back">
+									<img src="img/svg/forex.svg" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="box box-hidden"></div>
+						<div class="box box-hidden"></div>
+						<div class="box"><div class="box-inner"></div></div>
+						<div class="box box-3-6 active">
+							<div class="svg-line">
+								<svg width="156" height="57" viewBox="0 0 156 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0 56L52.65 56C55.8809 56 58.5 53.3809 58.5 50.15V6.85C58.5 3.61914 61.1191 1 64.35 1L156 1" stroke="url(#paint0_linear_23_14)" stroke-width="1.46"/>
+								<defs>
+								<linearGradient id="paint0_linear_23_14" x1="-2.78571" y1="52.6667" x2="270.393" y2="-3.52196" gradientUnits="userSpaceOnUse">
+								<stop stop-color="#FE4E01"/>
+								<stop offset="1" stop-color="#B822FF"/>
+								</linearGradient>
+								</defs>
+								</svg>
+							</div>
+							<div class="box-inner bg-primary">
+								<div class="front">
+									<span>payz</span>
+								</div>
+								<div class="back">
+									<img src="img/svg/payz.svg" alt="">
+								</div>
+							</div>
+						</div>
+						<!-- ------------------------------------------------- -->
+						<div class="box box-4-1 active">
+							<div class="svg-line">
+								<svg width="125" height="2" viewBox="0 0 125 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M125 0.999989L0 1" stroke="url(#paint0_linear_23_13)" stroke-width="1.46"/>
+								<defs>
+								<linearGradient id="paint0_linear_23_13" x1="-4.37114e-08" y1="0.5" x2="125" y2="0.499989" gradientUnits="userSpaceOnUse">
+								<stop stop-color="#FE4E01"/>
+								<stop offset="1" stop-color="#B93BE4"/>
+								</linearGradient>
+								</defs>
+								</svg>
+							</div>
+							<div class="box-inner bg-primary">
+								<div class="front active">
+									<span>all</span>
+								</div>
+								<div class="back">
+									<img src="img/svg/all.svg" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="box"><div class="box-inner"></div></div>
+						<div class="box box-hidden"></div>
+						<div class="box box-hidden"></div>
+						<div class="box"><div class="box-inner"></div></div>
+						<div class="box"><div class="box-inner"></div></div>
+
+						<div class="box-big">
+							<div class="box-inner bg-primary">
+								<div class="front">
+									<img src="img/svg/a.svg" alt="">
+								</div>
+								<div class="back">
+									<img src="img/svg/a.svg" alt="">
+								</div>
+							</div>
+						</div>
+						<!-- ------------------------------------------------- -->
+						<div class="box"><div class="box-inner"></div></div>
+						<div class="box box-has-line box-5-2">
+							<div class="svg-line">
+								<svg width="65" height="61" viewBox="0 0 65 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M64.5 1H6.85C3.61913 1 1 3.61913 1 6.85V61" stroke="url(#paint0_linear_1474_41)" stroke-width="1.46"/>
+								<defs>
+								<linearGradient id="paint0_linear_1474_41" x1="16.8193" y1="1.10582" x2="41.5176" y2="99.2487" gradientUnits="userSpaceOnUse">
+								<stop stop-color="#FE4E01"/>
+								<stop offset="1" stop-color="#B822FF"/>
+								</linearGradient>
+								</defs>
+								</svg>
+							</div>
+							<div class="box-inner">
+								<div class="front">
+									<img src="img/svg/visa-primary.svg" alt="">
+								</div>
+								<div class="back">
+									<img src="img/svg/visa.svg" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="box"><div class="box-inner"></div></div>
+						<div class="box box-has-line box-5-4">
+							<div class="svg-line">
+								<svg width="2" height="15" viewBox="0 0 2 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0.999999 -3.65078e-07L1 15" stroke="url(#paint0_linear_23_12)" stroke-width="1.46"/>
+								<defs>
+								<linearGradient id="paint0_linear_23_12" x1="0.5" y1="15" x2="0.499999" y2="4.37114e-08" gradientUnits="userSpaceOnUse">
+								<stop stop-color="#FE4E01"/>
+								<stop offset="1" stop-color="#B93BE4"/>
+								</linearGradient>
+								</defs>
+								</svg>
+							</div>
+							<div class="box-inner">
+								<div class="front">
+									<img src="img/svg/bitcoin-primary.svg" alt="">
+								</div>
+								<div class="back">
+									<img src="img/svg/bitcoin.svg" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="box box-has-line box-5-6">
+							<div class="svg-line">
+								<svg width="61" height="126" viewBox="0 0 61 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0 1H54.15C57.3809 1 60 3.61913 60 6.85V126" stroke="url(#paint0_linear_1474_38)" stroke-width="1.46"/>
+								<defs>
+								<linearGradient id="paint0_linear_1474_38" x1="14.9474" y1="1.22046" x2="107.185" y2="167.454" gradientUnits="userSpaceOnUse">
+								<stop stop-color="#FE4E01"/>
+								<stop offset="1" stop-color="#B822FF"/>
+								</linearGradient>
+								</defs>
+								</svg>
+							</div>
+							<div class="box-inner">
+								<div class="front">
+									<img src="img/svg/dollar.svg" alt="">
+								</div>
+								<div class="back">
+									<img src="img/svg/dollar.svg" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="box"><div class="box-inner"></div></div>
+						<!-- ------------------------------------------------- -->
+						<div class="box box-has-line box-6-1">
+							<div class="svg-line">
+								<svg width="64" height="66" viewBox="0 0 64 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0 64.5H57.15C60.3809 64.5 63 61.8809 63 58.65V0" stroke="url(#paint0_linear_1474_43)" stroke-width="1.46"/>
+								<defs>
+								<linearGradient id="paint0_linear_1474_43" x1="15.6947" y1="0.113757" x2="44.1681" y2="104.535" gradientUnits="userSpaceOnUse">
+								<stop stop-color="#FE4E01"/>
+								<stop offset="1" stop-color="#B822FF"/>
+								</linearGradient>
+								</defs>
+								</svg>
+							</div>	
+							<div class="box-inner">
+								<div class="front">
+									<img src="img/svg/mastercard-primary.svg" alt="">
+								</div>
+								<div class="back">
+									<img src="img/svg/mastercard.svg" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="box"><div class="box-inner"></div></div>
+						<div class="box box-has-line box-6-3">
+							<div class="svg-line">
+								<svg width="2" height="133" viewBox="0 0 2 133" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0.999994 2.92063e-06L1 133" stroke="url(#paint0_linear_23_11)" stroke-width="1.46"/>
+								<defs>
+								<linearGradient id="paint0_linear_23_11" x1="0.5" y1="133" x2="0.499994" y2="2.18557e-08" gradientUnits="userSpaceOnUse">
+								<stop stop-color="#FE4E01"/>
+								<stop offset="1" stop-color="#B93BE4"/>
+								</linearGradient>
+								</defs>
+								</svg>
+							</div>
+							<div class="box-inner">
+								<div class="front">
+									<img src="img/svg/skrill-primary.svg" alt="">
+								</div>
+								<div class="back">
+									<img src="img/svg/skrill.svg" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="box"><div class="box-inner"></div></div>
+						<div class="box"><div class="box-inner"></div></div>
+						<div class="box box-has-line box-6-6">
+							<div class="svg-line">
+								<svg width="69" height="65" viewBox="0 0 69 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.5 0V57.65C1.5 60.8809 4.11913 63.5 7.35 63.5H68.5" stroke="url(#paint0_linear_1474_39)" stroke-width="1.46"/>
+								<defs>
+								<linearGradient id="paint0_linear_1474_39" x1="18.1912" y1="0.111993" x2="44.4004" y2="103.942" gradientUnits="userSpaceOnUse">
+								<stop stop-color="#FE4E01"/>
+								<stop offset="1" stop-color="#B822FF"/>
+								</linearGradient>
+								</defs>
+								</svg>
+							</div>
+							<div class="box-inner">
+								<div class="front">
+									<img src="img/svg/euro-primary.svg" alt="">
+								</div>
+								<div class="back">
+									<img src="img/svg/euro.svg" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
 	<section class="section-home-2">
 		<div class="container">
-			<div class="wrapper">
-				<div class="side">
-					<p class="position">основатель и ведущий специалист академии практической психологии</p>
-					<ol class="ol-list">
-						<li>Кандидат психологических наук, доцент</li>
-						<li>Гештальт-терапевт</li>
-						<li>Автор методологии «Психотерапия Переживанием» (диалоговая модель гештальт-терапии)</li>
-					</ol>
-					<div class="buttons">
-						<a href="#" class="btn-one">ПОДРОБНЕЕ</a>
-						<a href="#" class="btn-link">СМОТРЕТЬ ДИПЛОМЫ</a>
+			<div class="table-wrapper">
+				<table class="table-home">
+					<thead class="table-head">
+						<tr>
+							<th class="slide active">
+								<div class="col-top">
+									<select class="select2" name="" id="">
+										<option disabled selected>System</option>
+										<option value="">System</option>
+										<option value="">System</option>
+									</select>
+								</div>
+							</th>
+							<th class="slide active">
+								<div class="col-top">
+									<select class="select2" name="" id="">
+										<option value="">Niche</option>
+										<option value="">Niche</option>
+										<option value="">Niche</option>
+									</select>
+								</div>
+							</th>
+							<th class="slide active">
+								<div class="col-top">
+									<select class="select2" name="" id="">
+										<option value="">Deposit type</option>
+									</select>
+								</div>
+							</th>
+							<th class="slide active">
+								<div class="col-top">
+									<select class="select2" name="" id="">
+										<option value="">Currencies</option>
+									</select>
+								</div>
+							</th>
+							<th class="slide active">
+								<div class="col-top">
+									<select class="select2" name="" id="">
+										<option value="">GEO</option>
+									</select>
+								</div>
+							</th>
+							<th class="slide">
+								<div class="col-top">
+									<select class="select2" name="" id="">
+										<option value="">New Field</option>
+									</select>
+								</div>
+							</th>
+							<th class="slide">
+								<div class="col-top">
+									<select class="select2" name="" id="">
+										<option value="">New Field</option>
+									</select>
+								</div>
+							</th>
+						</tr>
+						<tr>
+							<th class="slide active">
+								<div class="col-bottom">
+									<span>payment system</span>
+								</div>
+							</th>
+							<th class="slide active">
+								<div class="col-bottom">
+									<span>AreaS of BUsiness</span>
+								</div>
+							</th>
+							<th class="slide active">
+								<div class="col-bottom">
+									<span>Credit CArd / Check</span>
+								</div>
+							</th>
+							<th class="slide active">
+								<div class="col-bottom">
+									<span>Num of available</span>
+								</div>
+							</th>
+							<th class="slide active">
+								<div class="col-bottom">
+									<span>REGION</span>
+								</div>
+							</th>
+							<th class="slide">
+								<div class="col-bottom">
+									<span>New field</span>
+								</div>
+							</th>
+							<th class="slide">
+								<div class="col-bottom">
+									<span>New field</span>
+								</div>
+							</th>
+						</tr>
+					</thead>
+					<tbody class="table-body">
+						<tr>
+							<td class="slide active">
+								<span><img src="img/payment/image 1.png" alt=""></span>
+							</td>
+							<td class="slide active">
+								<span>ALL</span>
+							</td>
+							<td class="slide active">
+								<span>MasterCard/Visa</span>
+							</td>
+							<td class="slide active">
+								<span>81 Currencies</span>
+							</td>
+							<td class="slide active">
+								<span>All world</span>
+							</td>
+							<td class="slide">
+								<span>New field</span>
+							</td>
+							<td class="slide">
+								<span>New field</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="slide active">
+								<span><img src="img/payment/image 2.png" alt=""></span>
+							</td>
+							<td class="slide active">
+								<span>ALL</span>
+							</td>
+							<td class="slide active">
+								<span>MasterCard/Visa/Cash <br>WesterUnion/UniStream</span>
+							</td>
+							<td class="slide active">
+								<span>68 Currencies</span>
+							</td>
+							<td class="slide active">
+								<span>All world</span>
+							</td>
+							<td class="slide">
+								<span>New field</span>
+							</td>
+							<td class="slide">
+								<span>New field</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="slide active">
+								<span><img src="img/payment/image 3.png" alt=""></span>
+							</td>
+							<td class="slide active">
+								<span>Gambling</span>
+							</td>
+							<td class="slide active">
+								<span>Visa / Direct Check</span>
+							</td>
+							<td class="slide active">
+								<span>USD / EUR</span>
+							</td>
+							<td class="slide active">
+								<span>Europe, South America</span>
+							</td>
+							<td class="slide">
+								<span>New field</span>
+							</td>
+							<td class="slide">
+								<span>New field</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="slide active">
+								<span><img src="img/payment/image 4.png" alt=""></span>
+							</td>
+							<td class="slide active">
+								<span>Medicine</span>
+							</td>
+							<td class="slide active">
+								<span>Direct Check / Cash</span>
+							</td>
+							<td class="slide active">
+								<span>USD / EUR</span>
+							</td>
+							<td class="slide active">
+								<span>Europe, GB</span>
+							</td>
+							<td class="slide">
+								<span>New field</span>
+							</td>
+							<td class="slide">
+								<span>New field</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="slide active">
+								<span><img src="img/payment/image 5.png" alt=""></span>
+							</td>
+							<td class="slide active">
+								<span>ALL</span>
+							</td>
+							<td class="slide active">
+								<span>MasterCard/Visa/Maestro</span>
+							</td>
+							<td class="slide active">
+								<span>29 Currencies</span>
+							</td>
+							<td class="slide active">
+								<span>Europe, India, Asia</span>
+							</td>
+							<td class="slide">
+								<span>New field</span>
+							</td>
+							<td class="slide">
+								<span>New field</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="slide active">
+								<span><img src="img/payment/image 6.png" alt=""></span>
+							</td>
+							<td class="slide active">
+								<span>ALL</span>
+							</td>
+							<td class="slide active">
+								<span>MasterCard/Visa/AmericanExpress</span>
+							</td>
+							<td class="slide active">
+								<span>71 Currencies</span>
+							</td>
+							<td class="slide active">
+								<span>All world</span>
+							</td>
+							<td class="slide">
+								<span>New field</span>
+							</td>
+							<td class="slide">
+								<span>New field</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="slide active">
+								<span><img src="img/payment/image 7.png" alt=""></span>
+							</td>
+							<td class="slide active">
+								<span>Finance</span>
+							</td>
+							<td class="slide active">
+								<span>Direct Check / Cash</span>
+							</td>
+							<td class="slide active">
+								<span>USD / EUR</span>
+							</td>
+							<td class="slide active">
+								<span>Europe</span>
+							</td>
+							<td class="slide">
+								<span>New field</span>
+							</td>
+							<td class="slide">
+								<span>New field</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="slide active">
+								<span><img src="img/payment/image 8.png" alt=""></span>
+							</td>
+							<td class="slide active">
+								<span>Cloud Tech</span>
+							</td>
+							<td class="slide active">
+								<span>Direct Check / Cash</span>
+							</td>
+							<td class="slide active">
+								<span>16 Currencies</span>
+							</td>
+							<td class="slide active">
+								<span>Africa, Europe</span>
+							</td>
+							<td class="slide">
+								<span>New field</span>
+							</td>
+							<td class="slide">
+								<span>New field</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="slide active">
+								<span><img src="img/payment/image 9.png" alt=""></span>
+							</td>
+							<td class="slide active">
+								<span>Casino</span>
+							</td>
+							<td class="slide active">
+								<span>MasterCard/Visa/Maestro</span>
+							</td>
+							<td class="slide active">
+								<span>91 Currencies</span>
+							</td>
+							<td class="slide active">
+								<span>All world</span>
+							</td>
+							<td class="slide">
+								<span>New field</span>
+							</td>
+							<td class="slide">
+								<span>New field</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="slide active">
+								<span><img src="img/payment/image 10.png" alt=""></span>
+							</td>
+							<td class="slide active">
+								<span>Gambling</span>
+							</td>
+							<td class="slide active">
+								<span>MasterCard/Visa/Maestro</span>
+							</td>
+							<td class="slide active">
+								<span>35 Currencies</span>
+							</td>
+							<td class="slide active">
+								<span>Australia</span>
+							</td>
+							<td class="slide">
+								<span>New field</span>
+							</td>
+							<td class="slide">
+								<span>New field</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="buttons">
+					<div id="table_prev" class="btn-arrow btn-prev">
+						<svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M15 29L2.53526e-06 14.5L15 -2.62268e-06L16.9687 1.90312L5.34375 13.1406L30 13.1406L30 15.8594L5.34375 15.8594L16.9688 27.0969L15 29Z" fill="#82868a"></path>
+						</svg>
 					</div>
-				</div>
-				<div class="img-mob">
-					<div class="thumb">
-						<img src="img/Rectangle28.png" alt="">
+					<div id="table_next" class="btn-arrow btn-prev">
+						<svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M15 -2.14573e-06L30 14.5L15 29L13.0313 27.0969L24.6562 15.8594L7.58559e-07 15.8594L5.20878e-07 13.1406L24.6562 13.1406L13.0312 1.90312L15 -2.14573e-06Z" fill="#82868a"></path>
+						</svg>
 					</div>
-				</div>
-				<div class="content">
-					<h2 class="heading-2">Игорь Погодин</h2>
-					<div class="desc">
-						<p>За 27 лет работы психотерапевтом, тысячи часов консультаций и тренингов Игорь накопил огромный опыт.</p>
-						<p>Основав Академию в 2003 году, он активно делится своими знаниями и готовит квалифицированных специалистов, которые работают в его методологии</p>
-					</div>
-					<div class="buttons-mob">
-						<a href="#" class="btn-one">ПОДРОБНЕЕ</a>
-						<a href="#" class="btn-link">СМОТРЕТЬ ДИПЛОМЫ</a>
-					</div>
-					<div class="thumb">
-						<img src="img/Rectangle28.png" alt="">
-					</div>
-				</div>
-			</div>
-			<div class="wrapper-mob">
-				<div class="thumb">
-					<img src="img/Rectangle28.png" alt="">
-				</div>
-			</div>
-			<div class="wrapper-count">
-				<div class="col">
-					<div class="count">
-						<h2><span class="count-need">27</span><span>+</span><small>книг</small></h2>
-					</div>
-					<h6>ПО психологии и психотерапии</h6>
-				</div>
-				<div class="col">
-					<div class="count">
-						<h2><span class="count-need">27</span><small>лет</small></h2>
-					</div>
-					<h6>практический опыт работы</h6>
-				</div>
-				<div class="col">
-					<div class="count">
-						<h2><span class="count-need">15</span><span>K</span><small>часов</small></h2>
-					</div>
-					<h6>КОНСУЛЬТАЦИЙ и более 3к тренингов</h6>
 				</div>
 			</div>
 		</div>
 	</section>
 	<section class="section-home-3">
 		<div class="container">
-			<h2 class="heading-2">Программы <br><span>Pogodin Academy</span></h2>
-			<div class="programs">
-				<div class="item" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%), url(img/Rectangle60.png);">
-					<div class="inner">
-						<h4 class="heading-4">Обучение гештальт-терапии для себя и профессии</h4>
-						<hr>
-						<div class="desc">
-							<ul class="ul-list">
-								<li>Личная и групповая психотерапия </li>
-								<li>Практические знания и навыки</li>
-								<li>Дружное и поддерживающее сообщество</li>
-								<li>Инструменты для улучшения качества жизни</li>
-							</ul>
-							<a href="#" class="btn-one">УЗНАТЬ БОЛЬШЕ</a>
+			<h2 class="heading-2">OUR TOP <span>B2B</span> PAYMENT AGGREGATIVE RANKING</h2>
+			<div class="wrapper">
+				<div class="row">
+					<div class="col">
+						<div class="col-inner">
+							<div class="logo">
+								<img src="img/svg/plan.svg" alt="">
+							</div>
+							<button class="btn btn-primary">Get an offer</button>
+							<a href="#" class="more">
+							More
+							<svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M-0.000324298 1.125L1.08663 -3.16749e-07L8.33301 7.5L1.08663 15L-0.000324856 13.875L6.13321 7.5L-0.000324298 1.125Z" fill="#FE4E01"/></svg>
+							</a>
+						</div>
+					</div>
+					<div class="col">
+						<div class="col-inner">
+							<div class="col-head">
+								<span>Rating</span>
+							</div>
+							<div class="col-body">
+								<div class="rating">
+									<div class="rate">
+										<span class="current">3</span><span>/5</span>
+									</div>
+									<div class="stars">
+										<svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.48366 27.1636L7.81332 17.1202L0 10.3651L10.3222 9.47153L14.3364 0L18.3505 9.47153L28.6727 10.3651L20.8594 17.1202L23.1891 27.1636L14.3364 21.8381L5.48366 27.1636Z" fill="#FE4E01"/></svg>
+										<svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.48366 27.1636L7.81332 17.1202L0 10.3651L10.3222 9.47153L14.3364 0L18.3505 9.47153L28.6727 10.3651L20.8594 17.1202L23.1891 27.1636L14.3364 21.8381L5.48366 27.1636Z" fill="#FE4E01"/>
+										</svg>
+										<svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.48366 27.1636L7.81332 17.1202L0 10.3651L10.3222 9.47153L14.3364 0L18.3505 9.47153L28.6727 10.3651L20.8594 17.1202L23.1891 27.1636L14.3364 21.8381L5.48366 27.1636Z" fill="#FE4E01"/>
+										</svg>
+										<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.35934 25.0314L9.05066 17.3349L9.1746 16.7709L8.74806 16.3816L3.02053 11.1546L10.5418 10.4674L11.1509 10.4117L11.3788 9.84413L14.2537 2.68386L17.1286 9.84413L17.3565 10.4117L17.9656 10.4674L25.4869 11.1546L19.7593 16.3816L19.3328 16.7709L19.4567 17.3349L21.148 25.0314L14.7897 20.9939L14.2537 20.6536L13.7176 20.9939L7.35934 25.0314Z" stroke="#787889" stroke-width="2"/></svg>
+										<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.35934 25.0314L9.05066 17.3349L9.1746 16.7709L8.74806 16.3816L3.02053 11.1546L10.5418 10.4674L11.1509 10.4117L11.3788 9.84413L14.2537 2.68386L17.1286 9.84413L17.3565 10.4117L17.9656 10.4674L25.4869 11.1546L19.7593 16.3816L19.3328 16.7709L19.4567 17.3349L21.148 25.0314L14.7897 20.9939L14.2537 20.6536L13.7176 20.9939L7.35934 25.0314Z" stroke="#787889" stroke-width="2"/></svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="col-inner">
+							<div class="col-head">
+								<span>Proccessing</span>
+							</div>
+							<div class="col-body">
+								<div class="desc">
+									Gambling, Betting Forex, Igaming
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="col-inner">
+							<div class="col-head">
+								<span>Location</span>
+							</div>
+							<div class="col-body">
+								<div class="locations">
+									<img src="img/svg/flags/1.svg" alt="">
+									<img src="img/svg/flags/2.svg" alt="">
+									<img src="img/svg/flags/3.svg" alt="">
+									<img src="img/svg/flags/4.svg" alt="">
+									<img src="img/svg/flags/5.svg" alt="">
+									<img src="img/svg/flags/6.svg" alt="">
+									<img src="img/svg/flags/7.svg" alt="">
+									<img src="img/svg/flags/8.svg" alt="">
+									<img src="img/svg/flags/9.svg" alt="">
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="item" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%), url(img/Rectangle64.png);">
-					<div class="inner">
-						<h4 class="heading-4">Гештальт-консультант</h4>
-						<hr>
-						<div class="desc">
-							<ul class="ul-list">
-								<li>Продолжительность — 9 месяцев</li>
-								<li>Сертификат по окончании</li>
-								<li>Структура — 3 курса по 3 месяца</li>
-								<li>Быстрый вход в профессию</li>
-							</ul>
-							<a href="#" class="btn-one">УЗНАТЬ БОЛЬШЕ</a>
+				<div class="row">
+					<div class="col">
+						<div class="col-inner">
+							<div class="logo">
+								<img src="img/svg/plan.svg" alt="">
+							</div>
+							<button class="btn btn-primary">Get an offer</button>
+							<a href="#" class="more">
+							More
+							<svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M-0.000324298 1.125L1.08663 -3.16749e-07L8.33301 7.5L1.08663 15L-0.000324856 13.875L6.13321 7.5L-0.000324298 1.125Z" fill="#FE4E01"/></svg>
+							</a>
+						</div>
+					</div>
+					<div class="col">
+						<div class="col-inner">
+							<div class="col-head">
+								<span>Rating</span>
+							</div>
+							<div class="col-body">
+								<div class="rating">
+									<div class="rate">
+										<span class="current">3</span><span>/5</span>
+									</div>
+									<div class="stars">
+										<svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.48366 27.1636L7.81332 17.1202L0 10.3651L10.3222 9.47153L14.3364 0L18.3505 9.47153L28.6727 10.3651L20.8594 17.1202L23.1891 27.1636L14.3364 21.8381L5.48366 27.1636Z" fill="#FE4E01"/></svg>
+										<svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.48366 27.1636L7.81332 17.1202L0 10.3651L10.3222 9.47153L14.3364 0L18.3505 9.47153L28.6727 10.3651L20.8594 17.1202L23.1891 27.1636L14.3364 21.8381L5.48366 27.1636Z" fill="#FE4E01"/>
+										</svg>
+										<svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.48366 27.1636L7.81332 17.1202L0 10.3651L10.3222 9.47153L14.3364 0L18.3505 9.47153L28.6727 10.3651L20.8594 17.1202L23.1891 27.1636L14.3364 21.8381L5.48366 27.1636Z" fill="#FE4E01"/>
+										</svg>
+										<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.35934 25.0314L9.05066 17.3349L9.1746 16.7709L8.74806 16.3816L3.02053 11.1546L10.5418 10.4674L11.1509 10.4117L11.3788 9.84413L14.2537 2.68386L17.1286 9.84413L17.3565 10.4117L17.9656 10.4674L25.4869 11.1546L19.7593 16.3816L19.3328 16.7709L19.4567 17.3349L21.148 25.0314L14.7897 20.9939L14.2537 20.6536L13.7176 20.9939L7.35934 25.0314Z" stroke="#787889" stroke-width="2"/></svg>
+										<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.35934 25.0314L9.05066 17.3349L9.1746 16.7709L8.74806 16.3816L3.02053 11.1546L10.5418 10.4674L11.1509 10.4117L11.3788 9.84413L14.2537 2.68386L17.1286 9.84413L17.3565 10.4117L17.9656 10.4674L25.4869 11.1546L19.7593 16.3816L19.3328 16.7709L19.4567 17.3349L21.148 25.0314L14.7897 20.9939L14.2537 20.6536L13.7176 20.9939L7.35934 25.0314Z" stroke="#787889" stroke-width="2"/></svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="col-inner">
+							<div class="col-head">
+								<span>Proccessing</span>
+							</div>
+							<div class="col-body">
+								<div class="desc">
+									Gambling, Betting Forex, Igaming
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="col-inner">
+							<div class="col-head">
+								<span>Location</span>
+							</div>
+							<div class="col-body">
+								<div class="locations">
+									<img src="img/svg/flags/1.svg" alt="">
+									<img src="img/svg/flags/2.svg" alt="">
+									<img src="img/svg/flags/3.svg" alt="">
+									<img src="img/svg/flags/4.svg" alt="">
+									<img src="img/svg/flags/5.svg" alt="">
+									<img src="img/svg/flags/6.svg" alt="">
+									<img src="img/svg/flags/7.svg" alt="">
+									<img src="img/svg/flags/8.svg" alt="">
+									<img src="img/svg/flags/9.svg" alt="">
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="item" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%), url(img/Rectangle66.png);">
-					<div class="inner">
-						<h4 class="heading-4">Тематические и практические курсы</h4>
-						<hr>
-						<div class="desc">
-							<ul class="ul-list">
-								<li>Личная и групповая психотерапия </li>
-								<li>Практические знания и навыки</li>
-								<li>Дружное и поддерживающее сообщество</li>
-								<li>Инструменты для улучшения качества жизни</li>
-							</ul>
-							<a href="#" class="btn-one">УЗНАТЬ БОЛЬШЕ</a>
+				<div class="row">
+					<div class="col">
+						<div class="col-inner">
+							<div class="logo">
+								<img src="img/svg/plan.svg" alt="">
+							</div>
+							<button class="btn btn-primary">Get an offer</button>
+							<a href="#" class="more">
+							More
+							<svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M-0.000324298 1.125L1.08663 -3.16749e-07L8.33301 7.5L1.08663 15L-0.000324856 13.875L6.13321 7.5L-0.000324298 1.125Z" fill="#FE4E01"/></svg>
+							</a>
+						</div>
+					</div>
+					<div class="col">
+						<div class="col-inner">
+							<div class="col-head">
+								<span>Rating</span>
+							</div>
+							<div class="col-body">
+								<div class="rating">
+									<div class="rate">
+										<span class="current">3</span><span>/5</span>
+									</div>
+									<div class="stars">
+										<svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.48366 27.1636L7.81332 17.1202L0 10.3651L10.3222 9.47153L14.3364 0L18.3505 9.47153L28.6727 10.3651L20.8594 17.1202L23.1891 27.1636L14.3364 21.8381L5.48366 27.1636Z" fill="#FE4E01"/></svg>
+										<svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.48366 27.1636L7.81332 17.1202L0 10.3651L10.3222 9.47153L14.3364 0L18.3505 9.47153L28.6727 10.3651L20.8594 17.1202L23.1891 27.1636L14.3364 21.8381L5.48366 27.1636Z" fill="#FE4E01"/>
+										</svg>
+										<svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.48366 27.1636L7.81332 17.1202L0 10.3651L10.3222 9.47153L14.3364 0L18.3505 9.47153L28.6727 10.3651L20.8594 17.1202L23.1891 27.1636L14.3364 21.8381L5.48366 27.1636Z" fill="#FE4E01"/>
+										</svg>
+										<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.35934 25.0314L9.05066 17.3349L9.1746 16.7709L8.74806 16.3816L3.02053 11.1546L10.5418 10.4674L11.1509 10.4117L11.3788 9.84413L14.2537 2.68386L17.1286 9.84413L17.3565 10.4117L17.9656 10.4674L25.4869 11.1546L19.7593 16.3816L19.3328 16.7709L19.4567 17.3349L21.148 25.0314L14.7897 20.9939L14.2537 20.6536L13.7176 20.9939L7.35934 25.0314Z" stroke="#787889" stroke-width="2"/></svg>
+										<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.35934 25.0314L9.05066 17.3349L9.1746 16.7709L8.74806 16.3816L3.02053 11.1546L10.5418 10.4674L11.1509 10.4117L11.3788 9.84413L14.2537 2.68386L17.1286 9.84413L17.3565 10.4117L17.9656 10.4674L25.4869 11.1546L19.7593 16.3816L19.3328 16.7709L19.4567 17.3349L21.148 25.0314L14.7897 20.9939L14.2537 20.6536L13.7176 20.9939L7.35934 25.0314Z" stroke="#787889" stroke-width="2"/></svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="col-inner">
+							<div class="col-head">
+								<span>Proccessing</span>
+							</div>
+							<div class="col-body">
+								<div class="desc">
+									Gambling, Betting Forex, Igaming
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="col-inner">
+							<div class="col-head">
+								<span>Location</span>
+							</div>
+							<div class="col-body">
+								<div class="locations">
+									<img src="img/svg/flags/1.svg" alt="">
+									<img src="img/svg/flags/2.svg" alt="">
+									<img src="img/svg/flags/3.svg" alt="">
+									<img src="img/svg/flags/4.svg" alt="">
+									<img src="img/svg/flags/5.svg" alt="">
+									<img src="img/svg/flags/6.svg" alt="">
+									<img src="img/svg/flags/7.svg" alt="">
+									<img src="img/svg/flags/8.svg" alt="">
+									<img src="img/svg/flags/9.svg" alt="">
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			<button class="btn btn-primary btn-show-more">Show more</button>
 		</div>
 	</section>
 	<section class="section-home-4">
 		<div class="container">
-			<div class="title-wrapper">
-				<h2 class="heading-2">Какой <span>вопрос</span> сейчас в центре вашего внимания?</h2>
-				<div class="desc">
-					<p>Вовремя услышанные слова способны утешить и приободрить. Помочь обнаружить новый способ обходиться с трудностями и силы в себе — для вдохновляющего и объемного проживания Своей Жизни. Мы готовы быть рядом с вами, в какой бы точке этого путешествия вы ни находились. <br>Нажмите на картинку и получите инсайт от Pogodin Family </p>
-				</div>
-			</div>
-			<div class="content-wrapper card-slider">
-				<div class="item">
-					<div class="inner">
-						<div class="front">
-							<div class="content">
-								<p class="theme">тематика</p>
-								<h6 class="title">Карьера</h6>
-								<div class="thumb">
-									<img src="img/icons/1.svg" alt="">
-								</div>
-								<img src="img/icons/dots.svg" alt="" class="dots">
-							</div>
-						</div>
-						<div class="back" style="background: url(img/Rectangle32.png);">
-							<div class="content">
-								<div class="quote">
-									<p class="desc">Суть жизни – найти самого себя</p>
-									<hr>
-									<p class="name">Надежда Жиркова</p>
-									<p class="pos">Тренер </p>
-								</div>
-							</div>
-						</div>
+			<div class="wrapper">
+				<div class="left">
+					<div class="content editor">
+						<h2 class="heading-2">Easy to use, Big Community, No extra coast for integrations and more</h2>
+						<p>With our service, you can compare different payment providers side-by-side and make an informed decision quickly. We provide detailed information about the features and fees of each payment provider, allowing you to make an informed decision about which provider is right for your business. </p>
+						<ul>
+							<li>Convenient search and filtering will allow you to quickly find a service provider that matches your segment in the desired region.</li>
+							<li>Real user ratings will help you choose a service transparently and quickly.</li>
+							<li>Stay updated with the latest news in the world of payment solutions.</li>
+							<li>With us, you can integrate any payment system, wallet, or electronic currency.</li>
+							<li>Save energy, time, and resources.</li>
+							<li>Share your opinions and experiences.</li>
+						</ul>
+						<button class="btn btn-primary">Send money now</button>
 					</div>
 				</div>
-				<div class="item">
-					<div class="inner">
-						<div class="front">
-							<div class="content">
-								<p class="theme">тематика</p>
-								<h6 class="title">Выгорание</h6>
-								<div class="thumb">
-									<img src="img/icons/2.svg" alt="">
-								</div>
-								<img src="img/icons/dots.svg" alt="" class="dots">
-							</div>
-						</div>
-						<div class="back" style="background: url(img/Rectangle32.png);">
-							<div class="content">
-								<div class="quote">
-									<p class="desc">Суть жизни – найти самого себя</p>
-									<hr>
-									<p class="name">Надежда Жиркова</p>
-									<p class="pos">Тренер </p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="inner">
-						<div class="front">
-							<div class="content">
-								<p class="theme">тематика</p>
-								<h6 class="title">Выгорание</h6>
-								<div class="thumb">
-									<img src="img/icons/2.svg" alt="">
-								</div>
-								<img src="img/icons/dots.svg" alt="" class="dots">
-							</div>
-						</div>
-						<div class="back" style="background: url(img/Rectangle32.png);">
-							<div class="content">
-								<div class="quote">
-									<p class="desc">Суть жизни – найти самого себя</p>
-									<hr>
-									<p class="name">Надежда Жиркова</p>
-									<p class="pos">Тренер </p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="inner">
-						<div class="front">
-							<div class="content">
-								<p class="theme">тематика</p>
-								<h6 class="title">Жизненные цели</h6>
-								<div class="thumb">
-									<img src="img/icons/4.svg" alt="">
-								</div>
-								<img src="img/icons/dots.svg" alt="" class="dots">
-							</div>
-						</div>
-						<div class="back" style="background: url(img/Rectangle32.png);">
-							<div class="content">
-								<div class="quote">
-									<p class="desc">Суть жизни – найти самого себя Суть жизни – найти самого себя</p>
-									<hr>
-									<p class="name">Надежда Жиркова</p>
-									<p class="pos">Тренер </p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="inner">
-						<div class="front">
-							<div class="content">
-								<p class="theme">тематика</p>
-								<h6 class="title">Поиск себя</h6>
-								<div class="thumb">
-									<img src="img/icons/5.svg" alt="">
-								</div>
-								<img src="img/icons/dots.svg" alt="" class="dots">
-							</div>
-						</div>
-						<div class="back" style="background: url(img/Rectangle32.png);">
-							<div class="content">
-								<div class="quote">
-									<p class="desc">Суть жизни – найти самого себя Суть жизни – найти самого себя Суть жизни – найти самого себя</p>
-									<hr>
-									<p class="name">Надежда Жиркова</p>
-									<p class="pos">Тренер </p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="inner">
-						<div class="front">
-							<div class="content">
-								<p class="theme">тематика</p>
-								<h6 class="title">Отношения</h6>
-								<div class="thumb">
-									<img src="img/icons/6.svg" alt="">
-								</div>
-								<img src="img/icons/dots.svg" alt="" class="dots">
-							</div>
-						</div>
-						<div class="back" style="background: url(img/Rectangle32.png);">
-							<div class="content">
-								<div class="quote">
-									<p class="desc">Суть жизни – найти самого себя</p>
-									<hr>
-									<p class="name">Надежда Жиркова</p>
-									<p class="pos">Тренер </p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="inner">
-						<div class="front">
-							<div class="content">
-								<p class="theme">тематика</p>
-								<h6 class="title">Трудности</h6>
-								<div class="thumb">
-									<img src="img/icons/7.svg" alt="">
-								</div>
-								<img src="img/icons/dots.svg" alt="" class="dots">
-							</div>
-						</div>
-						<div class="back" style="background: url(img/Rectangle32.png);">
-							<div class="content">
-								<div class="quote">
-									<p class="desc">Суть жизни – найти самого себя</p>
-									<hr>
-									<p class="name">Надежда Жиркова</p>
-									<p class="pos">Тренер </p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="inner">
-						<div class="front">
-							<div class="content">
-								<p class="theme">тематика</p>
-								<h6 class="title">Дружба</h6>
-								<div class="thumb">
-									<img src="img/icons/8.svg" alt="">
-								</div>
-								<img src="img/icons/dots.svg" alt="" class="dots">
-							</div>
-						</div>
-						<div class="back" style="background: url(img/Rectangle32.png);">
-							<div class="content">
-								<div class="quote">
-									<p class="desc">Суть жизни – найти самого себя</p>
-									<hr>
-									<p class="name">Надежда Жиркова</p>
-									<p class="pos">Тренер </p>
-								</div>
-							</div>
-						</div>
+				<div class="right">
+					<div class="img_wrapper">
+						<img src="img/pexels-fauxels-3182812 1.png" alt="">
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<section class="section-events">
+	<section class="section-home-5">
 		<div class="container">
-			<div class="title-wrapper">
-				<h2 class="heading-2">Ближайшие <br><span>мероприятия</span></h2>
-				<div class="arrows">
-					<button class="prev"></button>
-					<button class="next"></button>
-				</div>
-			</div>
-			<div class="events-slider">
-				<div class="item">
-					<div class="thumb">
-						<img src="img/Rectangle51.png" alt="">
-					</div>
-					<div class="content">
-						<div class="head">
-							<p class="city">Карпаты, б/о "Коруна"</p>
-							<p class="date">14-26 июля 2022</p>
+			<div class="wrapper">
+				<div class="left">
+					<div class="topics_wrapper">
+						<div class="img_wrapper">
+							<img src="img/Rectangle 90.png" alt="">
 						</div>
-						<div class="body">
-							<h6 class="title">Интенсив «Рискуя быть живым»</h6>
-							<p class="desc">Две недели вы проведете в волшебном уголке прекраснейших Карпатских гор, в комфортабельном отеле, окруженные открытыми людьми и профессионалами высочайшего класса в области гештальт-терапии, погрузитесь в теплую, доверительную атмосферу… и глубоко поработаете над собой</p>
-							<a href="#" class="btn-one">УЗНАТЬ БОЛЬШЕ</a>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="thumb">
-						<img src="img/Rectangle50.png" alt="">
-					</div>
-					<div class="content">
-						<div class="head">
-							<p class="city">Карпаты, б/о "Коруна"</p>
-							<p class="date">14-26 июля 2022</p>
-						</div>
-						<div class="body">
-							<h6 class="title">Интенсив «Рискуя быть живым»</h6>
-							<p class="desc">Две недели вы проведете в волшебном уголке прекраснейших Карпатских гор, в комфортабельном отеле, окруженные открытыми людьми и профессионалами высочайшего класса в области гештальт-терапии, погрузитесь в теплую, доверительную атмосферу… и глубоко поработаете над собой</p>
-							<a href="#" class="btn-one">УЗНАТЬ БОЛЬШЕ</a>
+						<div class="topics">
+							<div class="category">
+								<a href="#">
+									<span>acquiring</span>
+									<span>#42</span>
+								</a>
+								<a href="#">
+									<span>TRNSFER TIPS</span>
+									<span>#32</span>
+								</a>
+								<a href="#">
+									<span>EXCHANGE TIPS</span>
+									<span>#25</span>
+								</a>
+								<a href="#">
+									<span>CRYPTO IDEAS</span>
+									<span>#35</span>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="item">
-					<div class="thumb">
-						<img src="img/Rectangle51.png" alt="">
-					</div>
-					<div class="content">
-						<div class="head">
-							<p class="city">Карпаты, б/о "Коруна"</p>
-							<p class="date">14-26 июля 2022</p>
-						</div>
-						<div class="body">
-							<h6 class="title">Интенсив «Рискуя быть живым»</h6>
-							<p class="desc">Две недели вы проведете в волшебном уголке прекраснейших Карпатских гор, в комфортабельном отеле, окруженные открытыми людьми и профессионалами высочайшего класса в области гештальт-терапии, погрузитесь в теплую, доверительную атмосферу… и глубоко поработаете над собой</p>
-							<a href="#" class="btn-one">УЗНАТЬ БОЛЬШЕ</a>
+				<div class="right">
+					<div class="inner">
+						<h2 class="heading-2"><span>new</span>BLOG ON THE TOPIC TOP PAYMENT SYSTEMS</h2>
+						<div class="counters">
+							<div class="counter"><span class="count">27</span><span class="desc">TRANSFER IDEAS</span></div>
+							<div class="counter"><span class="count">180</span><span class="desc">CRYPTO SOLUTIONS</span></div>
+							<div class="counter"><span class="count">27</span><span class="desc">E-WALLET IDEAS</span></div>
+							<div class="counter"><span class="count">180</span><span class="desc">WAYS TO DEPOSIT</span></div>
 						</div>
 					</div>
 				</div>
@@ -470,464 +1090,415 @@
 	</section>
 	<section class="section-home-6">
 		<div class="container">
-			<div class="banner" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(img/Rectangle70.png);">
-				<div class="inner">
-					<h2 class="heading-2">Lorem ipsum dolor si amet</h2>
-					<p class="desc">Fusce volutpat lectus et nisl consectetur finibus. In vitae scelerisque augue, in varius eros. Nunc sapien diam, euismod et pretium id, volutpat et tortor</p>
-					<hr>
-					<a href="#" class="link">ПОДРОБНЕЕ</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="section-home-7">
-		<div class="container">
-			<div class="head">
-				<p class="desc">Обучайтесь <br>у лучших специалистов </p>
-				<div class="title-wrapper">
-					<h2 class="heading-2">Мы — команда <span>специалистов</span> в области практической психологии и гештальт-терапии</h2>
-					<ul class="ul-list">
-						<li>20+ лет практики</li>
-						<li>По стандартам Европейской Ассоциации Гештальт-терапии (EAGT)</li>
-						<li>25+ квалифицированных преподавателей</li>
-						<li>50+ опытных психологов и психотерапевтов</li>
-					</ul>
-				</div>
-			</div>
-			<div class="body">
-				<div class="left">
-					<div class="team-slider">
-						<div class="slide">
-							<img src="img/Rectangle36.png" alt="">
-							<div class="quote">
-								<p class="desc">Жизнь – это отважное путешествие, длительность которого невозможно предугадать</p>
-								<hr>
-								<p class="name">Алина Шумак</p>
+			<h2 class="heading-2">Popular REQUEST</h2>
+
+			<div class="wrapper">
+				<div class="content">
+					<div class="item">
+						<div class="inner">
+							<div class="category">
+								<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M8.68125 10.125C8.89375 10.125 9.075 10.05 9.225 9.9C9.375 9.75 9.45 9.56875 9.45 9.35625C9.45 9.14375 9.375 8.9625 9.225 8.8125C9.075 8.6625 8.89375 8.5875 8.68125 8.5875C8.46875 8.5875 8.2875 8.6625 8.1375 8.8125C7.9875 8.9625 7.9125 9.14375 7.9125 9.35625C7.9125 9.56875 7.9875 9.75 8.1375 9.9C8.2875 10.05 8.46875 10.125 8.68125 10.125ZM8.2125 7.7625H9.09375C9.11875 7.4 9.17188 7.13125 9.25313 6.95625C9.33438 6.78125 9.5375 6.5375 9.8625 6.225C10.2 5.9 10.4344 5.61563 10.5656 5.37188C10.6969 5.12813 10.7625 4.84375 10.7625 4.51875C10.7625 3.94375 10.5656 3.475 10.1719 3.1125C9.77813 2.75 9.2625 2.56875 8.625 2.56875C8.15 2.56875 7.725 2.69688 7.35 2.95312C6.975 3.20938 6.7 3.56875 6.525 4.03125L7.36875 4.3875C7.50625 4.075 7.67813 3.8375 7.88438 3.675C8.09063 3.5125 8.3375 3.43125 8.625 3.43125C9 3.43125 9.30313 3.5375 9.53438 3.75C9.76562 3.9625 9.88125 4.23125 9.88125 4.55625C9.88125 4.80625 9.825 5.025 9.7125 5.2125C9.6 5.4 9.4 5.6 9.1125 5.8125C8.7125 6.175 8.4625 6.46563 8.3625 6.68438C8.2625 6.90313 8.2125 7.2625 8.2125 7.7625ZM3.375 12.75C3.075 12.75 2.8125 12.6375 2.5875 12.4125C2.3625 12.1875 2.25 11.925 2.25 11.625V1.125C2.25 0.825 2.3625 0.5625 2.5875 0.3375C2.8125 0.1125 3.075 0 3.375 0H13.875C14.175 0 14.4375 0.1125 14.6625 0.3375C14.8875 0.5625 15 0.825 15 1.125V11.625C15 11.925 14.8875 12.1875 14.6625 12.4125C14.4375 12.6375 14.175 12.75 13.875 12.75H3.375ZM1.125 15C0.825 15 0.5625 14.8875 0.3375 14.6625C0.1125 14.4375 0 14.175 0 13.875V2.25H1.125V13.875H12.75V15H1.125Z" fill="#0D0D16"/>
+								</svg>
+								DIGITAL BLOG
 							</div>
-						</div>
-						<div class="slide">
-							<img src="img/Rectangle28.png" alt="">
-							<div class="quote">
-								<p class="desc">Жизнь – это отважное путешествие, длительность которого невозможно предугадать Жизнь – это отважное путешествие, длительность которого невозможно предугадать</p>
-								<hr>
-								<p class="name">Алина Шумак</p>
+							<div class="icon">
+								<img src="img/svg/smile.svg" alt="">
 							</div>
-						</div>
-						<div class="slide">
-							<img src="img/Rectangle32.png" alt="">
-							<div class="quote">
-								<p class="desc">Жизнь – это отважное путешествие, длительность которого невозможно предугадать</p>
-								<hr>
-								<p class="name">Алина Шумак</p>
-							</div>
-						</div>
-						<div class="slide">
-							<img src="img/Rectangle28.png" alt="">
-							<div class="quote">
-								<p class="desc">Жизнь – это отважное путешествие, длительность которого невозможно предугадать</p>
-								<hr>
-								<p class="name">Алина Шумак</p>
-							</div>
-						</div>
-						<div class="slide">
-							<img src="img/Rectangle32.png" alt="">
-							<div class="quote">
-								<p class="desc">Жизнь </p>
-								<hr>
-								<p class="name">Алина Шумак</p>
-							</div>
+							<a href="#" class="title">
+								<span>gambling betting payment solutions</span>
+								<span>gambling betting payment solutions</span>
+							</a>
+							<p class="desc">Indeed, it may just be our two pence right there, but before you know it, you will be laden with profits by the sacksful. </p>
+							<a href="#" class="link">
+							View
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 0.666665L20 10.3333L10 20L8.6875 18.7313L16.4375 11.2396L-7.6586e-07 11.2396L-9.24314e-07 9.42708L16.4375 9.42708L8.6875 1.93541L10 0.666665Z" fill="#0D0D16"/>
+							</svg>
+							</a>
 						</div>
 					</div>
-					<div class="team-slider-nav">
-						<div class="slide">
-							<div class="item">
-								<img src="img/Rectangle36.png" alt="">
+					<div class="item">
+						<div class="inner">
+							<div class="category">
+								<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M8.68125 10.125C8.89375 10.125 9.075 10.05 9.225 9.9C9.375 9.75 9.45 9.56875 9.45 9.35625C9.45 9.14375 9.375 8.9625 9.225 8.8125C9.075 8.6625 8.89375 8.5875 8.68125 8.5875C8.46875 8.5875 8.2875 8.6625 8.1375 8.8125C7.9875 8.9625 7.9125 9.14375 7.9125 9.35625C7.9125 9.56875 7.9875 9.75 8.1375 9.9C8.2875 10.05 8.46875 10.125 8.68125 10.125ZM8.2125 7.7625H9.09375C9.11875 7.4 9.17188 7.13125 9.25313 6.95625C9.33438 6.78125 9.5375 6.5375 9.8625 6.225C10.2 5.9 10.4344 5.61563 10.5656 5.37188C10.6969 5.12813 10.7625 4.84375 10.7625 4.51875C10.7625 3.94375 10.5656 3.475 10.1719 3.1125C9.77813 2.75 9.2625 2.56875 8.625 2.56875C8.15 2.56875 7.725 2.69688 7.35 2.95312C6.975 3.20938 6.7 3.56875 6.525 4.03125L7.36875 4.3875C7.50625 4.075 7.67813 3.8375 7.88438 3.675C8.09063 3.5125 8.3375 3.43125 8.625 3.43125C9 3.43125 9.30313 3.5375 9.53438 3.75C9.76562 3.9625 9.88125 4.23125 9.88125 4.55625C9.88125 4.80625 9.825 5.025 9.7125 5.2125C9.6 5.4 9.4 5.6 9.1125 5.8125C8.7125 6.175 8.4625 6.46563 8.3625 6.68438C8.2625 6.90313 8.2125 7.2625 8.2125 7.7625ZM3.375 12.75C3.075 12.75 2.8125 12.6375 2.5875 12.4125C2.3625 12.1875 2.25 11.925 2.25 11.625V1.125C2.25 0.825 2.3625 0.5625 2.5875 0.3375C2.8125 0.1125 3.075 0 3.375 0H13.875C14.175 0 14.4375 0.1125 14.6625 0.3375C14.8875 0.5625 15 0.825 15 1.125V11.625C15 11.925 14.8875 12.1875 14.6625 12.4125C14.4375 12.6375 14.175 12.75 13.875 12.75H3.375ZM1.125 15C0.825 15 0.5625 14.8875 0.3375 14.6625C0.1125 14.4375 0 14.175 0 13.875V2.25H1.125V13.875H12.75V15H1.125Z" fill="#0D0D16"/>
+								</svg>
+								DIGITAL BLOG
 							</div>
-						</div>
-						<div class="slide">
-							<div class="item">
-								<img src="img/Rectangle28.png" alt="">
+							<div class="icon">
+								<img src="img/svg/smile.svg" alt="">
 							</div>
-						</div>
-						<div class="slide">
-							<div class="item">
-								<img src="img/Rectangle32.png" alt="">
-							</div>
-						</div>
-						<div class="slide">
-							<div class="item">
-								<img src="img/Rectangle28.png" alt="">
-							</div>
-						</div>
-						<div class="slide">
-							<div class="item">
-								<img src="img/Rectangle32.png" alt="">
-							</div>
+							<a href="#" class="title">
+								<span>FOR WEB-SITE</span>
+								<span>FOR WEB-SITE</span>
+							</a>
+							<p class="desc">Indeed, it may just be our two pence right there, but before you know it, you will be laden with profits by the sacksful. </p>
+							<a href="#" class="link">
+							View
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 0.666665L20 10.3333L10 20L8.6875 18.7313L16.4375 11.2396L-7.6586e-07 11.2396L-9.24314e-07 9.42708L16.4375 9.42708L8.6875 1.93541L10 0.666665Z" fill="#0D0D16"/>
+							</svg>
+							</a>
 						</div>
 					</div>
-				</div>
-				<div class="right">
-					<div class="box-wrapper">
-						<div class="block">
-							<div class="inner">
-								<h6 class="count count-1">2,5К</h6>
-								<p class="desc">часов практики индивидуальной терапии в гештальт-подходе</p>
+					<div class="item">
+						<div class="inner">
+							<div class="category">
+								<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M8.68125 10.125C8.89375 10.125 9.075 10.05 9.225 9.9C9.375 9.75 9.45 9.56875 9.45 9.35625C9.45 9.14375 9.375 8.9625 9.225 8.8125C9.075 8.6625 8.89375 8.5875 8.68125 8.5875C8.46875 8.5875 8.2875 8.6625 8.1375 8.8125C7.9875 8.9625 7.9125 9.14375 7.9125 9.35625C7.9125 9.56875 7.9875 9.75 8.1375 9.9C8.2875 10.05 8.46875 10.125 8.68125 10.125ZM8.2125 7.7625H9.09375C9.11875 7.4 9.17188 7.13125 9.25313 6.95625C9.33438 6.78125 9.5375 6.5375 9.8625 6.225C10.2 5.9 10.4344 5.61563 10.5656 5.37188C10.6969 5.12813 10.7625 4.84375 10.7625 4.51875C10.7625 3.94375 10.5656 3.475 10.1719 3.1125C9.77813 2.75 9.2625 2.56875 8.625 2.56875C8.15 2.56875 7.725 2.69688 7.35 2.95312C6.975 3.20938 6.7 3.56875 6.525 4.03125L7.36875 4.3875C7.50625 4.075 7.67813 3.8375 7.88438 3.675C8.09063 3.5125 8.3375 3.43125 8.625 3.43125C9 3.43125 9.30313 3.5375 9.53438 3.75C9.76562 3.9625 9.88125 4.23125 9.88125 4.55625C9.88125 4.80625 9.825 5.025 9.7125 5.2125C9.6 5.4 9.4 5.6 9.1125 5.8125C8.7125 6.175 8.4625 6.46563 8.3625 6.68438C8.2625 6.90313 8.2125 7.2625 8.2125 7.7625ZM3.375 12.75C3.075 12.75 2.8125 12.6375 2.5875 12.4125C2.3625 12.1875 2.25 11.925 2.25 11.625V1.125C2.25 0.825 2.3625 0.5625 2.5875 0.3375C2.8125 0.1125 3.075 0 3.375 0H13.875C14.175 0 14.4375 0.1125 14.6625 0.3375C14.8875 0.5625 15 0.825 15 1.125V11.625C15 11.925 14.8875 12.1875 14.6625 12.4125C14.4375 12.6375 14.175 12.75 13.875 12.75H3.375ZM1.125 15C0.825 15 0.5625 14.8875 0.3375 14.6625C0.1125 14.4375 0 14.175 0 13.875V2.25H1.125V13.875H12.75V15H1.125Z" fill="#0D0D16"/>
+								</svg>
+								DIGITAL BLOG
 							</div>
+							<div class="icon">
+								<img src="img/svg/smile.svg" alt="">
+							</div>
+							<a href="#" class="title">
+								<span>best mobile payment for small business</span>
+								<span>best mobile payment for small business</span>
+							</a>
+							<p class="desc">Indeed, it may just be our two pence right there, but before you know it, you will be laden with profits by the sacksful. </p>
+							<a href="#" class="link">
+							View
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 0.666665L20 10.3333L10 20L8.6875 18.7313L16.4375 11.2396L-7.6586e-07 11.2396L-9.24314e-07 9.42708L16.4375 9.42708L8.6875 1.93541L10 0.666665Z" fill="#0D0D16"/>
+							</svg>
+							</a>
 						</div>
-						<div class="block">
-							<div class="inner">
-								<h6 class="count count-need">500</h6>
-								<p class="desc">часов индивидуальной практики в коучинге</p>
+					</div>
+					<div class="item">
+						<div class="inner">
+							<div class="category">
+								<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M8.68125 10.125C8.89375 10.125 9.075 10.05 9.225 9.9C9.375 9.75 9.45 9.56875 9.45 9.35625C9.45 9.14375 9.375 8.9625 9.225 8.8125C9.075 8.6625 8.89375 8.5875 8.68125 8.5875C8.46875 8.5875 8.2875 8.6625 8.1375 8.8125C7.9875 8.9625 7.9125 9.14375 7.9125 9.35625C7.9125 9.56875 7.9875 9.75 8.1375 9.9C8.2875 10.05 8.46875 10.125 8.68125 10.125ZM8.2125 7.7625H9.09375C9.11875 7.4 9.17188 7.13125 9.25313 6.95625C9.33438 6.78125 9.5375 6.5375 9.8625 6.225C10.2 5.9 10.4344 5.61563 10.5656 5.37188C10.6969 5.12813 10.7625 4.84375 10.7625 4.51875C10.7625 3.94375 10.5656 3.475 10.1719 3.1125C9.77813 2.75 9.2625 2.56875 8.625 2.56875C8.15 2.56875 7.725 2.69688 7.35 2.95312C6.975 3.20938 6.7 3.56875 6.525 4.03125L7.36875 4.3875C7.50625 4.075 7.67813 3.8375 7.88438 3.675C8.09063 3.5125 8.3375 3.43125 8.625 3.43125C9 3.43125 9.30313 3.5375 9.53438 3.75C9.76562 3.9625 9.88125 4.23125 9.88125 4.55625C9.88125 4.80625 9.825 5.025 9.7125 5.2125C9.6 5.4 9.4 5.6 9.1125 5.8125C8.7125 6.175 8.4625 6.46563 8.3625 6.68438C8.2625 6.90313 8.2125 7.2625 8.2125 7.7625ZM3.375 12.75C3.075 12.75 2.8125 12.6375 2.5875 12.4125C2.3625 12.1875 2.25 11.925 2.25 11.625V1.125C2.25 0.825 2.3625 0.5625 2.5875 0.3375C2.8125 0.1125 3.075 0 3.375 0H13.875C14.175 0 14.4375 0.1125 14.6625 0.3375C14.8875 0.5625 15 0.825 15 1.125V11.625C15 11.925 14.8875 12.1875 14.6625 12.4125C14.4375 12.6375 14.175 12.75 13.875 12.75H3.375ZM1.125 15C0.825 15 0.5625 14.8875 0.3375 14.6625C0.1125 14.4375 0 14.175 0 13.875V2.25H1.125V13.875H12.75V15H1.125Z" fill="#0D0D16"/>
+								</svg>
+								DIGITAL BLOG
 							</div>
+							<div class="icon">
+								<img src="img/svg/dog.svg" alt="">
+							</div>
+							<a href="#" class="title">
+								<span>PAY IN BITCOIN.</span>
+								<span>PAY IN BITCOIN.</span>
+							</a>
+							<p class="desc">Indeed, it may just be our two pence right there, but before you know it, you will be laden with profits by the sacksful. </p>
+							<a href="#" class="link">
+							View
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 0.666665L20 10.3333L10 20L8.6875 18.7313L16.4375 11.2396L-7.6586e-07 11.2396L-9.24314e-07 9.42708L16.4375 9.42708L8.6875 1.93541L10 0.666665Z" fill="#0D0D16"/>
+							</svg>
+							</a>
 						</div>
-						<div class="block">
-							<div class="inner">
-								<h6 class="count count-need">300</h6>
-								<p class="desc">часов обучающих групп по гештальт-терапии</p>
+					</div>
+					<div class="item">
+						<div class="inner">
+							<div class="category">
+								<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M8.68125 10.125C8.89375 10.125 9.075 10.05 9.225 9.9C9.375 9.75 9.45 9.56875 9.45 9.35625C9.45 9.14375 9.375 8.9625 9.225 8.8125C9.075 8.6625 8.89375 8.5875 8.68125 8.5875C8.46875 8.5875 8.2875 8.6625 8.1375 8.8125C7.9875 8.9625 7.9125 9.14375 7.9125 9.35625C7.9125 9.56875 7.9875 9.75 8.1375 9.9C8.2875 10.05 8.46875 10.125 8.68125 10.125ZM8.2125 7.7625H9.09375C9.11875 7.4 9.17188 7.13125 9.25313 6.95625C9.33438 6.78125 9.5375 6.5375 9.8625 6.225C10.2 5.9 10.4344 5.61563 10.5656 5.37188C10.6969 5.12813 10.7625 4.84375 10.7625 4.51875C10.7625 3.94375 10.5656 3.475 10.1719 3.1125C9.77813 2.75 9.2625 2.56875 8.625 2.56875C8.15 2.56875 7.725 2.69688 7.35 2.95312C6.975 3.20938 6.7 3.56875 6.525 4.03125L7.36875 4.3875C7.50625 4.075 7.67813 3.8375 7.88438 3.675C8.09063 3.5125 8.3375 3.43125 8.625 3.43125C9 3.43125 9.30313 3.5375 9.53438 3.75C9.76562 3.9625 9.88125 4.23125 9.88125 4.55625C9.88125 4.80625 9.825 5.025 9.7125 5.2125C9.6 5.4 9.4 5.6 9.1125 5.8125C8.7125 6.175 8.4625 6.46563 8.3625 6.68438C8.2625 6.90313 8.2125 7.2625 8.2125 7.7625ZM3.375 12.75C3.075 12.75 2.8125 12.6375 2.5875 12.4125C2.3625 12.1875 2.25 11.925 2.25 11.625V1.125C2.25 0.825 2.3625 0.5625 2.5875 0.3375C2.8125 0.1125 3.075 0 3.375 0H13.875C14.175 0 14.4375 0.1125 14.6625 0.3375C14.8875 0.5625 15 0.825 15 1.125V11.625C15 11.925 14.8875 12.1875 14.6625 12.4125C14.4375 12.6375 14.175 12.75 13.875 12.75H3.375ZM1.125 15C0.825 15 0.5625 14.8875 0.3375 14.6625C0.1125 14.4375 0 14.175 0 13.875V2.25H1.125V13.875H12.75V15H1.125Z" fill="#0D0D16"/>
+								</svg>
+								DIGITAL BLOG
 							</div>
+							<div class="icon">
+								<img src="img/svg/fox.svg" alt="">
+							</div>
+							<a href="#" class="title">
+								<span>CREDIT CARDS</span>
+								<span>CREDIT CARDS</span>
+							</a>
+							<p class="desc">Indeed, it may just be our two pence right there, but before you know it, you will be laden with profits by the sacksful. </p>
+							<a href="#" class="link">
+							View
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 0.666665L20 10.3333L10 20L8.6875 18.7313L16.4375 11.2396L-7.6586e-07 11.2396L-9.24314e-07 9.42708L16.4375 9.42708L8.6875 1.93541L10 0.666665Z" fill="#0D0D16"/>
+							</svg>
+							</a>
 						</div>
-						<div class="block-link">
-							<div class="inner">
-								<div class="link-top">
-									<a href="#" class="circle">
-										<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.75 21.25L21.25 8.75" stroke="#4B2D3A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.75 8.75H21.25V21.25" stroke="#4B2D3A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-									</a>
-									<p>ПОЗНАКОМИТЬСЯ</p>
-								</div>
-								<div class="link-bottom">
-									<h6 class="count count-need">40</h6>
-									<p class="desc">специалистов академии</p>
-								</div>
+					</div>
+					<div class="item">
+						<div class="inner">
+							<div class="category">
+								<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M8.68125 10.125C8.89375 10.125 9.075 10.05 9.225 9.9C9.375 9.75 9.45 9.56875 9.45 9.35625C9.45 9.14375 9.375 8.9625 9.225 8.8125C9.075 8.6625 8.89375 8.5875 8.68125 8.5875C8.46875 8.5875 8.2875 8.6625 8.1375 8.8125C7.9875 8.9625 7.9125 9.14375 7.9125 9.35625C7.9125 9.56875 7.9875 9.75 8.1375 9.9C8.2875 10.05 8.46875 10.125 8.68125 10.125ZM8.2125 7.7625H9.09375C9.11875 7.4 9.17188 7.13125 9.25313 6.95625C9.33438 6.78125 9.5375 6.5375 9.8625 6.225C10.2 5.9 10.4344 5.61563 10.5656 5.37188C10.6969 5.12813 10.7625 4.84375 10.7625 4.51875C10.7625 3.94375 10.5656 3.475 10.1719 3.1125C9.77813 2.75 9.2625 2.56875 8.625 2.56875C8.15 2.56875 7.725 2.69688 7.35 2.95312C6.975 3.20938 6.7 3.56875 6.525 4.03125L7.36875 4.3875C7.50625 4.075 7.67813 3.8375 7.88438 3.675C8.09063 3.5125 8.3375 3.43125 8.625 3.43125C9 3.43125 9.30313 3.5375 9.53438 3.75C9.76562 3.9625 9.88125 4.23125 9.88125 4.55625C9.88125 4.80625 9.825 5.025 9.7125 5.2125C9.6 5.4 9.4 5.6 9.1125 5.8125C8.7125 6.175 8.4625 6.46563 8.3625 6.68438C8.2625 6.90313 8.2125 7.2625 8.2125 7.7625ZM3.375 12.75C3.075 12.75 2.8125 12.6375 2.5875 12.4125C2.3625 12.1875 2.25 11.925 2.25 11.625V1.125C2.25 0.825 2.3625 0.5625 2.5875 0.3375C2.8125 0.1125 3.075 0 3.375 0H13.875C14.175 0 14.4375 0.1125 14.6625 0.3375C14.8875 0.5625 15 0.825 15 1.125V11.625C15 11.925 14.8875 12.1875 14.6625 12.4125C14.4375 12.6375 14.175 12.75 13.875 12.75H3.375ZM1.125 15C0.825 15 0.5625 14.8875 0.3375 14.6625C0.1125 14.4375 0 14.175 0 13.875V2.25H1.125V13.875H12.75V15H1.125Z" fill="#0D0D16"/>
+								</svg>
+								DIGITAL BLOG
 							</div>
+							<div class="icon">
+								<img src="img/svg/money.svg" alt="">
+							</div>
+							<a href class="title">
+								<span>MARKETPLACE</span>
+								<span>MARKETPLACE</span>
+							</a>
+							<p class="desc">Indeed, it may just be our two pence right there, but before you know it, you will be laden with profits by the sacksful. </p>
+							<a href="#" class="link">
+							View
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 0.666665L20 10.3333L10 20L8.6875 18.7313L16.4375 11.2396L-7.6586e-07 11.2396L-9.24314e-07 9.42708L16.4375 9.42708L8.6875 1.93541L10 0.666665Z" fill="#0D0D16"/>
+							</svg>
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
+
+			<button class="btn btn-primary btn-show-more">Show more</button>
+
 		</div>
 	</section>
 	<section class="section-home-8">
 		<div class="container">
-			<h2 class="heading-2"><span>Отзывы</span> студентов</h2>
-			<div class="reviews-slider">
-				<div class="slide">
-					<div class="thumb">
-						<div class="inner">
-							<video src="video/IMG_6600.MP4" poster="img/review1.png"></video>
-							<button class="play">
-								<svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 9L0 17.6603L0 0.339746L15 9Z" fill="white"/></svg>
-							</button>
-							<button class="pause">
-								<svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 9L0 17.6603L0 0.339746L15 9Z" fill="white"/></svg>
-							</button>
-							<div class="block">
-								<h6 class="name">Эвелина Керова</h6>
-								<p class="desc">Выпускница 1 потока курса “Менеджмент чувств”</p>
-								<hr>
-								<a href="#" class="link">ЧИТАТЬ ОТЗЫВ</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="slide">
-					<div class="thumb">
-						<div class="inner">
-							<video src="video/IMG_6600.MP4" poster="img/review2.png"></video>
-							<button class="play">
-								<svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 9L0 17.6603L0 0.339746L15 9Z" fill="white"/></svg>
-							</button>
-							<button class="pause">
-								<svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 9L0 17.6603L0 0.339746L15 9Z" fill="white"/></svg>
-							</button>
-							<div class="block">
-								<h6 class="name">Джеймс Оли</h6>
-								<p class="desc">Выпускник 3 потока курса по обучению гештальт-консультированию</p>
-								<hr>
-								<a href="#" class="link">ЧИТАТЬ ОТЗЫВ</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="slide">
-					<div class="thumb">
-						<div class="inner">
-							<video src="video/IMG_6600.MP4" poster="img/review3.png"></video>
-							<button class="play">
-								<svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 9L0 17.6603L0 0.339746L15 9Z" fill="white"/></svg>
-							</button>
-							<button class="pause">
-								<svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 9L0 17.6603L0 0.339746L15 9Z" fill="white"/></svg>
-							</button>
-							<div class="block">
-								<h6 class="name">Катя Остахова</h6>
-								<p class="desc">Выпускница 1 потока курса по психотерапии переживанием</p>
-								<hr>
-								<a href="#" class="link">ЧИТАТЬ ОТЗЫВ</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="slide">
-					<div class="thumb">
-						<div class="inner">
-							<video src="video/IMG_6600.MP4" poster="img/review1.png"></video>
-							<button class="play">
-								<svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 9L0 17.6603L0 0.339746L15 9Z" fill="white"/></svg>
-							</button>
-							<button class="pause">
-								<svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 9L0 17.6603L0 0.339746L15 9Z" fill="white"/></svg>
-							</button>
-							<div class="block">
-								<h6 class="name">Эвелина Керова</h6>
-								<p class="desc">Выпускница 1 потока курса “Менеджмент чувств”</p>
-								<hr>
-								<a href="#" class="link">ЧИТАТЬ ОТЗЫВ</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="section-blog">
-		<div class="container">
-			<div class="title-wrapper">
-				<h2 class="heading-2"><span>Актуальное</span> в блоге </h2>
-				<div class="arrows">
-					<button class="prev"></button>
-					<button class="next"></button>
-				</div>
-			</div>
-			<div class="blog-wrapper blog-slider">
-				<div class="item">
-					<div class="inner">
-						<div class="thumb">
-							<img src="img/Rectangle88.png" alt="">
-						</div>
-						<div class="info">
-							<p class="category">психология</p>
-							<p class="date">11.09.21</p>
-							<p class="time">5 МИНУТ</p>
-							<p class="views">236</p>
-						</div>
-						<h6 class="heading-6">заголовок статьи</h6>
-						<p class="desc">Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare, tristique quam in, gravida enim. Nullam ut molestie arcu, at hendrerit elit. Proin eu enim metus</p>
-						<hr>
-						<a href="#" class="link">ЧИТАТЬ СТАТЬЮ</a>
-					</div>
-				</div>
-				<div class="item">
-					<div class="inner">
-						<div class="thumb">
-							<img src="img/Rectangle90.png" alt="">
-						</div>
-						<div class="info">
-							<p class="category">психология</p>
-							<p class="date">11.09.21</p>
-							<p class="time">5 МИНУТ</p>
-							<p class="views">236</p>
-						</div>
-						<h6 class="heading-6">заголовок статьи</h6>
-						<p class="desc">Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare, tristique quam in, gravida enim. Nullam ut molestie arcu, at hendrerit elit. Proin eu enim metus</p>
-						<hr>
-						<a href="#" class="link">ЧИТАТЬ СТАТЬЮ</a>
-					</div>
-				</div>
-				<div class="item">
-					<div class="inner">
-						<div class="thumb">
-							<img src="img/Rectangle92.png" alt="">
-						</div>
-						<div class="info">
-							<p class="category">психология</p>
-							<p class="date">11.09.21</p>
-							<p class="time">5 МИНУТ</p>
-							<p class="views">236</p>
-						</div>
-						<h6 class="heading-6">заголовок статьи</h6>
-						<p class="desc">Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare, tristique quam in, gravida enim. Nullam ut molestie arcu, at hendrerit elit. Proin eu enim metus</p>
-						<hr>
-						<a href="#" class="link">ЧИТАТЬ СТАТЬЮ</a>
-					</div>
-				</div>
-			</div>
-			<a href="#" class="btn-one see-more">БОЛЬШЕ СТАТЕЙ</a>
-		</div>
-	</section>
-	<section class="section-books">
-		<div class="container">
-			<div class="title-wrapper">
-				<h2 class="heading-2">Книги</h2>
-				<div class="arrows">
-					<button class="prev"></button>
-					<button class="next"></button>
-				</div>
-			</div>
-			<div class="books-wrapper books-slider">
-				<div class="item">
-					<div class="inner">
-						<div class="thumb">
-							<img src="img/Rectangle30.png" alt="">
-						</div>
-						<h6 class="heading-6">Как устроена реальность?</h6>
-						<hr>
-						<div class="bottom">
-							<p class="price">11.15$</p>
-							<a href="#" class="link">ПОДРОБНЕЕ</a>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="inner">
-						<div class="thumb">
-							<img src="img/Rectangle31.png" alt="">
-						</div>
-						<h6 class="heading-6">Все и ничто</h6>
-						<hr>
-						<div class="bottom">
-							<p class="price">11.15$</p>
-							<a href="#" class="link">ПОДРОБНЕЕ</a>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="inner">
-						<div class="thumb">
-							<img src="img/Rectangle322.png" alt="">
-						</div>
-						<h6 class="heading-6">Добро пожаловать домой!</h6>
-						<hr>
-						<div class="bottom">
-							<p class="price">11.15$</p>
-							<a href="#" class="link">ПОДРОБНЕЕ</a>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="inner">
-						<div class="thumb">
-							<img src="img/Rectangle33.png" alt="">
-						</div>
-						<h6 class="heading-6">Витальное расширение</h6>
-						<hr>
-						<div class="bottom">
-							<p class="price">11.15$</p>
-							<a href="#" class="link">ПОДРОБНЕЕ</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<a href="#" class="btn-outline see-more">СМОТРЕТЬ ВСЕ</a>
-		</div> 
-	</section>
-	<section class="section-form-banner">
-		<div class="container">
-			<div class="left">
-				<h2 class="heading-2">Остались вопросы? <br>Напишите нам!</h2>
-				<p class="desc">Оставьте заявку, и наши менеджеры с любовью расскажут о нашей программе</p>
-			</div>
-			<div class="right">
-				<form action="">
-					<p>
-						<label for="">Имя</label>
-						<input type="text" placeholder="Введите имя">
-					</p>
-					<p>
-						<label for="">Номер телефона</label>
-						<input type="text" placeholder="Введите номер телефона">
-					</p>
-					<p>
-						<label for="">E-mail</label>
-						<input type="text" placeholder="Введите e-mail">
-					</p>
+			<div class="wrapper">
+				<div class="left">
+					<h2 class="heading-2">Latest Reviews</h2>
 					<div class="buttons">
-						<button class="btn-two">ОТПРАВИТЬ</button>
-						<span class="info">Нажимая на кнопку, вы соглашаетесь с условиями <a href="#">Политики конфиденциальности</a></span>
+						<div class="btn-arrow btn-prev">
+							<svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M15 29L2.53526e-06 14.5L15 -2.62268e-06L16.9687 1.90312L5.34375 13.1406L30 13.1406L30 15.8594L5.34375 15.8594L16.9688 27.0969L15 29Z" fill="#82868a"></path>
+							</svg>
+						</div>
+						<div class="btn-arrow btn-prev">
+							<svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M15 -2.14573e-06L30 14.5L15 29L13.0313 27.0969L24.6562 15.8594L7.58559e-07 15.8594L5.20878e-07 13.1406L24.6562 13.1406L13.0312 1.90312L15 -2.14573e-06Z" fill="#82868a"></path>
+							</svg>
+						</div>
 					</div>
-				</form>
-			</div>
-		</div>
-	</section>
-	<section class="section-contacts">
-		<div class="container">
-			<div class="left">
-				<div class="map-wrapper" style="background: radial-gradient(44.27% 44.27% at 65.02% 50.06%, rgba(125, 125, 125, 0.12) 0%, rgba(255, 255, 255, 0) 100%), url(img/map.png)">
-					<div class="content">
-						<p class="info">Наш новый офис <br>в Киеве</p>
-						<a href="#" class="btn-link">СМОТРЕТЬ НА КАРТЕ</a>
+				</div>
+				<div class="right">
+					<div class="inner">
+						<div class="reviews-slider">
+							<div class="item">
+								<div class="card">
+									<div class="icon">
+										<img src="img/svg/man.svg" alt="">
+									</div>
+									<p class="desc">“ I love how AllPayz simplifies the process of finding top-notch service providers worldwide. ”</p>
+									<button class="btn">Find a provider</button>
+								</div>
+							</div>
+							<div class="item">
+								<div class="card">
+									<div class="icon">
+										<img src="img/svg/dragon.svg" alt="">
+									</div>
+									<p class="desc">“ I love how AllPayz simplifies the process of finding top-notch service providers worldwide. ”</p>
+									<button class="btn">Find a provider</button>
+								</div>
+							</div>
+							<div class="item">
+								<div class="card">
+									<div class="icon">
+										<img src="img/svg/girl.svg" alt="">
+									</div>
+									<p class="desc">“ I love how AllPayz simplifies the process of finding top-notch service providers worldwide. ”</p>
+									<button class="btn">Find a provider</button>
+								</div>
+							</div>
+							<div class="item">
+								<div class="card">
+									<div class="icon">
+										<img src="img/svg/man.svg" alt="">
+									</div>
+									<p class="desc">“ I love how AllPayz simplifies the process of finding top-notch service providers worldwide. ”</p>
+									<button class="btn">Find a provider</button>
+								</div>
+							</div>
+							<div class="item">
+								<div class="card">
+									<div class="icon">
+										<img src="img/svg/dragon.svg" alt="">
+									</div>
+									<p class="desc">“ I love how AllPayz simplifies the process of finding top-notch service providers worldwide. ”</p>
+									<button class="btn">Find a provider</button>
+								</div>
+							</div>
+							<div class="item">
+								<div class="card">
+									<div class="icon">
+										<img src="img/svg/girl.svg" alt="">
+									</div>
+									<p class="desc">“ I love how AllPayz simplifies the process of finding top-notch service providers worldwide. ”</p>
+									<button class="btn">Find a provider</button>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="right">
-				<h2 class="heading-2">Свяжитесь с нами <br><span>другим способом</span></h2>
-				<p class="street">г. Киев, ул. Предславинская, 39</p>
-				<a href="tel:+38 094 828 80 67" class="link-contact">+38 094 828 80 67</a>
-				<a href="tel:+7 812 309 54 47" class="link-contact">+7 812 309 54 47</a>
-				<a href="mailto:info@pogodin.academy" class="link-contact">info@pogodin.academy</a>
-				<hr>
-				<ul class="social">
-					<li><a href="#"><img src="img/icons/instagram.svg" alt=""></a></li>
-					<li><a href="#"><img src="img/icons/youtube.svg" alt=""></a></li>
-					<li><a href="#"><img src="img/icons/twitter.svg" alt=""></a></li>
-					<li><a href="#"><img src="img/icons/facebook.svg" alt=""></a></li>
-					<li><a href="#"><img src="img/icons/linkedin.svg" alt=""></a></li>
-				</ul>
+		</div>
+	</section>
+		<section class="section-home-9">
+		<div class="container">
+			<div class="wrapper">
+				<div class="left">
+					<div class="content editor">
+						<h2 class="heading-2">We offer all payment providers to become a part of our community flagship.</h2>
+						<p>You gain access to our hub, which brings together service providers and their users.</p>
+						<ul>
+							<li>The latest and most relevant news in the payment industry.</li>
+							<li>Find like-minded colleagues and partners.</li>
+							<li>Find answers to your industry-related questions.</li>
+						</ul>
+						<button class="btn btn-primary">Join</button>
+					</div>
+				</div>
+				<div class="right">
+					<div class="img_wrapper">
+						<img src="img/Rectangle 109.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="section-home-10">
+		<div class="container">
+			<div class="wrapper">
+				<div class="left">
+					<div class="inner">
+						<div class="form-wrapper">
+							<form action="">
+								<div class="radio-buttons-wrapper">
+									<div>
+										<input type="radio" id="input_merchant" name="role" value="merchant" checked />
+										<label for="input_merchant">Merchant</label>
+									</div>
+									<div>
+										<input type="radio" id="input_provider" name="role" value="provider" />
+										<label for="input_provider">Provider</label>
+									</div>
+								</div>
+								<div class="input-wrapper">
+									<input type="text" id="input_name">
+									<label for="input_name">Full Name</label>
+								</div>
+								<div class="input-wrapper">
+									<input type="text" id="input_company">
+									<label for="input_company">Company</label>
+								</div>
+								<div class="input-wrapper">
+									<input type="email" id="input_email">
+									<label for="input_email">E-Mail</label>
+									
+								</div>
+								<div class="input-wrapper">
+									<input type="text" id="input_phone">
+									<label for="input_phone">Phone</label>
+								</div>
+								<button class="btn btn-primary btn-submit">Send</button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="right">
+					<div class="inner">
+						<h2 class="heading-2">work with us</h2>
+						<p class="desc">Indeed, it may just be our two pence right there, but before you know it, you will be laden with profits by the sacksful. And why stop there? There is so much to chatter about when it comes to the juicy eSports gambling industry. No need to play coy now, take a deep breath and plunge into the deep to explore the ocean floor for any signs of.</p>
+						<div class="buttons">
+							<button class="btn btn-primary">Open a ticket</button>
+							<button class="btn btn-secondary">Open a ticket</button>
+						</div>
+						<hr>
+						<div class="bottom">
+							<div class="col">
+								<div class="icon">
+									<img src="img/svg/lock.svg" alt="">
+								</div>
+								<p>Our dedicated fraud and security teams work to keep your money safe.</p>
+							</div>
+							<div class="col">
+								<div class="icon">
+									<img src="img/svg/institute.svg" alt="">
+								</div>
+								<p>We hold your money with established financial institutions</p>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
 	<footer>
 		<div class="container">
-			<div class="left">
-				<a href="#" class="logo"><img src="img/logo-dark.svg" alt=""></a>
-				<p class="info">Подпишитесь на наши новости и обучающие материалы</p>
-				<form action="">
-					<input type="text" placeholder="Введите имя">
-					<button class="btn-one">ОТПРАВИТЬ</button>
-				</form>
-			</div>
-			<div class="right">
-				<a href="#" class="logo"><img src="img/logo-dark.svg" alt=""></a>
-				<ul class="footer-nav">
+			<div class="footer-top">
+				<a href="#" class="logo">
+					<img src="img/svg/logo-primary.svg" alt="">
+				</a>
+				<div class="buttons">
+					<button class="btn btn-primary">
+						All providers 
+						<svg width="6" height="3" viewBox="0 0 6 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M3 2.66667L0 0H6L3 2.66667Z" fill="#F6F9FC"/>
+						</svg>
+					</button>
+					<a href="#" class="link">
+						Resources
+						<svg width="6" height="3" viewBox="0 0 6 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M3 2.66667L0 0H6L3 2.66667Z" fill="#0D0D16"/>
+						</svg>
+					</a>
+				</div>
+				<div class="search">
+					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M18.7778 20L11.4722 12.6944C10.9167 13.1759 10.2689 13.5509 9.52892 13.8194C8.78893 14.088 8.00152 14.2222 7.16667 14.2222C5.16367 14.2222 3.46847 13.5278 2.08108 12.1389C0.693694 10.75 0 9.07407 0 7.11111C0 5.14815 0.694444 3.47222 2.08333 2.08333C3.47222 0.694444 5.15278 0 7.125 0C9.09722 0 10.7731 0.694444 12.1528 2.08333C13.5324 3.47222 14.2222 5.14954 14.2222 7.11528C14.2222 7.9088 14.0926 8.67593 13.8333 9.41667C13.5741 10.1574 13.1852 10.8519 12.6667 11.5L20 18.7778L18.7778 20ZM7.13889 12.5556C8.64352 12.5556 9.92245 12.0231 10.9757 10.9583C12.0289 9.89352 12.5556 8.61111 12.5556 7.11111C12.5556 5.61111 12.0289 4.3287 10.9757 3.26389C9.92245 2.19907 8.64352 1.66667 7.13889 1.66667C5.61883 1.66667 4.32678 2.19907 3.26272 3.26389C2.19869 4.3287 1.66667 5.61111 1.66667 7.11111C1.66667 8.61111 2.19869 9.89352 3.26272 10.9583C4.32678 12.0231 5.61883 12.5556 7.13889 12.5556Z" fill="#454745"/>
+					</svg>
+				</div>
+				<ul class="languages-ul">
 					<li class="has-child">
-						<a href="#">Академия</a>
-						<ul class="sub-menu">
-							<li><a href="#">об академии</a></li>
-							<li><a href="#">игорь погодин</a></li>
-							<li><a href="#">институт гештальта</a></li>
-							<li><a href="#">команда</a></li>
-							<li><a href="#">мероприятия</a></li>
-							<li><a href="#">ПАМЯТКИ СТУДЕНТАМ</a></li>
-						</ul>
-					</li>
-					<li class="has-child">
-						<a href="#">программы</a>
-						<ul class="sub-menu">
-							<li><a href="#">ОБУЧЕНИЕ для себя и профессии</a></li>
-							<li><a href="#">Гештальт-консультант</a></li>
-							<li><a href="#">Вводные курсы</a></li>
-						</ul>
-					</li>
-					<li class="has-child">
-						<a href="#">другое</a>
-						<ul class="sub-menu">
-							<li><a href="#">книги</a></li>
-							<li><a href="#">блог</a></li>
-						</ul>
+						<a href="#">EN <img src="img/langs/en.png" alt=""></a>
 					</li>
 				</ul>
-			</div>
-			<div class="bottom">
-				<p class="copyright">© 2014-2021 Академия практической психологии Игоря Погодина</p>
-				<div class="logos">
-					<a href="#"><img src="img/icons/visa.svg" alt=""></a>
-					<a href="#"><img src="img/icons/mastercard.svg" alt=""></a>
+				<div class="footer-ul">
+					<ul>
+						<li><a href="#">Contact Sales</a></li>
+						<li><a href="#">Log In</a></li>
+					</ul>
 				</div>
-				<a href="#" class="policy">Политика конфиденциальности</a>
-				<a href="#" class="go-top"><svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.1875 6.34375L6.71875 0.875L1.25 6.34375" stroke="white" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+				<div class="auth">
+					<a href="#" class="btn btn-primary btn-register">Register</a>
+				</div>
+			</div>
+			<div class="footer-body">
+				<div class="footer-ul">
+					<ul class="footer-nav">
+						<li><a href="#">Legal</a></li>
+						<li><a href="#">Privacy policy</a></li>
+						<li><a href="#">Country site map</a></li>
+						<li><a href="#">Modern slavery statement</a></li>
+					</ul>
+				</div>
+				<div class="social-ul">
+					<p class="label">Follow us</p>
+					<ul class="footer-nav">
+						<li>
+							<a href="#">
+								<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M11.5 0C5.14886 0 0 5.17533 0 11.5591C0 17.3544 4.24716 22.1394 9.78127 22.9753V14.6228H6.93607V11.5843H9.78127V9.56254C9.78127 6.21512 11.4038 4.74554 14.1717 4.74554C15.4973 4.74554 16.1983 4.84432 16.5302 4.8895V7.54179H14.6421C13.467 7.54179 13.0567 8.66145 13.0567 9.92349V11.5843H16.5004L16.0331 14.6228H13.0567V23C18.6697 22.2345 23 17.4106 23 11.5591C23 5.17533 17.8511 0 11.5 0Z" fill="#0D0D16"></path>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg width="28" height="23" viewBox="0 0 28 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M27.1818 2.72197C26.1798 3.18519 25.1057 3.49621 23.9766 3.63738C25.129 2.91829 26.0146 1.78009 26.4298 0.425722C25.3536 1.08967 24.1567 1.57274 22.8877 1.83303C21.8709 0.703654 20.4218 0 18.8182 0C15.738 0 13.2403 2.59845 13.2403 5.8057C13.2403 6.26009 13.2911 6.70346 13.3865 7.12918C8.75131 6.88654 4.64364 4.57485 1.89178 1.061C1.41089 1.92126 1.13761 2.91829 1.13761 3.98149C1.13761 5.9954 2.12057 7.77328 3.61831 8.81663C2.70314 8.78575 1.84305 8.52326 1.091 8.08871C1.091 8.11298 1.091 8.13724 1.091 8.1615C1.091 10.9761 3.01455 13.3209 5.56305 13.8569C5.09699 13.9893 4.60339 14.0598 4.09496 14.0598C3.73483 14.0598 3.38528 14.0246 3.04421 13.954C3.75601 16.259 5.81514 17.9421 8.25348 17.9884C6.34687 19.5457 3.94243 20.4721 1.32827 20.4721C0.877038 20.4721 0.434282 20.4457 0 20.3905C2.46587 22.0405 5.39781 23 8.54794 23C18.8055 23 24.4151 14.1525 24.4151 6.48068C24.4151 6.22921 24.4088 5.97554 24.4003 5.72849C25.4892 4.91014 26.434 3.88664 27.1818 2.72197Z" fill="#0D0D16"></path>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M6.79545 0C3.0488 0 0 3.0488 0 6.79545V16.2045C0 19.9512 3.0488 23 6.79545 23H16.2045C19.9512 23 23 19.9512 23 16.2045V6.79545C23 3.0488 19.9512 0 16.2045 0H6.79545ZM6.79545 1.04545H16.2045C19.3861 1.04545 21.9545 3.61388 21.9545 6.79545V16.2045C21.9545 19.3861 19.3861 21.9545 16.2045 21.9545H6.79545C3.61388 21.9545 1.04545 19.3861 1.04545 16.2045V6.79545C1.04545 3.61388 3.61388 1.04545 6.79545 1.04545ZM17.7727 4.18182C17.4955 4.18182 17.2295 4.29196 17.0335 4.48802C16.8374 4.68409 16.7273 4.95 16.7273 5.22727C16.7273 5.50454 16.8374 5.77046 17.0335 5.96652C17.2295 6.16258 17.4955 6.27273 17.7727 6.27273C18.05 6.27273 18.3159 6.16258 18.512 5.96652C18.708 5.77046 18.8182 5.50454 18.8182 5.22727C18.8182 4.95 18.708 4.68409 18.512 4.48802C18.3159 4.29196 18.05 4.18182 17.7727 4.18182ZM11.5 5.75C8.33055 5.75 5.75 8.33055 5.75 11.5C5.75 14.6694 8.33055 17.25 11.5 17.25C14.6694 17.25 17.25 14.6694 17.25 11.5C17.25 8.33055 14.6694 5.75 11.5 5.75ZM11.5 6.79545C14.1044 6.79545 16.2045 8.89556 16.2045 11.5C16.2045 14.1044 14.1044 16.2045 11.5 16.2045C8.89556 16.2045 6.79545 14.1044 6.79545 11.5C6.79545 8.89556 8.89556 6.79545 11.5 6.79545Z" fill="#0D0D16"></path>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="copyright">
+					<p>
+					© AllPayPayz Payments Limited 2023 <br>AllPayPayz is authorised by the Financial Conduct Authority under the Electronic Money Regulations <br> 2011, Firm Reference 900507, for the issuing of electronic money.
+					</p>
+					<p>All investment services are provided by the respective AllPayPayz entity in your location.</p>
+				</div>
 			</div>
 		</div>
 	</footer>
 	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-	<script src="https://vjs.zencdn.net/7.17.0/video.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/lazy-line-painter@1.9.4/lib/lazy-line-painter-1.9.4.min.js"></script>
 	<script src="js/less.js"></script>
 	<script src="js/script.js"></script>
 </body>

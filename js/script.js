@@ -119,6 +119,14 @@ jQuery(function($) {
   }
   setInterval( animate_blocks, 5000 );
 
+  $('.section-home-1 .container .wrapper .right .box-wrapper .box-6-1').hover(
+    function() {
+      $('.section-home-1 .container .wrapper .right .box-wrapper .box.box-5-2').addClass('hover');
+    }, function() {
+      $('.section-home-1 .container .wrapper .right .box-wrapper .box.box-5-2').removeClass('hover');
+    }
+  );
+
   $('.section-home-1 .container .wrapper .right .box-wrapper .box-6-6').hover(
     function() {
       $('.section-home-1 .container .wrapper .right .box-wrapper .box.box-5-6').addClass('hover');

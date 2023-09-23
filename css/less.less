@@ -504,6 +504,11 @@ header {
 					font-weight: 400;
 					line-height: normal;
 					width: -webkit-fill-available;
+					border: 1px solid #ffffff;
+					transition: 0.3s;
+					&:focus {
+						border: 1px solid #787889;
+					}
 				}
 				.btn-clear {
 					position: absolute;
@@ -639,7 +644,7 @@ header {
 								// transform: rotateY(180deg);
 							}
 							.back {
-								border: 1.46px solid #787889;
+								border: 1.46px solid rgb(120 120 137 / 30%);
 								background: #ffffff;
 							}
 							&:hover {

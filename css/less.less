@@ -1516,12 +1516,15 @@ header {
 							padding: 50px;
 							.category {
 								display: flex;
+								margin-bottom: 38px;
 							}
 							.icon {
 								display: none;
 							}
 							.title {
 								font-size: 40px;
+								display: inline;
+								color: #ffffff;
 							}
 							.desc {
 								font-size: 17px;
@@ -1557,26 +1560,32 @@ header {
 						background: #86E014;
 						.title {
 							margin-top: 38px;
-							span:first-child {
-								color: #F6F9FC;
-								background: linear-gradient(to right, #FFF 20%, #4A8400 40%, #4A8400 60%, #FFF 80%);
-								background-size: 200% auto;
-								background-clip: text;
-								text-fill-color: transparent;
-								-webkit-background-clip: text;
-								-webkit-text-fill-color: transparent;
-								animation: shine 5s linear infinite;
-								@keyframes shine {
-									to {
-										background-position: 200% center;
-									}
-								}
-							}
-							span:last-child {
+							// span:first-child {
+							// 	color: #F6F9FC;
+							// 	background: linear-gradient(to right, #FFF 20%, #4A8400 40%, #4A8400 60%, #FFF 80%);
+							// 	background-size: 200% auto;
+							// 	background-clip: text;
+							// 	text-fill-color: transparent;
+							// 	-webkit-background-clip: text;
+							// 	-webkit-text-fill-color: transparent;
+							// 	animation: shine 5s linear infinite;
+							// 	@keyframes shine {
+							// 		to {
+							// 			background-position: 200% center;
+							// 		}
+							// 	}
+							// }
+							// span:last-child {
+							// 	color: #4A8400;
+							// 	&:hover {
+							// 		opacity: 1;
+							// 	}
+							// }
+							span {
+								display: inline;
+								position: static!important;
+								opacity: 1!important;
 								color: #4A8400;
-								&:hover {
-									opacity: 1;
-								}
 							}
 						}
 
@@ -1612,27 +1621,33 @@ header {
 						}
 						.title {
 							margin-top: 38px;
-							span:first-child {
-								color: #F6F9FC;
-								background: linear-gradient(to right, #FFF 20%, #B822FF 40%, #B822FF 60%, #FFF 80%);
-								background-size: 200% auto;
-								background-clip: text;
-								text-fill-color: transparent;
-								-webkit-background-clip: text;
-								-webkit-text-fill-color: transparent;
+							// span:first-child {
+							// 	color: #F6F9FC;
+							// 	background: linear-gradient(to right, #FFF 20%, #B822FF 40%, #B822FF 60%, #FFF 80%);
+							// 	background-size: 200% auto;
+							// 	background-clip: text;
+							// 	text-fill-color: transparent;
+							// 	-webkit-background-clip: text;
+							// 	-webkit-text-fill-color: transparent;
 
-								animation: shine 5s linear infinite;
-								@keyframes shine {
-									to {
-										background-position: 200% center;
-									}
-								}
-							}
-							span:last-child {
+							// 	animation: shine 5s linear infinite;
+							// 	@keyframes shine {
+							// 		to {
+							// 			background-position: 200% center;
+							// 		}
+							// 	}
+							// }
+							// span:last-child {
+							// 	color: #B822FF;
+							// 	&:hover {
+							// 		opacity: 1;
+							// 	}
+							// }
+							span {
 								color: #B822FF;
-								&:hover {
-									opacity: 1;
-								}
+								display: inline;
+								position: static!important;
+								opacity: 1!important;
 							}
 						}
 						.desc {

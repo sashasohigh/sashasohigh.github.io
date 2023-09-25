@@ -8,10 +8,12 @@
 	.section-home-5 .container .wrapper .left .topics_wrapper .topics .category a span:first-child,
 	.section-home-5 .container .wrapper .left .topics_wrapper .topics .category a span:last-child,
 	.section-home-6 .container .wrapper .content .item:nth-child(1) .inner .title, 
-	.section-home-6 .container .wrapper .content .item:nth-child(3) .inner .title {
+	.section-home-6 .container .wrapper .content .item:nth-child(3) .inner .title,
+	.section-home-3 .container .wrapper .row .col .col-inner .col-body .rating .rate span:first-child {
 		font-size: 36px;
 	}
-	.section-home-8 .container .wrapper .right .inner .reviews-slider .item .card .desc {
+	.section-home-8 .container .wrapper .right .inner .reviews-slider .item .card .desc,
+	.section-home-3 .container .wrapper .row .col .col-inner .col-body .rating .rate span:last-child {
 		font-size: 20px;
 	}
 	p, li,
@@ -46,7 +48,10 @@
 	.section-home-5 .container .wrapper .right .inner .counters .counter .desc,
 	header .container .header-bottom .input-search-wrapper input,
 	.section-home-6 .container .btn-show-more,
-	.section-home-9 .container .wrapper .left .content .btn {
+	.section-home-9 .container .wrapper .left .content .btn,
+	footer .container .footer-top .footer-ul ul li a,
+	footer .container .footer-top .languages-ul li a,
+	footer .container .footer-body .social-ul .label {
 		font-size: 16px;
 	}
 	.section-home-1 .container .wrapper .left .inner p {
@@ -82,15 +87,21 @@
 		margin-left: 21px;
 	}
 	.section-home-5 .container .wrapper .right .inner .counters .counter:nth-child(even) .count {
-		margin-right: 21;
+		margin-right: 21px;
 		margin-left: 24px;
 	}
 	.btn,
 	.section-home-1 .container .wrapper .left .inner .buttons .btn,
 	.section-home-3 .container .wrapper .row .col .col-inner .btn,
 	.section-home-4 .container .wrapper .left .content .btn,
-	.section-home-8 .container .wrapper .right .inner .reviews-slider .item .card .btn {
+	.section-home-8 .container .wrapper .right .inner .reviews-slider .item .card .btn,
+	.section-home-9 .container .wrapper .left .content .btn,
+	.section-home-10 .container .wrapper .right .inner .buttons .btn,
+	.section-home-10 .container .wrapper .left .inner .form-wrapper form .btn-submit {
 		padding: 10px 30px;
+	}
+	header .container .header-bottom .buttons .btn-home {
+		padding: 10px;
 	}
 	header .container .header-bottom .filters-ul > li {
 		margin: 0 10px;
@@ -101,7 +112,8 @@
 }
 
 @media(max-width:1440px) {
-	header .container .header-top .logo img {
+	header .container .header-top .logo img,
+	footer .container .footer-top .logo img {
 		height: 25px;
 	}
 	p, li,
@@ -136,7 +148,10 @@
 	.section-home-5 .container .wrapper .right .inner .counters .counter .desc,
 	header .container .header-bottom .input-search-wrapper input,
 	.section-home-6 .container .btn-show-more,
-	.section-home-9 .container .wrapper .left .content .btn {
+	.section-home-9 .container .wrapper .left .content .btn,
+	footer .container .footer-top .footer-ul ul li a,
+	footer .container .footer-top .languages-ul li a,
+	footer .container .footer-body .social-ul .label {
 		font-size: 14px;
 	}
 	.section-home-5 .container .wrapper .right .inner {
@@ -146,8 +161,14 @@
 	.section-home-1 .container .wrapper .left .inner .buttons .btn,
 	.section-home-3 .container .wrapper .row .col .col-inner .btn,
 	.section-home-4 .container .wrapper .left .content .btn,
-	.section-home-8 .container .wrapper .right .inner .reviews-slider .item .card .btn {
+	.section-home-8 .container .wrapper .right .inner .reviews-slider .item .card .btn,
+	.section-home-9 .container .wrapper .left .content .btn,
+	.section-home-10 .container .wrapper .right .inner .buttons .btn,
+	.section-home-10 .container .wrapper .left .inner .form-wrapper form .btn-submit {
 		padding: 10px 25px;
+	}
+	header .container .header-bottom .buttons .btn-home {
+		padding: 10px;
 	}
 	.section-home-1 .container .wrapper .left .inner .buttons .btn {
 		height: auto;

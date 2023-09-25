@@ -109,6 +109,11 @@
 	header .container .header-bottom .input-search-wrapper {
 		max-width: 300px;
 	}
+	.section-home-2 .container .table-wrapper .buttons .btn-arrow,
+	.section-home-8 .container .wrapper .left .buttons .btn-arrow {
+		height: 40px;
+		width: 40px;
+	}
 }
 
 @media(max-width:1440px) {

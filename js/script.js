@@ -156,4 +156,10 @@ jQuery(function($) {
     });
   });
 
+  $('header .container .header-bottom .filters-ul .has-child > a').click(function (event) {
+    event.preventDefault();
+    $(this).parent('.has-child').toggleClass('open-menu');
+    $(this).parent('.has-child').find('.child-menu').slideToggle();
+  });
+
 });

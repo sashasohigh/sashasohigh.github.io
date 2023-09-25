@@ -3,6 +3,7 @@ body {
 	padding: 0;
 	font-family: 'Mulish', sans-serif;
 	background: #F6F9FC;
+	overflow-x: hidden;
 }
 
 .container {
@@ -351,7 +352,7 @@ header {
 				background: #FE4E01;
 				position: absolute;
 				height: 100%;
-				width: calc(100vw - 17px);
+				width: 100vw;
 				z-index: -1;
 				left: 50%;
 				transform: translateX(-50%);
@@ -431,7 +432,7 @@ header {
 				background: #E5EAEE;
 				position: absolute;
 				height: 100%;
-				width: calc(100vw - 17px);
+				width: 100vw;
 				z-index: -1;
 				left: 50%;
 				transform: translateX(-50%);
@@ -668,10 +669,10 @@ header {
 					position: relative;
 					color: #FE4E01;
 					text-align: center;
-					font-family: Montserrat;
+					font-family: Future Tense;
 					font-size: 11px;
 					font-style: normal;
-					font-weight: 600;
+					font-weight: 400;
 					line-height: 120%;
 					text-transform: uppercase;
 					.box {
@@ -695,6 +696,11 @@ header {
 							transition: transform 0.6s;
 							transform-style: preserve-3d;
 							z-index: 1;
+							font-family: "Future Tense", sans-serif;
+							font-size: 11px;
+							font-style: normal;
+							font-weight: 400;
+							text-align: center;
 							&:empty {
 								display: none;
 							}
@@ -722,7 +728,10 @@ header {
 							}
 							.back {
 								border: 1.46px solid rgb(120 120 137 / 30%);
-								background: #ffffff;
+								background: #F6F9FC;
+							}
+							img {
+								max-width: 80%;
 							}
 							&:hover {
 								// transform: rotateY(180deg);
@@ -956,6 +965,9 @@ header {
 							.back {
 								display: none;
 							}
+							img {
+								max-width: 60%;
+							}
 						}
 						&:before {
 							content: '';
@@ -1120,16 +1132,16 @@ header {
 									text-align: center;
 									margin-bottom: 10px;
 									span {
-										font-family: Montserrat;
+										font-family: Future Tense;
 										&:first-child {
 											color: #FE4E01;
 											font-size: 39.795px;
-											font-weight: 600;
+											font-weight: 400;
 										}
 										&:last-child {
 											color: #787889;
 											font-size: 22.74px;
-											font-weight: 600;
+											font-weight: 400;
 										}
 									}
 								}
@@ -1398,9 +1410,9 @@ header {
 									}
 									&:last-child {
 										color: #F6F9FC;
-										font-family: Montserrat;
+										font-family: Future Tense;
 										font-size: 40px;
-										font-weight: 600;
+										font-weight: 400;
 										line-height: 120%;
 									}
 								}
@@ -1418,7 +1430,7 @@ header {
 				display: flex;
 				align-items: center;
 				.inner {
-					margin-left: 65px;
+					// margin-left: 65px;
 					h2 {
 						color: #F6F9FC;
 						font-size: 53.494px;
@@ -1449,12 +1461,13 @@ header {
 							color: #F6F9FC;
 							display: flex;
 							align-items: center;
+							justify-content: space-between;
 							margin-top: 11px;
 							position: relative;
 							.count {
-								font-family: Montserrat;
-								font-size: 56.75px;
-								font-weight: 600;
+								font-family: Future Tense;
+								font-size: 40px;
+								font-weight: 400;
 								line-height: 120%;
 								text-transform: uppercase;
 								&:after {
@@ -1462,7 +1475,8 @@ header {
 								}
 							}
 							.desc {
-								font-size: 20px;
+								text-align: right;
+								font-size: 18px;
 								font-weight: 600;
 							}
 							&:nth-child(odd) {
@@ -1476,14 +1490,12 @@ header {
 									background: #FE4E01;
 								}
 								.desc {
-									margin-left: 57px;
-									margin-right: 13px;
+									margin: 0 15px;
 								}
 							}
 							&:nth-child(even) {
 								.count {
-									margin-left: 34px;
-									margin-right: 64px;
+									margin: 0 15px;
 								}
 							}
 						}
@@ -1504,6 +1516,7 @@ header {
 			margin-bottom: 50px;
 		}
 		.wrapper {
+			overflow: hidden;
 			.content {
 				display: flex;
 				flex-wrap: wrap;

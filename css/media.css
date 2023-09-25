@@ -1,6 +1,166 @@
+@media(max-width:1660px) {
+	.section-home-8 .container .wrapper .left h2 {
+		font-size: 60px;
+	}
+	.heading-1,
+	.heading-2,
+	.section-home-5 .container .wrapper .right .inner h2,
+	.section-home-5 .container .wrapper .left .topics_wrapper .topics .category a span:first-child,
+	.section-home-5 .container .wrapper .left .topics_wrapper .topics .category a span:last-child,
+	.section-home-6 .container .wrapper .content .item:nth-child(1) .inner .title, 
+	.section-home-6 .container .wrapper .content .item:nth-child(3) .inner .title {
+		font-size: 36px;
+	}
+	.section-home-8 .container .wrapper .right .inner .reviews-slider .item .card .desc {
+		font-size: 20px;
+	}
+	p, li,
+	.heading-6,
+	.input-wrapper > label,
+	.input-wrapper > input, 
+	.input-wrapper > textarea,
+	.btn,
+	.section-home-10 .container .wrapper .left .inner .form-wrapper form .radio-buttons-wrapper div label,
+	header .container .header-top ul li a,
+	header .container .header-bottom .filters-ul li a,
+	.section-home-1 .container .wrapper .left .inner .buttons .btn,
+	.section-home-2 .container .table-wrapper table,
+	.select2-container--default .select2-selection--single .select2-selection__rendered,
+	.section-home-3 .container .wrapper .row .col .col-inner .col-body .desc,
+	.section-home-3 .container .wrapper .row .col .col-inner .btn,
+	.section-home-3 .container .wrapper .row .col .col-inner .more,
+	.section-home-3 .container .btn-show-more,
+	.section-home-4 .container .wrapper .left .content .btn,
+	.section-home-5 .container .wrapper .right .inner h2 span,
+	.section-home-6 .container .wrapper .content .item:nth-child(1) .inner .desc, 
+	.section-home-6 .container .wrapper .content .item:nth-child(3) .inner .desc
+	.section-home-6 .container .btn-show-more,
+	.section-home-8 .container .wrapper .right .inner .reviews-slider .item .card .btn,
+	footer .container .footer-body .footer-ul .footer-nav li,
+	.section-home-3 .container .wrapper .row .col .col-inner .col-head span,
+	.section-home-6 .container .wrapper .content .item .inner .title,
+	.section-home-6 .container .wrapper .content .item .inner .category,
+	.section-home-6 .container .wrapper .content .item .inner .link,
+	.section-home-10 .container .wrapper .right .inner .buttons .btn,
+	.section-home-10 .container .wrapper .left .inner .form-wrapper form .btn-submit,
+	.section-home-5 .container .wrapper .right .inner .counters .counter .desc,
+	header .container .header-bottom .input-search-wrapper input,
+	.section-home-6 .container .btn-show-more,
+	.section-home-9 .container .wrapper .left .content .btn {
+		font-size: 16px;
+	}
+	.section-home-1 .container .wrapper .left .inner p {
+		margin: 30px 0 40px;
+	}
+	.section-home-2 .container .table-wrapper table .table-head tr th .col-bottom span {
+		padding: 36px 0 16px;
+	}
+	.section-home-1,
+	.section-home-2,
+	.section-home-4,
+	.section-home-5,
+	.section-home-6,
+	.section-home-7,
+	.section-home-8,
+	.section-home-9,
+	.section-home-10 {
+		padding: 100px 0;
+	}
+	.section-home-4 .container .wrapper .left .content,
+	.section-home-9 .container .wrapper .left .content {
+		padding-right: 40px;
+	}
+	.section-home-4 .container .wrapper .right .img_wrapper,
+	.section-home-9 .container .wrapper .right .img_wrapper {
+		padding-left: 40px;
+	}
+	.section-home-5 .container .wrapper .right .inner {
+		margin-left: 40px;
+	}
+	.section-home-5 .container .wrapper .right .inner .counters .counter:nth-child(odd) .desc {
+		margin-right: 24px;
+		margin-left: 21px;
+	}
+	.section-home-5 .container .wrapper .right .inner .counters .counter:nth-child(even) .count {
+		margin-right: 21;
+		margin-left: 24px;
+	}
+	.btn,
+	.section-home-1 .container .wrapper .left .inner .buttons .btn,
+	.section-home-3 .container .wrapper .row .col .col-inner .btn,
+	.section-home-4 .container .wrapper .left .content .btn,
+	.section-home-8 .container .wrapper .right .inner .reviews-slider .item .card .btn {
+		padding: 10px 30px;
+	}
+	header .container .header-bottom .filters-ul > li {
+		margin: 0 10px;
+	}
+	header .container .header-bottom .input-search-wrapper {
+		max-width: 300px;
+	}
+}
+
+@media(max-width:1440px) {
+	header .container .header-top .logo img {
+		height: 25px;
+	}
+	p, li,
+	.heading-6,
+	.input-wrapper > label,
+	.input-wrapper > input, 
+	.input-wrapper > textarea,
+	.btn,
+	.section-home-10 .container .wrapper .left .inner .form-wrapper form .radio-buttons-wrapper div label,
+	header .container .header-top ul li a,
+	header .container .header-bottom .filters-ul li a,
+	.section-home-1 .container .wrapper .left .inner .buttons .btn,
+	.section-home-2 .container .table-wrapper table,
+	.select2-container--default .select2-selection--single .select2-selection__rendered,
+	.section-home-3 .container .wrapper .row .col .col-inner .col-body .desc,
+	.section-home-3 .container .wrapper .row .col .col-inner .btn,
+	.section-home-3 .container .wrapper .row .col .col-inner .more,
+	.section-home-3 .container .btn-show-more,
+	.section-home-4 .container .wrapper .left .content .btn,
+	.section-home-5 .container .wrapper .right .inner h2 span,
+	.section-home-6 .container .wrapper .content .item:nth-child(1) .inner .desc, 
+	.section-home-6 .container .wrapper .content .item:nth-child(3) .inner .desc
+	.section-home-6 .container .btn-show-more,
+	.section-home-8 .container .wrapper .right .inner .reviews-slider .item .card .btn,
+	footer .container .footer-body .footer-ul .footer-nav li,
+	.section-home-3 .container .wrapper .row .col .col-inner .col-head span,
+	.section-home-6 .container .wrapper .content .item .inner .title,
+	.section-home-6 .container .wrapper .content .item .inner .category,
+	.section-home-6 .container .wrapper .content .item .inner .link,
+	.section-home-10 .container .wrapper .right .inner .buttons .btn,
+	.section-home-10 .container .wrapper .left .inner .form-wrapper form .btn-submit,
+	.section-home-5 .container .wrapper .right .inner .counters .counter .desc,
+	header .container .header-bottom .input-search-wrapper input,
+	.section-home-6 .container .btn-show-more,
+	.section-home-9 .container .wrapper .left .content .btn {
+		font-size: 14px;
+	}
+	.section-home-5 .container .wrapper .right .inner {
+		margin-left: 0;
+	}
+	.btn,
+	.section-home-1 .container .wrapper .left .inner .buttons .btn,
+	.section-home-3 .container .wrapper .row .col .col-inner .btn,
+	.section-home-4 .container .wrapper .left .content .btn,
+	.section-home-8 .container .wrapper .right .inner .reviews-slider .item .card .btn {
+		padding: 10px 25px;
+	}
+	.section-home-1 .container .wrapper .left .inner .buttons .btn {
+		height: auto;
+	}
+	header .container .header-bottom .input-search-wrapper {
+		max-width: 250px;
+	}
+}
+
 @media(max-width:1280px) {
 	
 }
+
 
 @media(max-width:1100px) {
 

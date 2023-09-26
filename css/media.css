@@ -1326,6 +1326,11 @@
 	footer .container .footer-body .social-ul .footer-nav li {
 		margin-right: 10px;
 	}
+
+	.section-home-6 .container .wrapper .content .item:nth-child(1) .inner .title br, 
+	.section-home-6 .container .wrapper .content .item:nth-child(3) .inner .title br {
+		display: none;
+	}
 }
 
 @media(max-width:480px) {

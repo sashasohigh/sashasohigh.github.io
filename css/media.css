@@ -621,6 +621,8 @@
 
 	.section-home-2 .container .table-wrapper table {
 		width: max-content;
+		overflow: visible;
+		table-layout: auto;
 	}
 
 	.section-home-2 .container .table-wrapper table .table-head tr th,

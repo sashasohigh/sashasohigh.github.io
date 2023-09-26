@@ -380,7 +380,7 @@
 		right: 0;
 		height: calc(100vh - 78px);
 		top: 78px;
-		overflow: auto;
+		overflow: auto!important;
 	}
 
 	header .container .header-mob .header-mob-nav {

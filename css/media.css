@@ -378,6 +378,9 @@
 		background: #E5EAEE;
 		left: 0;
 		right: 0;
+		height: calc(100vh - 78px);
+		top: 78px;
+		overflow: auto;
 	}
 
 	header .container .header-mob .header-mob-nav {
@@ -609,8 +612,8 @@
 	}
 
 	.section-home-2 .container .table-wrapper {
-		overflow: auto;
-		position: relative;
+/*		overflow: auto;*/
+/*		position: relative;*/
 	}
 
 	.section-home-2 .container .table-wrapper table {

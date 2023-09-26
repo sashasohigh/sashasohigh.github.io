@@ -24,7 +24,19 @@ jQuery(function($) {
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 1,
-    arrows: false
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1100,
+        settings: {
+          slidesToShow: 3,
+        },
+        breakpoint: 650,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+    ]
   });
 
   $(".section-home-8 .container .wrapper .left .buttons .btn-prev").click(function () {
@@ -156,10 +168,16 @@ jQuery(function($) {
     });
   });
 
-  $('header .container .header-bottom .filters-ul .has-child > a').click(function (event) {
+  $('header .container .filters-ul .has-child > a').click(function (event) {
     event.preventDefault();
     $(this).parent('.has-child').toggleClass('open-menu');
     $(this).parent('.has-child').find('.child-menu').slideToggle();
+  });
+
+  $('.toggle-menu-header').click(function (event) {
+    event.preventDefault();
+    $('header').toggleClass('open-mob-menu');
+    $('header .container .header-mob').slideToggle();
   });
 
 });

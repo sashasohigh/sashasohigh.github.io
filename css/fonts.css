@@ -1,7 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @font-face {
-  font-family:'Future Tense';
-  src: url('../fonts/Future Tense/Future Tense.ttf') format('truetype');
+    font-family: 'Neutral Face';
+    src: url('../fonts/NeutralFace/NeutralFaceRegular.eot');
+    src: local('Neutral Face'), local('NeutralFaceRegular'),
+        url('../fonts/NeutralFace/NeutralFaceRegular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NeutralFace/NeutralFaceRegular.woff2') format('woff2'),
+        url('../fonts/NeutralFace/NeutralFaceRegular.woff') format('woff'),
+        url('../fonts/NeutralFace/NeutralFaceRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neutral Face';
+    src: url('../fonts/NeutralFace/NeutralFaceBold.eot');
+    src: local('Neutral Face Bold'), local('NeutralFaceBold'),
+        url('../fonts/NeutralFace/NeutralFaceBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NeutralFace/NeutralFaceBold.woff2') format('woff2'),
+        url('../fonts/NeutralFace/NeutralFaceBold.woff') format('woff'),
+        url('../fonts/NeutralFace/NeutralFaceBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }

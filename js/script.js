@@ -1,17 +1,17 @@
 $(document).ready(function(){
-  $(".nav").on("click","a", function (event) {
-    //отменяем стандартную обработку нажатия по ссылке
-    event.preventDefault();
+  // $(".nav").on("click","a", function (event) {
+  //   //отменяем стандартную обработку нажатия по ссылке
+  //   event.preventDefault();
 
-    //забираем идентификатор бока с атрибута href
-    var id  = $(this).attr('href'),
+  //   //забираем идентификатор бока с атрибута href
+  //   var id  = $(this).attr('href'),
 
-    //узнаем высоту от начала страницы до блока на который ссылается якорь
-      top = $(id).offset().top;
+  //   //узнаем высоту от начала страницы до блока на который ссылается якорь
+  //     top = $(id).offset().top;
     
-    //анимируем переход на расстояние - top за 1500 мс
-    $('body,html').animate({scrollTop: top - 130}, 1500);
-  });
+  //   //анимируем переход на расстояние - top за 1500 мс
+  //   $('body,html').animate({scrollTop: top - 130}, 1500);
+  // });
 
   $(function() {
     var marquee = $("#marquee"); 
@@ -28,4 +28,46 @@ $(document).ready(function(){
     };
     reset.call(marquee.find("div"));
   });
+
+  $(".services-item").hover(
+    function() {
+      var video = $(this).find("video")[0];
+      if (video) {
+        video.play();
+      }
+    },
+    function() {
+      var video = $(this).find("video")[0];
+      if (video) {
+        video.pause();
+      }
+    }
+  );
+
+  $('.portfolio-slider').slick({
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    speed: 1000,
+    dots: false,
+    arrows: false
+  });
+
+  $('.section-popup-preview-slider').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+  });
+
+  $(".project-preview-trigger").click(function() {
+    $('body').addClass('project-preview-popup');
+  });
+
+  $(".close").click(function() {
+    $('body').removeClass('project-preview-popup');
+  });
+
 });

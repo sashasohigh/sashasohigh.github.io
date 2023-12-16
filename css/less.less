@@ -282,8 +282,18 @@ header {
 	.video-wrapper {
 		margin-top: 50px;
 		padding: 0;
+		position: relative;
 		video {
 			width: 100%;
+		}
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
 		}
 	}
 	.marquee-wrapper {
@@ -353,10 +363,20 @@ header {
 	}
 	.video-wrapper {
 		margin-top: 100px;
+		position: relative;
 		video {
 			height: 650px;
 			width: 100%;
 			object-fit: cover;
+		}
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
 		}
 	}
 }
@@ -771,6 +791,7 @@ header {
 	transition: 1s;
 	transition-delay: 0.3s;
 	transform: translateY(-100%);
+	background: rgb(0 0 0 / 60%);
 	.section-popup-preview-slider {
 		.slick-arrow {
 			position: fixed;

@@ -205,6 +205,11 @@ header {
 				width: 190px;
 			}
 		}
+		.menu {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+		}
 		ul {
 			display: flex;
 			align-items: center;
@@ -230,9 +235,6 @@ header {
 				}
 			}
 			&.nav {
-				position: absolute;
-				left: 50%;
-				transform: translateX(-50%);
 				li {
 					margin: 0 25px;
 				}
@@ -470,12 +472,12 @@ header {
 	.portfolio-list {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 45px;
+		gap: 40px;
 		margin-bottom: 70px;
 		.portfolio-item {
-			width: calc(50% - 22.5px);
+			width: calc(33.3% - 27px);
 			.thumb-wrapper {
-				border-radius: 50px;
+				border-radius: 25px;
 				overflow: hidden;
 				margin-bottom: 35px;
 				position: relative;
@@ -639,7 +641,8 @@ header {
 			margin-bottom: 100px;
 			.slide {
 				img {
-
+					width: 100%;
+					object-fit: cover;
 				}
 			}
 		}
@@ -711,7 +714,7 @@ header {
 	justify-content: center;
 	border-radius: 50%;
 	position: absolute;
-	right: 0;
+	right: 15px;
 	transition: 0.3s;
 	svg {
 		height: 60%;

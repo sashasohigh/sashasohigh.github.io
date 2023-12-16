@@ -70,4 +70,8 @@ $(document).ready(function(){
     $('body').removeClass('project-preview-popup');
   });
 
+  $(".mob-menu-trigger").click(function() {
+    $('header').toggleClass('header-menu');
+  });
+
 });

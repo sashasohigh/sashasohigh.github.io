@@ -410,6 +410,14 @@
 	.section-portfolio .portfolio-list {
 		margin-bottom: 35px;
 	}
+	.section-popup-preview .close {
+		top: 15px;
+		right: 15px;
+	}
+	.project-preview-popup .section-portfolio-single .container .portfolio-preview .project-preview-trigger {
+		opacity: 0;
+		display: none;
+	}
 }
 
 @media(max-width: 600px) {

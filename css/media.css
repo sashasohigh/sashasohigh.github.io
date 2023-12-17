@@ -2,7 +2,7 @@
 	.container {
 		max-width: 1440px;
 	}
-	footer .top .container .contacts a, {
+	footer .top .container .contacts-wrapper .contacts a, {
 		font-size: 60px;
 	}
 	.section-home-2 .video-wrapper video {
@@ -51,7 +51,7 @@
 	.section-portfolio-single .container .portfolio-title {
 		font-size: 60px;
 	}
-	footer .top .container .contacts a {
+	footer .top .container .contacts-wrapper .contacts a {
 		font-size: 50px;
 	}
 	header .container ul li a,
@@ -165,7 +165,7 @@
 	.section-services .services-list .services-item {
 		width: calc(33.3% - 66px);
 	}
-	footer .top .container .contacts a {
+	footer .top .container .contacts-wrapper .contacts a {
 		font-size: 40px;
 	}
 	.section-portfolio .heading,
@@ -321,14 +321,21 @@
 		margin-bottom: 20px;
 	}
 	footer .top .container {
-		flex-wrap: wrap;
+/*		flex-wrap: wrap;*/
+	}
+	footer .top .container .contacts-wrapper {
+		flex-direction: column;
+		align-items: baseline;
+	}
+	footer .top .container .contacts-wrapper .contacts {
+		margin: 0;
 	}
 	footer .top .socials {
 		width: 100%;
 		display: flex;
 		margin-top: 20px;
 	}
-	footer .top .container .socials a {
+	footer .top .container .contacts-wrapper .socials a {
 		padding: 0;
 		background: none;
 		font-size: 0;
@@ -339,7 +346,7 @@
 	footer .top .container .contacts {
 		margin: 0 auto;
 	}
-	footer .top .container .contacts a,
+	footer .top .container .contacts-wrapper .contacts a,
 	.section-portfolio-single .container .portfolio-title {
 		font-size: 30px;
 	}
@@ -359,6 +366,9 @@
 		margin: 35px 0;
 		align-items: center;
 	}
+	footer .top .container .contacts-wrapper .socials a svg {
+		margin: 0;
+	}
 }
 
 @media(max-width:768px) {
@@ -368,7 +378,7 @@
 	.section-home .marquee-wrapper .marquee {
 		font-size: 40px;
 	}
-	footer .top .container .contacts a {
+	footer .top .container .contacts-wrapper .contacts a {
 		font-size: 25px;
 	}
 	header .container .menu {
@@ -456,7 +466,7 @@
 }
 
 @media(max-width:550px) {
-	footer .top .container .contacts a {
+	footer .top .container .contacts-wrapper .contacts a {
 		font-size: 20px;
 	}
 	header .container .logo {
@@ -470,16 +480,12 @@
 		width: 70%;
 		left: -70%;
 	}
-	footer .top .container .nav {
-		margin: 0;
-		margin-bottom: 10px;
-	}
 	footer .top .container .contacts {
 		width: 100%;
 		display: flex;
 		flex-direction: column;
 	}
-	footer .top .container .contacts a {
+	footer .top .container .contacts-wrapper .contacts a {
 		font-size: 16px;
 		margin: 5px 0;
 	}

@@ -16,10 +16,9 @@ $(document).ready(function(){
   $(function() {
     var marquee = $("#marquee"); 
     marquee.css({"overflow": "hidden", "width": "100%"});
-    // оболочка для текста ввиде span (IE не любит дивы с inline-block)
     marquee.wrapInner("<span>");
     marquee.find("span").css({ "width": "50%", "display": "inline-block", "text-align":"center" }); 
-    marquee.append(marquee.find("span").clone()); // тут у нас два span с текстом
+    marquee.append(marquee.find("span").clone());
     marquee.wrapInner("<div>");
     marquee.find("div").css("width", "200%");
     var reset = function() {
@@ -29,20 +28,22 @@ $(document).ready(function(){
     reset.call(marquee.find("div"));
   });
 
-  $(".services-item").hover(
-    function() {
-      var video = $(this).find("video")[0];
-      if (video) {
-        video.play();
+  if ($(window).width() < 1100) {
+    $(".services-item").hover(
+      function() {
+        var video = $(this).find("video")[0];
+        if (video) {
+          video.play();
+        }
+      },
+      function() {
+        var video = $(this).find("video")[0];
+        if (video) {
+          video.pause();
+        }
       }
-    },
-    function() {
-      var video = $(this).find("video")[0];
-      if (video) {
-        video.pause();
-      }
-    }
-  );
+    );
+  }
 
   $('.portfolio-slider').slick({
     infinite: true,

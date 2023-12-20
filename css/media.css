@@ -431,9 +431,6 @@
 }
 
 @media(max-width: 600px) {
-	.section-services .services-list .services-item .content {
-		display: none;
-	}
 	.section-services .services-list .services-item .video-icon {
 		position: static;
 		display: flex;
@@ -462,6 +459,10 @@
 	}
 	.section-portfolio-single .banner img {
 		height: 200px;
+	}
+	.section-services .services-list .services-item .content {
+		display: none;
+		margin-top: 20px;
 	}
 }
 

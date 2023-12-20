@@ -43,6 +43,11 @@ $(document).ready(function(){
         }
       }
     );
+  } else if ($(window).width() <= 600) {
+    $(".services-item").click(function() {
+      // Используем метод toggle() для скрытия/раскрытия блока
+      $(this).find('.content').slideToggle();
+    });
   }
 
   $('.portfolio-slider').slick({

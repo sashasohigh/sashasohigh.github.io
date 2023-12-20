@@ -28,7 +28,7 @@ $(document).ready(function(){
     reset.call(marquee.find("div"));
   });
 
-  if ($(window).width() < 1100) {
+  if ($(window).width() > 1100) {
     $(".services-item").hover(
       function() {
         var video = $(this).find("video")[0];

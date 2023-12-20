@@ -1,9 +1,16 @@
+@media(max-width:1920px) {
+	.container {
+		max-width: none;
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+}
 @media(max-width:1680px) {
 	.container {
-		max-width: 1440px;
+/*		max-width: 1440px;*/
 	}
-	footer .top .container .contacts-wrapper .contacts a, {
-		font-size: 60px;
+	footer .top .container .contacts-wrapper .contacts a {
+		font-size: 50px;
 	}
 	.section-home-2 .video-wrapper video {
 		height: 500px;
@@ -17,6 +24,9 @@
 		margin-left: 15px;
 		margin-top: 20px;
 	}
+	.section-portfolio .portfolio-list .showmore-wrapper {
+		margin-top: 60px;
+	}
 	footer {
 		margin-top: 80px;
 	}
@@ -27,7 +37,7 @@
 
 @media(max-width:1440px) {
 	.container {
-		max-width: 1300px;
+/*		max-width: 1300px;*/
 	}
 	.section-portfolio-single .banner img {
 		height: 300px;
@@ -52,7 +62,7 @@
 		font-size: 60px;
 	}
 	footer .top .container .contacts-wrapper .contacts a {
-		font-size: 50px;
+		font-size: 40px;
 	}
 	header .container ul li a,
 	.section-home-2 .container .text,
@@ -116,7 +126,7 @@
 
 @media(max-width:1366px) {
 	.container {
-		max-width: 1200px;
+/*		max-width: 1200px;*/
 	}
 	.section-portfolio .portfolio-title .heading,
 	.section-portfolio-single .container .portfolio-title {
@@ -126,7 +136,7 @@
 
 @media(max-width:1280px) {
 	.container {
-		max-width: 1100px;
+/*		max-width: 1100px;*/
 	}
 	.section-home .marquee-wrapper .marquee {
 		font-size: 60px;
@@ -166,7 +176,7 @@
 		width: calc(33.3% - 66px);
 	}
 	footer .top .container .contacts-wrapper .contacts a {
-		font-size: 40px;
+		font-size: 30px;
 	}
 	.section-portfolio .heading,
 	.section-services .heading,
@@ -208,6 +218,7 @@
 @media(max-width:1100px) {
 	.container {
 		max-width: 991px;
+		padding: 0 15px;
 	}
 	.mob-menu-trigger {
 		height: 40px;
@@ -306,6 +317,9 @@
 	}
 	footer {
 		margin-top: 50px;
+	}
+	.section-portfolio .portfolio-list .showmore-wrapper {
+		margin-top: 40px;
 	}
 }
 
@@ -413,9 +427,11 @@
 		font-size: 16px;
 		margin-bottom: 10px;
 	}
-	footer,
-	.section-portfolio .portfolio-list .showmore-wrapper {
+	footer {
 		margin-top: 35px;
+	}
+	.section-portfolio .portfolio-list .showmore-wrapper {
+		margin-top: 15px;
 	}
 	.section-portfolio .portfolio-list {
 		margin-bottom: 35px;
